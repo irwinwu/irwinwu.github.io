@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/page/2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-Linux常用命令" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/12/08/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="article-date">
+  <time class="dt-published" datetime="2019-12-08T05:58:49.000Z" itemprop="datePublished">2019-12-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/">面试准备</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2019/12/08/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">Linux常用命令</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id="一、linux常用命令"><a href="#一、linux常用命令" class="headerlink" title="一、linux常用命令"></a>一、linux常用命令</h4><ol>
+<li><h5 id="find-基本语法"><a href="#find-基本语法" class="headerlink" title="find 基本语法"></a>find 基本语法</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">find [PATH] [option] [action]</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">与时间有关的参数：</span></span><br><span class="line">-mtime n : n为数字，意思为在n天之前的“一天内”被更改过的文件；</span><br><span class="line">-mtime +n : 列出在n天之前（不含n天本身）被更改过的文件名；</span><br><span class="line">-mtime -n : 列出在n天之内（含n天本身）被更改过的文件名；</span><br><span class="line">-newer file : 列出比file还要新的文件名</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">例如：</span></span><br><span class="line">find /root -mtime 0 # 在当前目录下查找今天之内有改动的文件</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">与用户或用户组名有关的参数：</span></span><br><span class="line">-user name : 列出文件所有者为name的文件</span><br><span class="line">-group name : 列出文件所属用户组为name的文件</span><br><span class="line">-uid n : 列出文件所有者为用户ID为n的文件</span><br><span class="line">-gid n : 列出文件所属用户组为用户组ID为n的文件</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">例如：</span></span><br><span class="line">find /home/hadoop -user hadoop # 在目录/home/hadoop中找出所有者为hadoop的文件</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">与文件权限及名称有关的参数：</span></span><br><span class="line">-name filename ：找出文件名为filename的文件</span><br><span class="line">-size [+-]SIZE ：找出比SIZE还要大（+）或小（-）的文件</span><br><span class="line">-tpye TYPE ：查找文件的类型为TYPE的文件，TYPE的值主要有：一般文件（f)、设备文件（b、c）、</span><br><span class="line">             目录（d）、连接文件（l）、socket（s）、FIFO管道文件（p）；</span><br><span class="line">-perm mode ：查找文件权限刚好等于mode的文件，mode用数字表示，如0755；</span><br><span class="line">-perm -mode ：查找文件权限必须要全部包括mode权限的文件，mode用数字表示</span><br><span class="line">-perm +mode ：查找文件权限包含任一mode的权限的文件，mode用数字表示</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">例如：</span></span><br><span class="line">find / -name passwd # 查找文件名为passwd的文件</span><br><span class="line">find . -perm 0755 # 查找当前目录中文件权限的0755的文件</span><br><span class="line">find . -size +12k # 查找当前目录中大于12KB的文件，注意c表示byte</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="2">
+<li><h5 id="ls-命令，展示文件夹内内容"><a href="#ls-命令，展示文件夹内内容" class="headerlink" title="ls 命令，展示文件夹内内容"></a>ls 命令，展示文件夹内内容</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">-a ：全部的档案，连同隐藏档( 开头为 . 的档案) 一起列出来～ </span><br><span class="line">-A ：全部的档案，连同隐藏档，但不包括 . 与 .. 这两个目录，一起列出来～ </span><br><span class="line">-d ：仅列出目录本身，而不是列出目录内的档案数据 </span><br><span class="line">-f ：直接列出结果，而不进行排序 (ls 预设会以档名排序！) </span><br><span class="line">-F ：根据档案、目录等信息，给予附加数据结构，例如： </span><br><span class="line">*：代表可执行档； /：代表目录； =：代表 socket 档案； |：代表 FIFO 档案； </span><br><span class="line">-h ：将档案容量以人类较易读的方式(例如 GB, KB 等等)列出来； </span><br><span class="line">-i ：列出 inode 位置，而非列出档案属性； </span><br><span class="line">-l ：长数据串行出，包含档案的属性等等数据； </span><br><span class="line">-n ：列出 UID 与 GID 而非使用者与群组的名称 (UID与GID会在账号管理提到！) </span><br><span class="line">-r ：将排序结果反向输出，例如：原本档名由小到大，反向则为由大到小； </span><br><span class="line">-R ：连同子目录内容一起列出来； </span><br><span class="line">-S ：以档案容量大小排序！ </span><br><span class="line">-t ：依时间排序 </span><br><span class="line">--color=never ：不要依据档案特性给予颜色显示； </span><br><span class="line">--color=always ：显示颜色 </span><br><span class="line">--color=auto ：让系统自行依据设定来判断是否给予颜色 </span><br><span class="line">--full-time ：以完整时间模式 (包含年、月、日、时、分) 输出 </span><br><span class="line">--time=&#123;atime,ctime&#125; ：输出 access 时间或 改变权限属性时间 (ctime) </span><br><span class="line">而非内容变更时间 (modification time)  </span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="3">
+<li><h5 id="cd-命令："><a href="#cd-命令：" class="headerlink" title="cd 命令："></a>cd 命令：</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /root/Docements # 切换到目录/root/Docements</span><br><span class="line">cd ./path          # 切换到当前目录下的path目录中，“.”表示当前目录  </span><br><span class="line">cd ../path         # 切换到上层目录中的path目录中，“..”表示上一层目录</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li><h5 id="tree命令"><a href="#tree命令" class="headerlink" title="tree命令"></a>tree命令</h5></li>
+<li><p>显示树形的层级目录结构，非原生命令，需要安装tree</p>
+</li>
+<li><h5 id="cp-命令，作用复制："><a href="#cp-命令，作用复制：" class="headerlink" title="cp 命令，作用复制："></a>cp 命令，作用复制：</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-a ：将文件的特性一起复制</span><br><span class="line">-p ：连同文件的属性一起复制，而非使用默认方式，与-a相似，常用于备份</span><br><span class="line">-i ：若目标文件已经存在时，在覆盖时会先询问操作的进行</span><br><span class="line">-r ：递归持续复制，用于目录的复制行为</span><br><span class="line">-u ：目标文件与源文件有差异时才会复制</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li><h5 id="rm命令作用为删除，参数："><a href="#rm命令作用为删除，参数：" class="headerlink" title="rm命令作用为删除，参数："></a>rm命令作用为删除，参数：</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-f ：就是force的意思，忽略不存在的文件，不会出现警告消息</span><br><span class="line">-i ：互动模式，在删除前会询问用户是否操作</span><br><span class="line">-r ：递归删除，最常用于目录删除，它是一个非常危险的参数</span><br></pre></td></tr></table></figure>
+
+<ol start="7">
+<li><h5 id="mv命令作用为移动文件："><a href="#mv命令作用为移动文件：" class="headerlink" title="mv命令作用为移动文件："></a>mv命令作用为移动文件：</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-f ：force强制的意思，如果目标文件已经存在，不会询问而直接覆盖</span><br><span class="line">-i ：若目标文件已经存在，就会询问是否覆盖</span><br><span class="line">-u ：若目标文件已经存在，且比目标文件新，才会更新</span><br></pre></td></tr></table></figure>
+
+<ol start="8">
+<li><h5 id="pwd命令"><a href="#pwd命令" class="headerlink" title="pwd命令"></a>pwd命令</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pwd -P # 显示出实际路径，而非使用连接（link）路径；pwd显示的是连接路径</span><br></pre></td></tr></table></figure>
+
+<ol start="9">
+<li><h5 id="tar命令，用于压缩解压："><a href="#tar命令，用于压缩解压：" class="headerlink" title="tar命令，用于压缩解压："></a>tar命令，用于压缩解压：</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-c ：新建打包文件</span><br><span class="line">-t ：查看打包文件的内容含有哪些文件名</span><br><span class="line">-x ：解打包或解压缩的功能，可以搭配-C（大写）指定解压的目录，注意-c,-t,-x不能同时出现在同一条命令中</span><br><span class="line">-j ：通过bzip2的支持进行压缩/解压缩</span><br><span class="line">-z ：通过gzip的支持进行压缩/解压缩</span><br><span class="line">-v ：在压缩/解压缩过程中，将正在处理的文件名显示出来</span><br><span class="line">-f filename ：filename为要处理的文件</span><br><span class="line">-C dir ：指定压缩/解压缩的目录dirs</span><br></pre></td></tr></table></figure>
+
+<p>缩略版</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">压缩：tar -jcv -f filename.tar.bz2 要被处理的文件或目录名称</span><br><span class="line">查询：tar -jtv -f filename.tar.bz2</span><br><span class="line">解压：tar -jxv -f filename.tar.bz2 -C 欲解压缩的目录</span><br></pre></td></tr></table></figure>
+
+<ol start="10">
+<li><h5 id="mkdir命令创建目录："><a href="#mkdir命令创建目录：" class="headerlink" title="mkdir命令创建目录："></a>mkdir命令创建目录：</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mkdir [选项]... 目录... </span><br><span class="line"> -m, --mode=模式，设定权限&lt;模式&gt; (类似 chmod)，而不是 rwxrwxrwx 减 umask</span><br><span class="line"> -p, --parents  可以是一个路径名称。此时若路径中的某些目录尚不存在,加上此选项后,系统将自动建立好那些尚不存在的目录,即一次可以建立多个目录; </span><br><span class="line"> -v, --verbose  每次创建新目录都显示信息</span><br></pre></td></tr></table></figure>
+
+<ol start="11">
+<li><h5 id="rmdir-命令删除目录："><a href="#rmdir-命令删除目录：" class="headerlink" title="rmdir 命令删除目录："></a>rmdir 命令删除目录：</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rmdir [选项]... 目录...</span><br><span class="line">-p 递归删除目录dirname，当子目录删除后其父目录为空时，也一同被删除。如果整个路径被删除或者由于某种原因保留部分路径，则系统在标准输出上显示相应的信息。 </span><br><span class="line">-v --verbose  显示指令执行过程 </span><br></pre></td></tr></table></figure>
+
+<ol start="12">
+<li><h5 id="gzip-命令压缩文件或文件夹为-gz文件："><a href="#gzip-命令压缩文件或文件夹为-gz文件：" class="headerlink" title="gzip 命令压缩文件或文件夹为 .gz文件："></a>gzip 命令压缩文件或文件夹为 .gz文件：</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"> gzip[参数][文件或者目录]</span><br><span class="line">-a or --ascii 　使用ASCII文字模式。 </span><br><span class="line">-c or --stdout or --to-stdout 　把压缩后的文件输出到标准输出设备，不去更动原始文件。 </span><br><span class="line">-d or --decompress or ----uncompress 　解开压缩文件。 </span><br><span class="line">-f or --force 　强行压缩文件。不理会文件名称 or 硬连接是否存在以及该文件是否为符号连接。 </span><br><span class="line">-h or --help 　在线帮助。 </span><br><span class="line">-l or --list 　列出压缩文件的相关信息。 </span><br><span class="line">-L or --license 　显示版本与版权信息。 </span><br><span class="line">-n or --no-name 　压缩文件时，不保存原来的文件名称及时间戳记。 </span><br><span class="line">-N or --name 　压缩文件时，保存原来的文件名称及时间戳记。 </span><br><span class="line">-q or --quiet 　不显示警告信息。 </span><br><span class="line">-r or --recursive 　递归处理，将指定目录下的所有文件及子目录一并处理。 </span><br><span class="line">-S&lt;压缩字尾字符串&gt; or ----suffix&lt;压缩字尾字符串&gt; 　更改压缩字尾字符串。 </span><br><span class="line">-t or --test 　测试压缩文件是否正确无误。 </span><br><span class="line">-v or --verbose 　显示指令执行过程。 </span><br><span class="line">-V or --version 　显示版本信息。 </span><br><span class="line">-num 用指定的数字num调整压缩的速度，-1 or --fast表示最快压缩方法（低压缩比），-9 or --best表示最慢压缩方法（高压缩比）。系统缺省值为6。</span><br></pre></td></tr></table></figure>
+
+<h4 id="二-进程相关命令："><a href="#二-进程相关命令：" class="headerlink" title="二. 进程相关命令："></a><strong>二. 进程相关命令：</strong></h4><ol start="13">
+<li><h5 id="ps-命令显示运行的进程，"><a href="#ps-命令显示运行的进程，" class="headerlink" title="ps 命令显示运行的进程，"></a>ps 命令显示运行的进程，</h5>还会显示进程的一些信息如pid, cpu和内存使用情况等：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-A ：所有的进程均显示出来</span><br><span class="line">-a ：不与terminal有关的所有进程</span><br><span class="line">-u ：有效用户的相关进程</span><br><span class="line">-x ：一般与a参数一起使用，可列出较完整的信息</span><br><span class="line">-l ：较长，较详细地将PID的信息列出</span><br></pre></td></tr></table></figure>
+
+<ol start="14">
+<li><h5 id="kill-命令用于终止进程，参数："><a href="#kill-命令用于终止进程，参数：" class="headerlink" title="kill 命令用于终止进程，参数："></a>kill 命令用于终止进程，参数：</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">kill -signal PID</span><br><span class="line"></span><br><span class="line">1：SIGHUP，启动被终止的进程</span><br><span class="line">2：SIGINT，相当于输入ctrl+c，中断一个程序的进行</span><br><span class="line">9：SIGKILL，强制中断一个进程的进行</span><br><span class="line">15：SIGTERM，以正常的结束进程方式来终止进程</span><br><span class="line">17：SIGSTOP，相当于输入ctrl+z，暂停一个进程s的进行</span><br></pre></td></tr></table></figure>
+
+<ol start="15">
+<li><h5 id="killall-命令和参数："><a href="#killall-命令和参数：" class="headerlink" title="killall 命令和参数："></a>killall 命令和参数：</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">skillall [-iIe] [command name]</span><br><span class="line"></span><br><span class="line">-i ：交互式的意思，若需要删除时，会询问用户</span><br><span class="line">-e ：表示后面接的command name要一致，但command name不能超过15个字符</span><br><span class="line">-I ：命令名称忽略大小写</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">例如：</span></span><br><span class="line">killall -SIGHUP syslogd # 重新启动syslogd</span><br></pre></td></tr></table></figure>
+
+<ol start="16">
+<li><h5 id="crontab命令是启动linux定时任务的服务"><a href="#crontab命令是启动linux定时任务的服务" class="headerlink" title="crontab命令是启动linux定时任务的服务"></a>crontab命令是启动linux定时任务的服务</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">service cron start # 启动cronjob</span><br><span class="line">service cron stop # 停止cronjob</span><br><span class="line">service cron restart #  重启cronjob</span><br><span class="line">crontab -e # 编辑cronjob任务</span><br></pre></td></tr></table></figure>
+
+<ol start="17">
+<li><h5 id="free-命令"><a href="#free-命令" class="headerlink" title="free 命令"></a>free 命令</h5>用于显示Linux系统中空闲的、已用的物理内存及swap内存,及被内核使用的buffer：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">free [参数]</span><br><span class="line">-b 　以Byte为单位显示内存使用情况。 </span><br><span class="line">-k 　以KB为单位显示内存使用情况。 </span><br><span class="line">-m 　以MB为单位显示内存使用情况。</span><br><span class="line">-g   以GB为单位显示内存使用情况。 </span><br><span class="line">-o 　不显示缓冲区调节列。 </span><br><span class="line">-s&lt;间隔秒数&gt; 　持续观察内存使用状况。 s</span><br><span class="line">-t 　显示内存总和列。 </span><br><span class="line">-V 　显示版本信息。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="18">
+<li><h5 id="top-命令是Linux下常用的性能分析工具"><a href="#top-命令是Linux下常用的性能分析工具" class="headerlink" title="top 命令是Linux下常用的性能分析工具"></a>top 命令是Linux下常用的性能分析工具</h5>能够实时显示系统中各个进程的资源占用状况，类似于Windows的任务管理器：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">top [参数]</span><br><span class="line">-b 批处理</span><br><span class="line">-c 显示完整的治命令</span><br><span class="line">-I 忽略失效过程</span><br><span class="line">-s 保密模式</span><br><span class="line">-S 累积模式s</span><br><span class="line">-i&lt;时间&gt; 设置间隔时间</span><br><span class="line">-u&lt;用户名&gt; 指定用户名</span><br><span class="line">-p&lt;进程号&gt; 指定进程</span><br><span class="line">-n&lt;次数&gt; 循环显示的次数</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="三-权限相关命令："><a href="#三-权限相关命令：" class="headerlink" title="三. 权限相关命令："></a><strong>三. 权限相关命令：</strong></h4><ol start="19">
+<li><h5 id="chmod命令："><a href="#chmod命令：" class="headerlink" title="chmod命令："></a>chmod命令：</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">chmod [-R] xyz 文件或目录</span><br><span class="line">-R：进行递归的持续更改，即连同子目录下的所有文件都会更改</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">同时，<span class="built_in">chmod</span>还可以使用u（user）、g（group）、o（other）、a（all）和+（加入）、-（删除）、=（设置）跟rwx搭配来对文件的权限进行更改，编号是各种权限的数字代码，示例：</span></span><br><span class="line">chmod 0755 file # 把file的文件权限改变为-rxwr-xr-x</span><br><span class="line">chmod g+w file # 向file的文件权限中加入用户组可写权限</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="20">
+<li><h5 id="chown命令改变文件所有者："><a href="#chown命令改变文件所有者：" class="headerlink" title="chown命令改变文件所有者："></a>chown命令改变文件所有者：</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">chown [para]... [owner][:[group]] file...</span><br><span class="line">  -c 显示更改的部分的信息</span><br><span class="line"></span><br><span class="line">　-f 忽略错误信息</span><br><span class="line"></span><br><span class="line">　-h 修复符号链接</span><br><span class="line"></span><br><span class="line">　-R 处理指定目录以及其子目录下的所有文件</span><br><span class="line"></span><br><span class="line">　-v 显示详细的处理信息</span><br><span class="line"></span><br><span class="line">　-deference 作用于符号链接的指向，而不是链接文件本身</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="21">
+<li><h5 id="chgrp命令，改变文件所属组："><a href="#chgrp命令，改变文件所属组：" class="headerlink" title="chgrp命令，改变文件所属组："></a>chgrp命令，改变文件所属组：</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-c 当发生改变时输出调试信息</span><br><span class="line">-f 不显示错误信息</span><br><span class="line">-R 处理指定目录以及其子目录下的所有文件</span><br><span class="line">-v 运行时显示详细的处理信息</span><br><span class="line">--dereference 作用于符号链接的指向，而不是符号链接本身</span><br><span class="line">--no-dereference 作用于符号链接本身</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="22">
+<li><h5 id="useradd-命令建立用户账号："><a href="#useradd-命令建立用户账号：" class="headerlink" title="useradd 命令建立用户账号："></a>useradd 命令建立用户账号：</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">useradd [-mMnr][-c &lt;备注&gt;][-d &lt;登入目录&gt;][-e &lt;有效期限&gt;][-f &lt;缓冲天数&gt;][-g &lt;群组&gt;][-G &lt;群组&gt;][-s ][-u ][用户帐号] </span><br><span class="line"></span><br><span class="line">    -c #&lt;备注&gt; 　加上备注文字。备注文字会保存在passwd的备注栏位中。　</span><br><span class="line">　　-d #&lt;登入目录&gt; 　指定用户登入时的启始目录。</span><br><span class="line">　　-D #　变更预设值．</span><br><span class="line">　　-e # &lt;有效期限&gt; 　指定帐号的有效期限。</span><br><span class="line">　　-f # &lt;缓冲天数&gt; 　指定在密码过期后多少天即关闭该帐号。</span><br><span class="line">　　-g # &lt;群组&gt; 　指定用户所属的群组。</span><br><span class="line">　　-G # &lt;群组&gt; 　指定用户所属的附加群组。</span><br><span class="line">　　-m # 自动建立用户的登入目录。</span><br><span class="line">　　-M # 不要自动建立用户的登入目录。</span><br><span class="line">　　-n # 取消建立以用户名称为名的群组．</span><br><span class="line">　　-r # 建立系统帐号。</span><br><span class="line">　　-s # 指定用户登入后所使用的shell。</span><br><span class="line">　　-u # 指定用户ID。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="23">
+<li><h5 id="usermod-修改用户信息："><a href="#usermod-修改用户信息：" class="headerlink" title="usermod 修改用户信息："></a>usermod 修改用户信息：</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">usermod -h</span><br><span class="line">usermod [options] LOGIN</span><br><span class="line"> -c #后面接账号的说明，即/etc/passwd第五栏的说明栏，可以加入一些账号的说明</span><br><span class="line"> -d #后面接账号的家目录，即修改/etc/passwd的第六栏</span><br><span class="line"> -e #后面接日期，格式是YYYY-MM-DD也就是在/etc/shadow内的第八栏</span><br><span class="line"> -f #后面接天数，修改shadow的第七栏</span><br><span class="line"> -g #后面接主群组，修改/etc/passwd的第四个字段，即是GID的字段</span><br><span class="line"> -G #后面接附加群组，修改这个使用者能够支持的群组，修改的是/etc/group</span><br><span class="line"> -a #与 -G 合用，可增加附加群组的支持而非设定</span><br><span class="line"> -l #后面接账号名称。修改账号名称，/etc/passwd的第一栏</span><br><span class="line"> -s #后面接Shell的文件，例如/bin/bash或/bin/csh等等</span><br><span class="line"> -u #后面接 UID 数字，修改用户的UID /etc/passwd第三栏</span><br><span class="line"> -L #暂时将用户的密码冻结，让他无法登入。其实就是在/etc/shadow的密码栏前面加上了“!”</span><br><span class="line"> -U #将/etc/shadow 密码栏的“!”去掉</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="24">
+<li><h5 id="userdel-删除用户："><a href="#userdel-删除用户：" class="headerlink" title="userdel 删除用户："></a>userdel 删除用户：</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">userdel [options] LOGIN</span><br><span class="line">-f # 强制删除，包括用户的一切相关内容，这个参数是危险的参数，不建议大家使用。详细说明看MAN</span><br><span class="line">-r # 删除用户的家目录和用户的邮件池</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="25">
+<li><h5 id="groupadd-命令用于将新组加入系统："><a href="#groupadd-命令用于将新组加入系统：" class="headerlink" title="groupadd　命令用于将新组加入系统："></a>groupadd　命令用于将新组加入系统：</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">groupadd [－g gid] [－o]] [－r] [－f] groupname</span><br><span class="line"></span><br><span class="line">－g gid：指定组ID号。</span><br><span class="line">－o：允许组ID号，不必惟一。</span><br><span class="line">－r：加入组ID号，低于499系统账号。</span><br><span class="line">－f：加入已经有的组时，发展程序退出。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="26">
+<li><h5 id="groupdel-命令删除组："><a href="#groupdel-命令删除组：" class="headerlink" title="groupdel　命令删除组："></a>groupdel　命令删除组：</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">＃　用于删除不再需要的组，如果指定的组中包含用户，则必须先删除组里面的用户&gt;以后，才能删除组</span><br><span class="line">groupdel [options] GROUP</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="27">
+<li><h5 id="sudo-用来以其他身份来执行命令，预设的身份为root"><a href="#sudo-用来以其他身份来执行命令，预设的身份为root" class="headerlink" title="sudo 用来以其他身份来执行命令，预设的身份为root:"></a>sudo 用来以其他身份来执行命令，预设的身份为root:</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">sudo(选项)(参数)</span><br><span class="line"></span><br><span class="line">-b：在后台执行指令；</span><br><span class="line">-h：显示帮助；</span><br><span class="line">-H：将HOME环境变量设为新身份的HOME环境变量；</span><br><span class="line">-k：结束密码的有效期限，也就是下次再执行sudo时便需要输入密码；。</span><br><span class="line">-l：列出目前用户可执行与无法执行的指令；</span><br><span class="line">-p：改变询问密码的提示符号；</span><br><span class="line">-s：执行指定的shell；</span><br><span class="line">-u&lt;用户&gt;：以指定的用户作为新的身份。若不加上此参数，则预设以root作为新的身份；</span><br><span class="line">-v：延长密码有效期限5分钟；</span><br><span class="line">-V ：显示版本信息。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="28">
+<li><h5 id="passwd-设置用户的密码："><a href="#passwd-设置用户的密码：" class="headerlink" title="passwd 设置用户的密码："></a>passwd 设置用户的密码：</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">passwd [OPTION...] &lt;accountName&gt;</span><br><span class="line">-k, --keep-tokens       keep non-expired authentication tokens</span><br><span class="line">-d, --delete            delete the password for the named account (root only)</span><br><span class="line">-l, --lock              lock the named account (root only)</span><br><span class="line">-u, --unlock            unlock the named account (root only)</span><br><span class="line">-f, --force             force operation</span><br><span class="line">-x, --maximum=DAYS      maximum password lifetime (root only)</span><br><span class="line">-n, --minimum=DAYS      minimum password lifetime (root only)</span><br><span class="line">-w, --warning=DAYS      number of days warning users receives before password expiration (root only)</span><br><span class="line">-i, --inactive=DAYS     number of days after password expiration when an account becomes disabled (root only)</span><br><span class="line">-S, --status            report password status on the named account (root)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="29">
+<li><h5 id="groups-显示用户所属组："><a href="#groups-显示用户所属组：" class="headerlink" title="groups 显示用户所属组："></a>groups 显示用户所属组：</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">groups # 默认显示当前用户的组</span><br><span class="line"></span><br><span class="line">groups hadoop2 # 显示hadoop2用户的组</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="四-文本查看编辑等命令"><a href="#四-文本查看编辑等命令" class="headerlink" title="四. 文本查看编辑等命令"></a><strong>四. 文本查看编辑等命令</strong></h4><ol start="30">
+<li><h5 id="vi-x2F-vim-是使用vi编辑器的命令："><a href="#vi-x2F-vim-是使用vi编辑器的命令：" class="headerlink" title="vi&#x2F;vim 是使用vi编辑器的命令："></a>vi&#x2F;vim 是使用vi编辑器的命令：</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vi /var/log/aa.log # 打开 /var/log/aa.log文件并编辑</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="31">
+<li><h5 id="cat命令"><a href="#cat命令" class="headerlink" title="cat命令"></a>cat命令</h5>用途是连接文件或标准输入并打印。这个命令常用来显示文件内容，或者将几个文件连接起来显示，或者从标准输入读取内容并显示，它常与重定向符号配合使用。</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> cat [选项] [文件]...</span><br><span class="line">-A, --show-all           等价于 -vET</span><br><span class="line">-b, --number-nonblank    对非空输出行编号</span><br><span class="line">-e                       等价于 -vE</span><br><span class="line">-E, --show-ends          在每行结束处显示 $</span><br><span class="line">-n, --number     对输出的所有行编号,由1开始对所有输出的行数编号</span><br><span class="line">-s, --squeeze-blank  有连续两行以上的空白行，就代换为一行的空白行 </span><br><span class="line">-t                       与 -vT 等价</span><br><span class="line">-T, --show-tabs          将跳格字符显示为 ^I</span><br><span class="line">-u                       (被忽略)</span><br><span class="line">-v, --show-nonprinting   使用 ^ 和 M- 引用，除了 LFD 和 TAB 之外</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="32">
+<li><h5 id="more-命令"><a href="#more-命令" class="headerlink" title="more 命令"></a>more 命令</h5>和cat的功能一样都是查看文件里的内容，但有所不同的是more可以按页来查看文件的内容，还支持直接跳转行等功能：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">more [-dlfpcsu ] [-num ] [+/ pattern] [+ linenum] [file ... ] </span><br><span class="line">命令参数：</span><br><span class="line">+n 从笫n行开始显示</span><br><span class="line">-n 定义屏幕大小为n行</span><br><span class="line">+/pattern 在每个档案显示前搜寻该字串（pattern），然后从该字串前两行之后开始显示 </span><br><span class="line">-c 从顶部清屏，然后显示</span><br><span class="line">-d 提示“Press space to continue，’q’ to quit（按空格键继续，按q键退出）”，禁用响铃功能</span><br><span class="line">-l 忽略Ctrl+l（换页）字符</span><br><span class="line">-p 通过清除窗口而不是滚屏来对文件进行换页，与-c选项相似</span><br><span class="line">-s 把连续的多个空行显示为一行</span><br><span class="line">-u 把文件内容中的下画线去掉</span><br><span class="line">常用操作命令：</span><br><span class="line">Enter 向下n行，需要定义。默认为1行</span><br><span class="line">Ctrl+F 向下滚动一屏</span><br><span class="line">空格键 向下滚动一屏</span><br><span class="line">Ctrl+B 返回上一屏</span><br><span class="line">= 输出当前行的行号</span><br><span class="line">：f 输出文件名和当前行的行号</span><br><span class="line">V 调用vi编辑器</span><br><span class="line">!命令 调用Shell，并执行命令 </span><br><span class="line">q 退出more</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="33">
+<li><h5 id="less命令"><a href="#less命令" class="headerlink" title="less命令"></a>less命令</h5>用法比起 more 更加的有弹性。在 more 的时候，我们并没有办法向前面翻， 只能往后面看，但若使用了 less 时，就可以使用 [pageup] [pagedown] 等按键的功能来往前往后翻看文件，更容易用来查看一个文件的内容！除此之外，在 less 里头可以拥有更多的搜索功能，不止可以向下搜，也可以向上搜。</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"> less [参数]  文件 </span><br><span class="line">-b &lt;缓冲区大小&gt; 设置缓冲区的大小</span><br><span class="line">-e 当文件显示结束后，自动离开</span><br><span class="line">-f 强迫打开特殊文件，例如外围设备代号、目录和二进制文件</span><br><span class="line">-g 只标志最后搜索的关键词</span><br><span class="line">-i 忽略搜索时的大小写</span><br><span class="line">-m 显示类似more命令的百分比</span><br><span class="line">-N 显示每行的行号</span><br><span class="line">-o &lt;文件名&gt; 将less 输出的内容在指定文件中保存起来</span><br><span class="line">-Q 不使用警告音</span><br><span class="line">-s 显示连续空行为一行</span><br><span class="line">-S 行过长时间将超出部分舍弃</span><br><span class="line">-x &lt;数字&gt; 将“tab”键显示为规定的数字空格</span><br><span class="line">/字符串：向下搜索“字符串”的功能</span><br><span class="line">?字符串：向上搜索“字符串”的功能</span><br><span class="line">n：重复前一个搜索（与 / 或 ? 有关）</span><br><span class="line">N：反向重复前一个搜索（与 / 或 ? 有关）</span><br><span class="line">b 向后翻一页</span><br><span class="line">d 向后翻半页</span><br><span class="line">h 显示帮助界面</span><br><span class="line">Q 退出less 命令</span><br><span class="line">u 向前滚动半页</span><br><span class="line">y 向前滚动一行</span><br><span class="line">空格键 滚动一行</span><br><span class="line">回车键 滚动一页</span><br><span class="line">[pagedown]： 向下翻动一页</span><br><span class="line">[pageup]： 向上翻动一页</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="34">
+<li><h5 id="tail-命令"><a href="#tail-命令" class="headerlink" title="tail 命令"></a>tail 命令</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">从指定点开始将文件写到标准输出.使用<span class="built_in">tail</span>命令的-f选项可以方便的查阅正在改变的日志文件,<span class="built_in">tail</span> -f filename会把filename里最尾部的内容显示在屏幕上,并且不但刷新,使你看到最新的文件内容.</span> </span><br><span class="line">tail[必要参数][选择参数][文件]   </span><br><span class="line"></span><br><span class="line">-f 循环读取</span><br><span class="line">-q 不显示处理信息</span><br><span class="line">-v 显示详细的处理信息</span><br><span class="line">-c&lt;数目&gt; 显示的字节数</span><br><span class="line">-n&lt;行数&gt; 显示行数</span><br><span class="line">--pid=PID 与-f合用,表示在进程ID,PID死掉之后结束. </span><br><span class="line">-q, --quiet, --silent 从不输出给出文件名的首部 </span><br><span class="line">-s, --sleep-interval=S 与-f合用,表示在每次反复的间隔休眠S秒 </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="35">
+<li><h5 id="head-命令"><a href="#head-命令" class="headerlink" title="head 命令"></a>head 命令</h5>用于显示档案的开头至标准输出中，默认head命令打印其相应文件的开头10行：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">head [参数]... [文件]...  </span><br><span class="line">-q 隐藏文件名</span><br><span class="line">-v 显示文件名</span><br><span class="line">-c&lt;字节&gt; 显示字节数</span><br><span class="line">-n&lt;行数&gt; 显示的行数</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="36">
+<li><h5 id="diff-命令"><a href="#diff-命令" class="headerlink" title="diff 命令"></a>diff 命令</h5>用于比较两个文件或目录的不同：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"> diff[参数][文件1或目录1][文件2或目录2]</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">diff命令能比较单个文件或者目录内容。如果指定比较的是文件，则只有当输入为文本文件时才有效。以逐行的方式，比较文本文件的异同处。如果指定比较的是目录的的时候，diff 命令会比较两个目录下名字相同的</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">文本文件。列出不同的二进制文件、公共子目录和只在一个目录出现的文件。</span></span><br><span class="line"></span><br><span class="line">-a or --text 　#diff预设只会逐行比较文本文件。</span><br><span class="line">-b or --ignore-space-change 　#不检查空格字符的不同。</span><br><span class="line">-B or --ignore-blank-lines 　#不检查空白行。</span><br><span class="line">-c 　#显示全部内文，并标出不同之处。</span><br><span class="line">-C or --context 　#与执行&quot;-c-&quot;指令相同。</span><br><span class="line">-d or --minimal 　#使用不同的演算法，以较小的单位来做比较。</span><br><span class="line">-D or ifdef 　#此参数的输出格式可用于前置处理器巨集。</span><br><span class="line">-e or --ed 　#此参数的输出格式可用于ed的script文件。</span><br><span class="line">-f or -forward-ed 　#输出的格式类似ed的script文件，但按照原来文件的顺序来显示不同处。</span><br><span class="line">-H or --speed-large-files 　#比较大文件时，可加快速度。</span><br><span class="line">-l or --ignore-matching-lines 　#若两个文件在某几行有所不同，而这几行同时都包含了选项中指定的字符 or 字符串，则不显示这两个文件的差异。</span><br><span class="line">-i or --ignore-case 　#不检查大小写的不同。</span><br><span class="line">-l or --paginate 　#将结果交由pr程序来分页。</span><br><span class="line">-n or --rcs 　#将比较结果以RCS的格式来显示。</span><br><span class="line">-N or --new-file 　#在比较目录时，若文件A仅出现在某个目录中，预设会显示：Only in目录：文件A若使用-N参数，则diff会将文件A与一个空白的文件比较。</span><br><span class="line">-p 　#若比较的文件为C语言的程序码文件时，显示差异所在的函数名称。</span><br><span class="line">-P or --unidirectional-new-file 　#与-N类似，但只有当第二个目录包含了一个第一个目录所没有的文件时，才会将这个文件与空白的文件做比较。</span><br><span class="line">-q or --brief 　#仅显示有无差异，不显示详细的信息。</span><br><span class="line">-r or --recursive 　#比较子目录中的文件。</span><br><span class="line">-s or --report-identical-files 　#若没有发现任何差异，仍然显示信息。</span><br><span class="line">-S or --starting-file 　#在比较目录时，从指定的文件开始比较。</span><br><span class="line">-t or --expand-tabs 　#在输出时，将tab字符展开。</span><br><span class="line">-T or --initial-tab 　#在每行前面加上tab字符以便对齐。</span><br><span class="line">-u,-U or --unified= 　#以合并的方式来显示文件内容的不同。</span><br><span class="line">-v or --version 　#显示版本信息。</span><br><span class="line">-w or --ignore-all-space 　#忽略全部的空格字符。</span><br><span class="line">-W or --width 　#在使用-y参数时，指定栏宽。s</span><br><span class="line">-x or --exclude 　#不比较选项中所指定的文件 or 目录。</span><br><span class="line">-X or --exclude-from 　#您可以将文件 or 目录类型存成文本文件，然后在=中指定此文本文件。</span><br><span class="line">-y or --side-by-side 　#以并列的方式显示文件的异同之处。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="五、网络相关命令："><a href="#五、网络相关命令：" class="headerlink" title="五、网络相关命令："></a><strong>五、网络相关命令：</strong></h4><ol start="37">
+<li><h5 id="ping-用于确定主机与外部连接状态："><a href="#ping-用于确定主机与外部连接状态：" class="headerlink" title="ping 用于确定主机与外部连接状态："></a>ping 用于确定主机与外部连接状态：</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">ping [参数] [主机名或IP地址]</span><br><span class="line">-d 使用Socket的SO_DEBUG功能。</span><br><span class="line">-f  极限检测。大量且快速地送网络封包给一台机器，看它的回应。</span><br><span class="line">-n 只输出数值。</span><br><span class="line">-q 不显示任何传送封包的信息，只显示最后的结果。</span><br><span class="line">-r 忽略普通的Routing Table，直接将数据包送到远端主机上。通常是查看本机的网络接口是否有问题。</span><br><span class="line">-R 记录路由过程。</span><br><span class="line">-v 详细显示指令的执行过程。</span><br><span class="line">&lt;p&gt;-c 数目：在发送指定数目的包后停止。</span><br><span class="line">-i 秒数：设定间隔几秒送一个网络封包给一台机器，预设值是一秒送一次。</span><br><span class="line">-I 网络界面：使用指定的网络界面送出数据包。</span><br><span class="line">-l 前置载入：设置在送出要求信息之前，先行发出的数据包。</span><br><span class="line">-p 范本样式：设置填满数据包的范本样式。</span><br><span class="line">-s 字节数：指定发送的数据字节数，预设值是56，加上8字节的ICMP头，一共是64ICMP数据字节。</span><br><span class="line">-t 存活数值：设置存活数值TTL的大小。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="38">
+<li><h5 id="ssh-命令用于远程登录上Linux主机："><a href="#ssh-命令用于远程登录上Linux主机：" class="headerlink" title="ssh 命令用于远程登录上Linux主机："></a>ssh 命令用于远程登录上Linux主机：</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh [-l login_name] [-p port] [user@]hostname</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="39">
+<li><h5 id="scp-命令"><a href="#scp-命令" class="headerlink" title="scp 命令"></a>scp 命令</h5>是secure copy的简写，用于在Linux下进行远程拷贝文件的命令，和它类似的命令有cp，不过cp只是在本机进行拷贝不能跨服务器，而且scp传输是加密的：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">scp [参数] [原路径] [目标路径]</span><br><span class="line"></span><br><span class="line">-1 强制scp命令使用协议ssh1 </span><br><span class="line">-2 强制scp命令使用协议ssh2 </span><br><span class="line">-4 强制scp命令只使用IPv4寻址 </span><br><span class="line">-6 强制scp命令只使用IPv6寻址 </span><br><span class="line">-B 使用批处理模式（传输过程中不询问传输口令或短语） </span><br><span class="line">-C 允许压缩。（将-C标志传递给ssh，从而打开压缩功能） </span><br><span class="line">-p 保留原文件的修改时间，访问时间和访问权限。 </span><br><span class="line">-q 不显示传输进度条。 </span><br><span class="line">-r 递归复制整个目录。 </span><br><span class="line">-v 详细方式显示输出。scp和ssh(1)会显示出整个过程的调试信息。这些信息用于调试连接，验证和配置问题。 </span><br><span class="line">-c cipher 以cipher将数据传输进行加密，这个选项将直接传递给ssh。 </span><br><span class="line">-F ssh_config 指定一个替代的ssh配置文件，此参数直接传递给ssh。 </span><br><span class="line">-i identity_file 从指定文件中读取传输时使用的密钥文件，此参数直接传递给ssh。 </span><br><span class="line">-l limit 限定用户所能使用的带宽，以Kbit/s为单位。 </span><br><span class="line">-o ssh_option 如果习惯于使用ssh_config(5)中的参数传递方式， </span><br><span class="line">-P port 注意是大写的P, port是指定数据传输用到的端口号 </span><br><span class="line">-S program 指定加密传输时所使用的程序。此程序必须能够理解ssh(1)的选项。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="40">
+<li><h5 id="telnet-命令用来远程登录操作："><a href="#telnet-命令用来远程登录操作：" class="headerlink" title="telnet 命令用来远程登录操作："></a>telnet 命令用来远程登录操作：</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"> telnet[参数][主机]</span><br><span class="line"></span><br><span class="line">-8 允许使用8位字符资料，包括输入与输出。</span><br><span class="line">-a 尝试自动登入远端系统。</span><br><span class="line">-b&lt;主机别名&gt; 使用别名指定远端主机名称。</span><br><span class="line">-c 不读取用户专属目录里的.telnetrc文件。</span><br><span class="line">-d 启动排错模式。</span><br><span class="line">-e&lt;脱离字符&gt; 设置脱离字符。</span><br><span class="line">-E 滤除脱离字符。</span><br><span class="line">-f 此参数的效果和指定&quot;-F&quot;参数相同。</span><br><span class="line">-F 使用Kerberos V5认证时，加上此参数可把本地主机的认证数据上传到远端主机。</span><br><span class="line">-k&lt;域名&gt; 使用Kerberos认证时，加上此参数让远端主机采用指定的领域名，而非该主机的域名。</span><br><span class="line">-K 不自动登入远端主机。</span><br><span class="line">-l&lt;用户名称&gt; 指定要登入远端主机的用户名称。</span><br><span class="line">-L 允许输出8位字符资料。</span><br><span class="line">-n&lt;记录文件&gt; 指定文件记录相关信息。</span><br><span class="line">-r 使用类似rlogin指令的用户界面。</span><br><span class="line">-S&lt;服务类型&gt; 设置telnet连线所需的IP TOS信息。</span><br><span class="line">-x 假设主机有支持数据加密的功能，就使用它。</span><br><span class="line">-X&lt;认证形态&gt; 关闭指定的认证形态。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="41">
+<li><h5 id="wget-是从远程下载的工具："><a href="#wget-是从远程下载的工具：" class="headerlink" title="wget 是从远程下载的工具："></a>wget 是从远程下载的工具：</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line">wget [参数] [URL地址]</span><br><span class="line"></span><br><span class="line">启动参数：</span><br><span class="line">-V, –version 显示wget的版本后退出</span><br><span class="line">-h, –help 打印语法帮助</span><br><span class="line">-b, –background 启动后转入后台执行</span><br><span class="line">-e, –execute=COMMAND 执行`.wgetrc’格式的命令，wgetrc格式参见/etc/wgetrc或~/.wgetrc</span><br><span class="line"></span><br><span class="line">记录和输入文件参数：</span><br><span class="line">-o, –output-file=FILE 把记录写到FILE文件中</span><br><span class="line">-a, –append-output=FILE 把记录追加到FILE文件中</span><br><span class="line">-d, –debug 打印调试输出</span><br><span class="line">-q, –quiet 安静模式(没有输出)</span><br><span class="line">-v, –verbose 冗长模式(这是缺省设置)</span><br><span class="line">-nv, –non-verbose 关掉冗长模式，但不是安静模式</span><br><span class="line">-i, –input-file=FILE 下载在FILE文件中出现的URLs</span><br><span class="line">-F, –force-html 把输入文件当作HTML格式文件对待</span><br><span class="line">-B, –base=URL 将URL作为在-F -i参数指定的文件中出现的相对链接的前缀</span><br><span class="line">–sslcertfile=FILE 可选客户端证书</span><br><span class="line">–sslcertkey=KEYFILE 可选客户端证书的KEYFILE</span><br><span class="line">–egd-file=FILE 指定EGD socket的文件名</span><br><span class="line"></span><br><span class="line">下载参数：</span><br><span class="line">–bind-address=ADDRESS 指定本地使用地址(主机名或IP，当本地有多个IP或名字时使用)</span><br><span class="line">-t, –tries=NUMBER 设定最大尝试链接次数(0 表示无限制).</span><br><span class="line">-O –output-document=FILE 把文档写到FILE文件中</span><br><span class="line">-nc, –no-clobber 不要覆盖存在的文件或使用.#前缀</span><br><span class="line">-c, –continue 接着下载没下载完的文件</span><br><span class="line">–progress=TYPE 设定进程条标记</span><br><span class="line">-N, –timestamping 不要重新下载文件除非比本地文件新</span><br><span class="line">-S, –server-response 打印服务器的回应</span><br><span class="line">–spider 不下载任何东西</span><br><span class="line">-T, –timeout=SECONDS 设定响应超时的秒数</span><br><span class="line">-w, –wait=SECONDS 两次尝试之间间隔SECONDS秒</span><br><span class="line">–waitretry=SECONDS 在重新链接之间等待1…SECONDS秒</span><br><span class="line">–random-wait 在下载之间等待0…2*WAIT秒</span><br><span class="line">-Y, –proxy=on/off 打开或关闭代理</span><br><span class="line">-Q, –quota=NUMBER 设置下载的容量限制</span><br><span class="line">–limit-rate=RATE 限定下载输率</span><br><span class="line"></span><br><span class="line">目录参数：</span><br><span class="line">-nd –no-directories 不创建目录</span><br><span class="line">-x, –force-directories 强制创建目录</span><br><span class="line">-nH, –no-host-directories 不创建主机目录</span><br><span class="line">-P, –directory-prefix=PREFIX 将文件保存到目录 PREFIX/…</span><br><span class="line">–cut-dirs=NUMBER 忽略 NUMBER层远程目录</span><br><span class="line"></span><br><span class="line">HTTP 选项参数：</span><br><span class="line">–http-user=USER 设定HTTP用户名为 USER.</span><br><span class="line">–http-passwd=PASS 设定http密码为 PASS</span><br><span class="line">-C, –cache=on/off 允许/不允许服务器端的数据缓存 (一般情况下允许)</span><br><span class="line">-E, –html-extension 将所有text/html文档以.html扩展名保存</span><br><span class="line">–ignore-length 忽略 `Content-Length’头域</span><br><span class="line">–header=STRING 在headers中插入字符串 STRING</span><br><span class="line">–proxy-user=USER 设定代理的用户名为 USER</span><br><span class="line">–proxy-passwd=PASS 设定代理的密码为 PASS</span><br><span class="line">–referer=URL 在HTTP请求中包含 `Referer: URL’头</span><br><span class="line">-s, –save-headers 保存HTTP头到文件</span><br><span class="line">-U, –user-agent=AGENT 设定代理的名称为 AGENT而不是 Wget/VERSION</span><br><span class="line">–no-http-keep-alive 关闭 HTTP活动链接 (永远链接)</span><br><span class="line">–cookies=off 不使用 cookies</span><br><span class="line">–load-cookies=FILE 在开始会话前从文件 FILE中加载cookie</span><br><span class="line">–save-cookies=FILE 在会话结束后将 cookies保存到 FILE文件中</span><br><span class="line"></span><br><span class="line">FTP 选项参数：</span><br><span class="line">-nr, –dont-remove-listing 不移走 `.listing’文件</span><br><span class="line">-g, –glob=on/off 打开或关闭文件名的 globbing机制</span><br><span class="line">–passive-ftp 使用被动传输模式 (缺省值).</span><br><span class="line">–active-ftp 使用主动传输模式</span><br><span class="line">–retr-symlinks 在递归的时候，将链接指向文件(而不是目录)</span><br><span class="line"></span><br><span class="line">递归下载参数：</span><br><span class="line">-r, –recursive 递归下载－－慎用!</span><br><span class="line">-l, –level=NUMBER 最大递归深度 (inf 或 0 代表无穷)</span><br><span class="line">–delete-after 在现在完毕后局部删除文件</span><br><span class="line">-k, –convert-links 转换非相对链接为相对链接</span><br><span class="line">-K, –backup-converted 在转换文件X之前，将之备份为 X.orig</span><br><span class="line">-m, –mirror 等价于 -r -N -l inf -nr</span><br><span class="line">-p, –page-requisites 下载显示HTML文件的所有图片</span><br><span class="line"></span><br><span class="line">递归下载中的包含和不包含(accept/reject)：</span><br><span class="line">-A, –accept=LIST 分号分隔的被接受扩展名的列表</span><br><span class="line">-R, –reject=LIST 分号分隔的不被接受的扩展名的列表</span><br><span class="line">-D, –domains=LIST 分号分隔的被接受域的列表</span><br><span class="line">–exclude-domains=LIST 分号分隔的不被接受的域的列表</span><br><span class="line">–follow-ftp 跟踪HTML文档中的FTP链接</span><br><span class="line">–follow-tags=LIST 分号分隔的被跟踪的HTML标签的列表</span><br><span class="line">-G, –ignore-tags=LIST 分号分隔的被忽略的HTML标签的列表</span><br><span class="line">-H, –span-hosts 当递归时转到外部主机</span><br><span class="line">-L, –relative 仅仅跟踪相对链接</span><br><span class="line">-I, –include-directories=LIST 允许目录的列表</span><br><span class="line">-X, –exclude-directories=LIST 不被包含目录的列表</span><br><span class="line">-np, –no-parent 不要追溯到父目录</span><br><span class="line">wget -S –spider url 不下载只显示过程</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="42">
+<li><h5 id="ifconfig命令"><a href="#ifconfig命令" class="headerlink" title="ifconfig命令"></a>ifconfig命令</h5>用来查看和配置网络设备。当网络环境发生改变时可通过此命令对网络进行相应的配置：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"> ifconfig [网络设备] [参数]</span><br><span class="line"></span><br><span class="line">up 启动指定网络设备/网卡。</span><br><span class="line">down 关闭指定网络设备/网卡。该参数可以有效地阻止通过指定接口的IP信息流，如果想永久地关闭一个接口，我们还需要从核心路由表中将该接口的路由信息全部删除。</span><br><span class="line">arp 设置指定网卡是否支持ARP协议。</span><br><span class="line">-promisc 设置是否支持网卡的promiscuous模式，如果选择此参数，网卡将接收网络中发给它所有的数据包</span><br><span class="line">-allmulti 设置是否支持多播模式，如果选择此参数，网卡将接收网络中所有的多播数据包</span><br><span class="line">-a 显示全部接口信息</span><br><span class="line">-s 显示摘要信息（类似于 netstat -i）</span><br><span class="line">add 给指定网卡配置IPv6地址</span><br><span class="line">del 删除指定网卡的IPv6地址</span><br><span class="line">&lt;硬件地址&gt; 配置网卡最大的传输单元</span><br><span class="line">mtu&lt;字节数&gt; 设置网卡的最大传输单元 (bytes)</span><br><span class="line">netmask&lt;子网掩码&gt; 设置网卡的子网掩码。掩码可以是有前缀0x的32位十六进制数，也可以是用点分开的4个十进制数。如果不打算将网络分成子网，可以不管这一选项；如果要使用子网，那么请记住，网络中每一个系统必须有相同子网掩码。</span><br><span class="line">tunel 建立隧道</span><br><span class="line">dstaddr 设定一个远端地址，建立点对点通信</span><br><span class="line">-broadcast&lt;地址&gt; 为指定网卡设置广播协议</span><br><span class="line">-pointtopoint&lt;地址&gt; 为网卡设置点对点通讯协议</span><br><span class="line">multicast 为网卡设置组播标志</span><br><span class="line">address 为网卡设置IPv4地址</span><br><span class="line">txqueuelen&lt;长度&gt; 为网卡设置传输列队的长度</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="43">
+<li><h5 id="route命令"><a href="#route命令" class="headerlink" title="route命令"></a>route命令</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> route [-f] [-p] [Command [Destination] [mask Netmask] [Gateway] [metric Metric]] [if Interface]] </span><br><span class="line">-c  # 显示更多信息</span><br><span class="line">-n  # 不解析名字</span><br><span class="line">-v  # 显示详细的处理信息</span><br><span class="line">-F  # 显示发送信息</span><br><span class="line">-C # 显示路由缓存</span><br><span class="line">-f  # 清除所有网关入口的路由表。 </span><br><span class="line">-p # 与 add 命令一起使用时使路由具有永久性。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="六、-搜索文件："><a href="#六、-搜索文件：" class="headerlink" title="六、 搜索文件："></a><strong>六、 搜索文件：</strong></h4><ol start="44">
+<li><h5 id="whereis-命令："><a href="#whereis-命令：" class="headerlink" title="whereis 命令："></a>whereis 命令：</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">whereis命令只能用于程序名的搜索，而且只搜索二进制文件（参数-b）、man说明文件（参数-m）和源代码文件（参数-s）。如果省略参数，则返回所有信息。和find相比，whereis查找的速度非常快，这是因为linux系统会将 系统内的所有文件都记录在一个数据库文件中，当使用whereis和locate时，会从数据库中查找数据，而不是像find命令那样，通过遍历硬盘来查找，效率自然会很高。 但是该数据库文件并不是实时更新，默认情况下时一星期更新一次，因此，我们在用whereis和locate 查找文件时，有时会找到已经被删除的数据，或者刚刚建立文件，却无法查找到，原因就是因为数据库文件没有被更新。</span> </span><br><span class="line"></span><br><span class="line"> whereis [-bmsu] [BMS 目录名 -f ] 文件名</span><br><span class="line"> -b 定位可执行文件。</span><br><span class="line">　-m 定位帮助文件。</span><br><span class="line">　-s 定位源代码文件。</span><br><span class="line">　-u 搜索默认路径下除可执行文件、源代码文件、帮助文件以外的其它文件。</span><br><span class="line">　-B 指定搜索可执行文件的路径。</span><br><span class="line">　-M 指定搜索帮助文件的路径。</span><br><span class="line">　-S 指定搜索源代码文件的路径。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="45">
+<li><h5 id="locate命令"><a href="#locate命令" class="headerlink" title="locate命令"></a>locate命令</h5></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">＃　locate命令可以在搜寻数据库时快速找到档案，数据库由updatedb程序来更新，updatedb是由cron daemon周期性建立的，locate命令在搜寻数据库时比由整个由硬盘资料来搜寻资料来得快，但较差劲的是locate所找到的档案若是最近才建立或 刚更名的，可能会找不到，在内定值中，updatedb每天会跑一次，可以由修改crontab来更新设定值。(etc/crontab)</span><br><span class="line"></span><br><span class="line">Locate [选择参数] [样式]</span><br><span class="line">-e   将排除在寻找的范围之外。</span><br><span class="line">-1  如果 是 1．则启动安全模式。在安全模式下，使用者不会看到权限无法看到 的档案。这会始速度减慢，因为 locate 必须至实际的档案系统中取得档案的 权限资料。</span><br><span class="line">-f   将特定的档案系统排除在外，例如我们没有到理要把 proc 档案系统中的档案 放在资料库中。</span><br><span class="line">-q  安静模式，不会显示任何错误讯息。</span><br><span class="line">-n 至多显示 n个输出。</span><br><span class="line">-r 使用正规运算式 做寻找的条件。</span><br><span class="line">-o 指定资料库存的名称。</span><br><span class="line">-d 指定资料库的路径</span><br><span class="line">-h 显示辅助讯息</span><br><span class="line">-V 显示程式的版本讯息</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="46">
+<li><h5 id="which命令"><a href="#which命令" class="headerlink" title="which命令"></a>which命令</h5>在PATH变量指定的路径中，搜索某个系统命令的位置，并且返回第一个搜索结果：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">which 可执行文件名称 </span><br><span class="line">-n 　指定文件名长度，指定的长度必须大于或等于所有文件中最长的文件名。</span><br><span class="line">-p 　与-n参数相同，但此处的包括了文件的路径。</span><br><span class="line">-w 　指定输出时栏位的宽度。</span><br><span class="line">-V 　显示版本信息</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>七、 其他：</strong></p>
+<ol start="47">
+<li><h5 id="grep命令"><a href="#grep命令" class="headerlink" title="grep命令"></a>grep命令</h5></li>
+</ol>
+<p>该命令常用于分析一行的信息，若当中有我们所需要的信息，就将该行显示出来，该命令通常与管道命令一起使用，用于对一些命令的输出进行筛选加工等等，比如可以加在ps, tail, cat后面</p>
+<p>它的简单语法为</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">grep [-acinv] [--color=auto] &#x27;查找字符串&#x27; filename</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="48">
+<li><h5 id="clear-命令"><a href="#clear-命令" class="headerlink" title="clear 命令"></a>clear 命令</h5><p>用于清除终端屏幕上现有的文字内容</p>
+</li>
+<li><h5 id="date-命令"><a href="#date-命令" class="headerlink" title="date 命令"></a>date 命令</h5><p>用于显示或设定时间：</p>
+</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">date [参数]... [+格式]</span><br><span class="line"></span><br><span class="line">必要参数:</span><br><span class="line"><span class="meta prompt_">%</span><span class="language-bash">H 小时(以00-23来表示)。</span> </span><br><span class="line"><span class="meta prompt_">%</span><span class="language-bash">I 小时(以01-12来表示)。</span> </span><br><span class="line"><span class="meta prompt_">%</span><span class="language-bash">K 小时(以0-23来表示)。</span> </span><br><span class="line"><span class="meta prompt_">%</span><span class="language-bash">l 小时(以0-12来表示)。</span> </span><br><span class="line"><span class="meta prompt_">%</span><span class="language-bash">M 分钟(以00-59来表示)。</span> </span><br><span class="line"><span class="meta prompt_">%</span><span class="language-bash">P AM或PM。</span> </span><br><span class="line"><span class="meta prompt_">%</span><span class="language-bash">r 时间(含时分秒，小时以12小时AM/PM来表示)。</span> </span><br><span class="line"><span class="meta prompt_">%</span><span class="language-bash">s 总秒数。起算时间为1970-01-01 00:00:00 UTC。</span> </span><br><span class="line"><span class="meta prompt_">%</span><span class="language-bash">S 秒(以本地的惯用法来表示)。</span> </span><br><span class="line"><span class="meta prompt_">%</span><span class="language-bash">T 时间(含时分秒，小时以24小时制来表示)。</span> </span><br><span class="line"><span class="meta prompt_">%</span><span class="language-bash">X 时间(以本地的惯用法来表示)。</span> </span><br><span class="line"><span class="meta prompt_">%</span><span class="language-bash">Z 市区。</span> </span><br><span class="line"><span class="meta prompt_">%</span><span class="language-bash">a 星期的缩写。</span> </span><br><span class="line"><span class="meta prompt_">%</span><span class="language-bash">A 星期的完整名称。</span> </span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">%</span><span class="language-bash">b 月份英文名的缩写。</span> </span><br><span class="line"><span class="meta prompt_">%</span><span class="language-bash">B 月份的完整英文名称。</span> </span><br><span class="line"><span class="meta prompt_">%</span><span class="language-bash">c 日期与时间。只输入<span class="built_in">date</span>指令也会显示同样的结果。</span> </span><br><span class="line"><span class="meta prompt_">%</span><span class="language-bash">d 日期(以01-31来表示)。</span> </span><br><span class="line"><span class="meta prompt_">%</span><span class="language-bash">D 日期(含年月日)。</span> </span><br><span class="line"><span class="meta prompt_">%</span><span class="language-bash">j 该年中的第几天。</span> </span><br><span class="line"><span class="meta prompt_">%</span><span class="language-bash">m 月份(以01-12来表示)。</span> </span><br><span class="line"><span class="meta prompt_">%</span><span class="language-bash">U 该年中的周数。</span> </span><br><span class="line"><span class="meta prompt_">%</span><span class="language-bash">w 该周的天数，0代表周日，1代表周一，异词类推。</span> </span><br><span class="line"><span class="meta prompt_">%</span><span class="language-bash">x 日期(以本地的惯用法来表示)。</span> </span><br><span class="line"><span class="meta prompt_">%</span><span class="language-bash">y 年份(以00-99来表示)。</span> </span><br><span class="line"><span class="meta prompt_">%</span><span class="language-bash">Y 年份(以四位数来表示)。</span> </span><br><span class="line"><span class="meta prompt_">%</span><span class="language-bash">n 在显示时，插入新的一行。</span> </span><br><span class="line"><span class="meta prompt_">%</span><span class="language-bash">t 在显示时，插入tab。</span> </span><br><span class="line">MM 月份(必要) </span><br><span class="line">DD 日期(必要) </span><br><span class="line">hh 小时(必要) </span><br><span class="line">mm 分钟(必要)</span><br><span class="line">ss 秒(选择性) </span><br><span class="line"></span><br><span class="line">选择参数:</span><br><span class="line">-d&lt;字符串&gt; 　显示字符串所指的日期与时间。字符串前后必须加上双引号。 </span><br><span class="line">-s&lt;字符串&gt; 　根据字符串来设置日期与时间。字符串前后必须加上双引号。 </span><br><span class="line">-u 　显示GMT。 </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="50">
+<li><h5 id="ln-命令"><a href="#ln-命令" class="headerlink" title="ln 命令"></a>ln 命令</h5>为某一个文件在另外一个位置建立一个同步的链接</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">Linux文件系统中，有所谓的链接(link)，我们可以将其视为档案的别名，而链接又可分为两种 : 硬链接(hard link)与软链接(symbolic link)，硬链接的意思是一个档案可以有多个名称，而软链接的方式则是产生一个特殊的档案，该档案的内容是指向另一个档案的位置。硬链接是存在同一个文件系统中，而软链接却可以跨越不同的文件系统。</span><br><span class="line"></span><br><span class="line">软链接：</span><br><span class="line">1.软链接，以路径的形式存在。类似于Windows操作系统中的快捷方式</span><br><span class="line">2.软链接可以 跨文件系统 ，硬链接不可以</span><br><span class="line">3.软链接可以对一个不存在的文件名进行链接</span><br><span class="line">4.软链接可以对目录进行链接</span><br><span class="line"></span><br><span class="line">硬链接:</span><br><span class="line">1.硬链接，以文件副本的形式存在。但不占用实际空间。</span><br><span class="line">2.不允许给目录创建硬链接</span><br><span class="line">3.硬链接只有在同一个文件系统中才能创建</span><br><span class="line"></span><br><span class="line">ln [参数][源文件或目录][目标文件或目录]</span><br><span class="line"></span><br><span class="line">必要参数:</span><br><span class="line">-b 删除，覆盖以前建立的链接</span><br><span class="line">-d 允许超级用户制作目录的硬链接</span><br><span class="line">-f 强制执行</span><br><span class="line">-i 交互模式，文件存在则提示用户是否覆盖</span><br><span class="line">-n 把符号链接视为一般目录</span><br><span class="line">-s 软链接(符号链接)</span><br><span class="line">-v 显示详细的处理过程</span><br><span class="line"></span><br><span class="line">选择参数:</span><br><span class="line">-S “-S&lt;字尾备份字符串&gt; ”或 “--suffix=&lt;字尾备份字符串&gt;”</span><br><span class="line">-V “-V&lt;备份方式&gt;”或“--version-control=&lt;备份方式&gt;”</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/12/08/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" data-id="cljy06imy000avt1yg6yxgg03" data-title="Linux常用命令" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mysql/" rel="tag">Mysql</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Mysql基本命令" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/12/07/Mysql%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" class="article-date">
+  <time class="dt-published" datetime="2019-12-07T01:22:50.000Z" itemprop="datePublished">2019-12-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/">面试准备</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2019/12/07/Mysql%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">Mysql基本命令</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id="一、MySQL基本命令"><a href="#一、MySQL基本命令" class="headerlink" title="一、MySQL基本命令"></a>一、MySQL基本命令</h4><p>登录数据库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p </span><br></pre></td></tr></table></figure>
+
+<p>修改密码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqladmin -u用户名 -p旧密码 password 新密码</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="二、MySQL–常用命令"><a href="#二、MySQL–常用命令" class="headerlink" title="二、MySQL–常用命令"></a>二、MySQL–常用命令</h4><h5 id="1、创建数据库（Create）"><a href="#1、创建数据库（Create）" class="headerlink" title="1、创建数据库（Create）"></a>1、创建数据库（Create）</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">create database db_name;  -- 创建数据库</span><br><span class="line">show databases;           -- 显示所有的数据库</span><br><span class="line">drop database db_name;    -- 删除数据库</span><br><span class="line">use db_name;              -- 选择数据库</span><br><span class="line">create table tb_name (字段名 varchar(20), 字段名 char(1));   -- 创建数据表模板</span><br><span class="line">show tables;              -- 显示数据表</span><br><span class="line">desc tb_name；            -- 显示表结构</span><br><span class="line">drop table tb_name；      -- 删除表</span><br><span class="line">    </span><br><span class="line">例如：</span><br><span class="line"></span><br><span class="line">/*创建学生表*/</span><br><span class="line">create table Student(</span><br><span class="line">     Sno char(10) primary key,</span><br><span class="line">     Sname char(20) unique,</span><br><span class="line">     Ssex char(2),</span><br><span class="line">     Sage smallint,</span><br><span class="line">     Sdept char(20)</span><br><span class="line">)；</span><br></pre></td></tr></table></figure>
+
+<h5 id="2、插入数据（Insert）"><a href="#2、插入数据（Insert）" class="headerlink" title="2、插入数据（Insert）"></a>2、插入数据（Insert）</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">/*第一种形式无需指定要插入数据的列名，只需提供被插入的值即可：*/</span><br><span class="line">insert into tb_name values (value1,value2,value3,...);</span><br><span class="line">/*第二种形式需要指定列名及被插入的值：*/</span><br><span class="line">insert into tb_name (column1,column2,column3,...) values (value1,value2,value3,...);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">/*插入数据*/</span><br><span class="line"></span><br><span class="line">insert into Student values ( 20180001,张三,男,20,CS）;</span><br><span class="line"></span><br><span class="line">insert into Student values ( 20180002,李四,男,19,CS）;</span><br><span class="line"></span><br><span class="line">insert into Student (Sno,Sname,Ssex,Sage,Sdept) values ( 20191124,王五,男,18,MA）;</span><br><span class="line"></span><br><span class="line">insert into Student (Sno,Sname,Ssex,Sage,Sdept) values ( 20191123,赵六,男,20,IS）;</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="3、查询数据-Select"><a href="#3、查询数据-Select" class="headerlink" title="3、查询数据(Select)"></a>3、查询数据(Select)</h5><p>基本select语句：<br>      一个基本的select语句可分解成三个部分：查找什么数据（select）、从哪里查找（from）、查找的条件是什么（where）。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">select 语句的一般格式如下：</span><br><span class="line">               select &lt;目标列表达式列表&gt;</span><br><span class="line">               [into 新表名]</span><br><span class="line">               from 表名或视图名</span><br><span class="line">               [where &lt;条件&gt;]</span><br><span class="line">               [group by &lt;分组表达式&gt;]</span><br><span class="line">               [having &lt;条件&gt;]</span><br><span class="line">               [order by &lt;排序表达式&gt;[ASC|DESC]]</span><br></pre></td></tr></table></figure>
+
+
+
+<h6 id="一-查询指定的列"><a href="#一-查询指定的列" class="headerlink" title="(一)查询指定的列"></a>(一)查询指定的列</h6><p> 1⃣️查询表中所有列<br>在select语句指定列的位置上使用*号时，表示查询表的所有列。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from tb_name；</span><br></pre></td></tr></table></figure>
+
+<p>2⃣️查询表中指定的列<br>查询多列时，列名之间要用逗号隔开。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select tb_name.&lt;字符型字段&gt;,&lt;字符型字段&gt; ... from  tb_name;</span><br></pre></td></tr></table></figure>
+
+<p>3⃣️指定查询结果中的列标题<br>通过指定列标题（也叫列别名）可使输出结果更容易被人理解。<br>指定列标题时，可在列名之后使用AS子句；也可使用:列别名&#x3D;&lt;表达式&gt;的形式指定列标题。<br>              AS子句的格式为：列名或计算表达式 [AS] 列标题</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select &lt;字符型字段&gt; as 列标题1,&lt;字符型字段&gt; as 列标题2, &lt;字符型字段&gt; as 列标题3 from bt_name；</span><br></pre></td></tr></table></figure>
+
+<p> 4⃣️查询经过计算的列（即表达式的值）<br> 使用select对列进行查询时，不仅可以直接以列的原始值作为结果，而且还可以将列值进行计算后所得值作为查询结果，即select子句可以查询表达式的值,表达式可由列名、常量及算术运算符组成。<br>              查询结果计算列显示“无列名”,一般要给计算列加列标题。<br>              其中：表达式中可以使用的运算符有：加+、减-、乘*、除&#x2F;、取余%</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select &lt;字符型字段&gt;,&lt;字符型字段&gt;,列标题 = &lt;字符型字段&gt; * n from tb_name；</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h6 id="二-选择行：选择表中的部分行或全部行作为查询的结果"><a href="#二-选择行：选择表中的部分行或全部行作为查询的结果" class="headerlink" title="(二)选择行：选择表中的部分行或全部行作为查询的结果"></a>(二)选择行：选择表中的部分行或全部行作为查询的结果</h6><p>​       </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select [all|distinct] [top n[percent]]&lt;目标列表达式列表&gt; from 表名</span><br></pre></td></tr></table></figure>
+
+<p>​	1⃣️消除查询结果中的重复行<br>​	对于关系数据库来说，表中的每一行都必须是不同的(即无重复行)。但当对表进行查询时若只选择其中的某些列，查询结果中就可能会出现重复行。<br>在select语句中使用distinct关键字可以消除结果集中的重复行,</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select distinct &lt;字符型字段&gt;[,&lt;字符型字段&gt;,...] from tb_name；</span><br></pre></td></tr></table></figure>
+
+<p>​	2⃣️限制查询结果中的返回行数<br>  使用top选项可限制查询结果的返回行数，即返回指定个数的记录数。<br>  其中：n是一个正整数，表示返回查询结果集的前n行；若带percent关键字，则表示返回结果集的前n%行。<br>​              </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select  top n from tb_name; /*查询前 n 的数据*/</span><br><span class="line">select top n percent from tb_name; /*查询前 n% tb_name的数据*/</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h6 id="三-查询满足条件的行-用where子句实现条件查询"><a href="#三-查询满足条件的行-用where子句实现条件查询" class="headerlink" title="(三)查询满足条件的行: 用where子句实现条件查询"></a>(三)查询满足条件的行: 用where子句实现条件查询</h6><p>​            通过where子句实现,该子句必须紧跟在From子句之后。<br>​            格式为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select [all|distinct] [top n[percent]]&lt;目标列表达式列表&gt; from 表名 where &lt;条件&gt;；</span><br></pre></td></tr></table></figure>
+
+<p>​            说明：在查询条件中可使用以下运算符或表达式：<br>​                  运算符                 运算符标识<br>​                  比较运算符         &lt;&#x3D;，&lt;，&#x3D;，&gt;，&gt;&#x3D;，!&#x3D;，&lt;&gt;，!&gt;，!&lt;<br>​                  范围运算符         between… and，not between… and<br>​                  列举运算符         in，not in<br>​                  模糊匹配运算符 like，not like<br>​                  空值运算符         is null，is not null<br>​                  逻辑运算符         and，or，not<br>​        1.使用比较运算符：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from tb_name where &lt;字符型字段&gt; &gt;= n ；</span><br></pre></td></tr></table></figure>
+
+<p>​        2.指定范围：<br>​              用于指定范围的关键字有两个：between…and和 not between…and。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from tb_name where [not] between &lt;表达式1&gt; and &lt;表达式2&gt;;</span><br></pre></td></tr></table></figure>
+
+<p>​              其中：between关键字之后的是范围的下限（即低值）,and关键字之后的是范围的上限（即高值）<br>​              用于查找字段值在（或不在）指定范围的行。<br>​       3.使用列举:<br>​             使用in关键字可以指定一个值的集合，集合中列出所有可能的值，当表达式的值与集合中的任一元素个匹配时，即返回true，否则返回false。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select * from tb_name where &lt;字符型字段&gt; [not] in(值1,值2,...,值n);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>​       4.使用通配符进行模糊查询:<br>​             可用like 子句进行字符串的模糊匹配查询，like子句将返回逻辑值（true或False）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select * from tb_name where &lt;字符型字段&gt; [not] like &lt;匹配串&gt;；</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>​             其含义是：查找指定字段值与匹配串相匹配的记录。匹配串中通常含有通配符%和_（下划线）。<br>​             其中:  %：代表任意长度（包括0）的字符串<br>​       5.使用null的查询<br>​             当需要判定一个表达式的值是否为空值时，使用 is null关键字。<br>​             当不使用not时，若表达式的值为空值，则返回true，否则返回false；当使用not时，结果刚好相反。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select * from tb_name where &lt;字符型字段&gt; is [not] null;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>​        6.多重条件查询：使用逻辑运算符<br>​             逻辑运算符and（与：两个条件都要满足）和or（或：满足其中一个条件即可）可用来联接多个查询条件。and的优先级高于or,但若使用括号可以改变优先级。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select * from tb_name where &lt;字符型字段&gt; = &#x27;volues&#x27; and &lt;字符型字段&gt; &gt; n;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h6 id="四-对查询结果排序"><a href="#四-对查询结果排序" class="headerlink" title="(四)对查询结果排序"></a>(四)对查询结果排序</h6><p>​        order by子句可用于对查询结果按照一个或多个字段的值（或表达式的值）进行升序（ASC）或降序（DESC）排列，默认为升序。<br>​       </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">order by &#123;排序表达式[ASC|DESC]&#125;[,...n]；</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>​        其中：排序表达式既可以是单个的一个字段，也可以是由字段、函数、常量等组成的表达式，或一个正整数。<br>​      </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select * from tb_name order by &lt;排序表达式&gt; &lt;排序方法&gt;；</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h6 id="五-使用统计函数-又称集函数，聚合函数"><a href="#五-使用统计函数-又称集函数，聚合函数" class="headerlink" title="(五)使用统计函数:又称集函数，聚合函数"></a>(五)使用统计函数:又称集函数，聚合函数</h6><p>​        在对表进行检索时，经常需要对结果进行计算或统计，T-SQL提供了一些统计函数（也称集函数或聚合函数），用来增强检索功能。统计函数用于计算表中的数据，即利用这些函数对一组数据进行计算，并返回单一的值。<br>​        常用统计函数表<br>​              函数名      功能<br>​              AVG         求平均值<br>​              count        求记录个数，返回int类型整数<br>​              max          求最大值<br>​              min           求最小值<br>​              sum          求和</p>
+<pre><code>    1. SUM和AVG
+         功能：求指定的数值型表达式的和或平均值。
+</code></pre>
+<p>​             </p>
+<pre><code>         <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select avg(&lt;字符型字段&gt;) as 平均数,sum(&lt;字符型字段&gt;) as 总数 from tb_name where &lt;字符型字段&gt; =&#x27;字符串&#x27;;</span><br></pre></td></tr></table></figure>
+</code></pre>
+<p>​<br>​             </p>
+<pre><code>    2. Max和Min
+         功能：求指定表达式的最大值或最小值。
+         
+         <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select max(&lt;字符型字段&gt;) as 最大值,min(&lt;字符型字段&gt;) as 最小值 from tb_name;</span><br></pre></td></tr></table></figure>
+</code></pre>
+<p>​<br>​             </p>
+<pre><code>    3. count
+         该函数有两种格式：count(*)和count([all]|[distinct] 字段名），为避免出错，查询记录个数一般使用count(*)，而查询某字段有几种取值用count(distinct 字段名）。
+         (1).count(*):
+             功能：统计记录总数。
+         
+         <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select count(*) as 总数 from tb_name;</span><br></pre></td></tr></table></figure>
+         
+         (2).count([all]|[distinct] 字段名）
+             功能：统计指定字段值不为空的记录个数，字段的数据类型可以是text、image、ntext、uniqueidentifier之外的任何类型。
+         
+         <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select count(&lt;字符型字段&gt;) as 总数 from tb_name;</span><br></pre></td></tr></table></figure>
+</code></pre>
+<h6 id="六-对查询结果分组"><a href="#六-对查询结果分组" class="headerlink" title="(六)对查询结果分组"></a>(六)对查询结果分组</h6><p> group by子句用于将查询结果表按某一列或多列值进行分组，列值相等的为一组，每组统计出一个结果。该子句常与统计函数一起使用进行分组统计。<br>        group by 分组字段[,…n][having &lt;条件表达式&gt;]；<br>        1⃣️在使用group by子句后<br>             select列表中只能包含：group by子句中所指定的分组字段及统计函数。<br>        2⃣️having子句的用法<br>             having子句必须与group by 子句配合使用，用于对分组后的结果进行筛选（筛选条件中常含有统计函数）。</p>
+<p>​		3⃣️ 分组查询时不含统计函数的条件<br>​				通常使用where子句；含有统计函数的条件,则只能用having子句。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select &lt;字符型字段&gt;,count(*) as 列标题 from tb_name where &lt;字符型字段&gt;=&#x27;字符串&#x27; group by &lt;字符型字段&gt;；</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>​		4⃣️修改数据(Update）</p>
+<p>​		Update 语句用于修改表中的数据。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">update tb_name set 列名称 = 新值 where 列名称 = 某值；</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>​		5⃣️删除数据(Delete)</p>
+<p>​		删除单行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">delete from tb_name where 列名称 = 某值；</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<pre><code>  删除所有行
+  可以在不删除表的情况下删除所有的行。这意味着表的结构、属性和索引都是完整的：
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">delete * from tb_name   </span><br><span class="line">delete from tb_name；</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="三、MySQL-–-alter命令"><a href="#三、MySQL-–-alter命令" class="headerlink" title="三、MySQL – alter命令"></a>三、MySQL – alter命令</h4><p> alter add命令用来增加表的字段。<br> alter add命令格式：alter table 表名 add字段 类型 其他;</p>
+<p> 例如，在表MyClass中添加了一个字段passtest，类型为int(4)，默认值为0</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alter table MyClass add passtest int(4) default &#x27;0&#x27;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>添加两个字段  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; alter table Person add age int,add address varchar(11); </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p> 删除两个字段</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alter table Person drop column age,drop column address;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p> 修改字段的注释</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alter table `student` modify column `id` comment &#x27;学号&#x27;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>加索引</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名 add index 索引名 (字段名1[，字段名2 …]);</span><br><span class="line">alter table employee add index emp_name (name);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>加主关键字的索引</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名 add primary key (字段名);</span><br><span class="line">alter table employee add primary key(id);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>加唯一限制条件的索引</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名 add unique 索引名 (字段名);</span><br><span class="line">alter table employee add unique emp_name2(cardnumber);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>删除某个索引</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名 drop index 索引名;</span><br><span class="line">alter table employee drop index emp_name;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>增加字段</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE table_name ADD field_name field_type;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>修改原字段名称及类型</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE table_name CHANGE old_field_name new_field_name field_type;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="7">
+<li>删除字段</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE table_name DROP field_name;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="四、MySQL-–-应用"><a href="#四、MySQL-–-应用" class="headerlink" title="四、MySQL – 应用"></a>四、MySQL – 应用</h4><p>学生-课程数据库<br> 学生表：Student（<strong>Sno</strong>，Sname，Ssex，Sage，Sdept）<br> 课程表：Course（<strong>Cno</strong>，Cname，Cpno，Ccredit）<br> 学生选课表：SC（<strong>Sno</strong>，<strong>Cno</strong>，Grade）<br> 关系的主码加粗表示。各个表中的数据示例如图所示：</p>
+<img src="/2019/12/07/Mysql%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/mysql.png" class="" title="Mysql">
+
+<p> 建立一个“学生”表Student：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">create table Student(</span><br><span class="line">  Sno char(9) peimary key, /*列级完整性约束条件，Sno是主码*/</span><br><span class="line">  Sname char(20) unique, /* Sname取唯一值*/</span><br><span class="line">  Ssex char(2),</span><br><span class="line">  Sage smallint,</span><br><span class="line">  Sdept char(20)</span><br><span class="line">);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p> 建立一个“课程”表Course：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">create table Course(</span><br><span class="line">  Sno char(4) primary key, /*列级完整性约束条件，Cname不能取空值*/</span><br><span class="line">  Sname char(40) not null, /*Cpno的含义是先修课*/</span><br><span class="line">  Cpno char(4)</span><br><span class="line">  Ccredit smallint,</span><br><span class="line">  foreign key (Cpnoo) references Course(Cno) /*表级完整性约束条件，Cpno是外码，被参照表是Course，被参照列是Cno</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>建立学生选课表SC：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">create table SC(</span><br><span class="line">  Sno char(9),</span><br><span class="line">  Cno char(4),</span><br><span class="line">  Grade smallint,</span><br><span class="line">  frimary key (Sno,Cno), /*主码由两个属性构成，必须作为表级完整性进行定义*/</span><br><span class="line">  foreign key (Sno) references Student(Sno), /*表级完整性约束条件，Sno是外码，被参照表是Student*/</span><br><span class="line">  foreign key (Cno) references Course(Cno)   /*表级完整性约束条件，Cno是外码，被参照表是Course */</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/12/07/Mysql%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" data-id="cljy06imx0004vt1yh8faeuyq" data-title="Mysql基本命令" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mysql/" rel="tag">Mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" rel="tag">面试准备</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-计算机网络-网络安全" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/12/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" class="article-date">
+  <time class="dt-published" datetime="2019-12-06T02:43:44.000Z" itemprop="datePublished">2019-12-06</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2019/12/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">计算机网络-网络安全</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h5 id="两种攻击"><a href="#两种攻击" class="headerlink" title="两种攻击"></a>两种攻击</h5><ul>
+<li>主动攻击：中断、篡改和伪造信息</li>
+<li>被动攻击：截获</li>
+</ul>
+<h5 id="对称加密DES"><a href="#对称加密DES" class="headerlink" title="对称加密DES"></a>对称加密DES</h5><p>即加密密钥与解密密钥是使用相同的密码体制，使用64位的密钥</p>
+<h5 id="公钥密码体制"><a href="#公钥密码体制" class="headerlink" title="公钥密码体制"></a>公钥密码体制</h5><p>使用不同的加密密钥和解密密钥</p>
+<h5 id="数字签名的三个功能"><a href="#数字签名的三个功能" class="headerlink" title="数字签名的三个功能"></a>数字签名的三个功能</h5><ul>
+<li>1⃣️报文鉴别</li>
+<li>2⃣️报文的完整性</li>
+<li>3⃣️不可否认</li>
+</ul>
+<h5 id="具有保密性的数字签名过程："><a href="#具有保密性的数字签名过程：" class="headerlink" title="具有保密性的数字签名过程："></a>具有保密性的数字签名过程：</h5><img src="/2019/12/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/szqm.png" class="" title="数字签名过程">
+
+
+
+<h5 id="报文鉴别："><a href="#报文鉴别：" class="headerlink" title="报文鉴别："></a>报文鉴别：</h5><ul>
+<li>1⃣️密码散列函数</li>
+<li>2⃣️MD5和SHA-1</li>
+</ul>
+<h5 id="实体鉴别：口令（验证码）"><a href="#实体鉴别：口令（验证码）" class="headerlink" title="实体鉴别：口令（验证码）"></a>实体鉴别：口令（验证码）</h5><h5 id="对称密钥分配：KDC密钥分配中心"><a href="#对称密钥分配：KDC密钥分配中心" class="headerlink" title="对称密钥分配：KDC密钥分配中心"></a>对称密钥分配：KDC密钥分配中心</h5><h5 id="非对称密钥分配：CA认证中心"><a href="#非对称密钥分配：CA认证中心" class="headerlink" title="非对称密钥分配：CA认证中心"></a>非对称密钥分配：CA认证中心</h5><h5 id="网络层上的安全协议：IPsec协议族"><a href="#网络层上的安全协议：IPsec协议族" class="headerlink" title="网络层上的安全协议：IPsec协议族"></a>网络层上的安全协议：IPsec协议族</h5><h5 id="运输层上的安全协议："><a href="#运输层上的安全协议：" class="headerlink" title="运输层上的安全协议："></a>运输层上的安全协议：</h5><ul>
+<li>安全套接字SSL</li>
+<li>运输层安全TLS</li>
+</ul>
+<h5 id="防火墙技术"><a href="#防火墙技术" class="headerlink" title="防火墙技术"></a>防火墙技术</h5><ul>
+<li>分组过滤路由器</li>
+<li>应用网关（代理服务器）</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/12/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" data-id="cljy06in9003lvt1y3hmq5zs9" data-title="计算机网络-网络安全" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" rel="tag">面试准备</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-计算机网络-应用层" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/12/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E5%BA%94%E7%94%A8%E5%B1%82/" class="article-date">
+  <time class="dt-published" datetime="2019-12-06T02:40:13.000Z" itemprop="datePublished">2019-12-06</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2019/12/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E5%BA%94%E7%94%A8%E5%B1%82/">计算机网络-应用层</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h5 id="域名系统DNS"><a href="#域名系统DNS" class="headerlink" title="域名系统DNS"></a>域名系统DNS</h5><p>是互联网使用的命名系统，用来把人们使用的机器名字转换为IP地址</p>
+<p>一个服务器所负责管辖的范围叫做<strong>区</strong></p>
+<p>每一个区设置相应的<strong>权限域名服务器</strong>，用来保存该区中的所有主机的域名到IP地址的映射</p>
+<h5 id="四个域名服务器："><a href="#四个域名服务器：" class="headerlink" title="四个域名服务器："></a>四个域名服务器：</h5><ul>
+<li>根域名服务器</li>
+<li>顶级域名服务器</li>
+<li>权限域名服务器</li>
+<li>本地域名服务器</li>
+</ul>
+<h5 id="两种查询"><a href="#两种查询" class="headerlink" title="两种查询"></a>两种查询</h5><ul>
+<li>迭代查询：即一个一个地进行查询，都是本地域名服务器发起的</li>
+<li>递归查询：本地域名服务器询问一个服务器，该服务器询问另一个，直到查询到再依次返回</li>
+</ul>
+<h5 id="高速缓存："><a href="#高速缓存：" class="headerlink" title="高速缓存："></a>高速缓存：</h5><p>用来存放最近查询过的域名以及从何处获得域名映射的信息记录</p>
+<h5 id="高速缓存的作用："><a href="#高速缓存的作用：" class="headerlink" title="高速缓存的作用："></a>高速缓存的作用：</h5><p>为了提高DNS查询效率，并减轻根域名服务器的负荷和减少互联网上的DNS查询报文数量</p>
+<h5 id="FTP"><a href="#FTP" class="headerlink" title="FTP"></a>FTP</h5><p>FTP使用客户服务器方式，使用TCP可靠的运输服务，需要建立两个TCP的连接，且是并行的</p>
+<p>FTP的服务器进程：一个主进程，负责接收新的请求；若干个从属进程，负责处理单个请求</p>
+<p>两个从属进程：控制连接，发送控制进程    数据连接，用于传输文件</p>
+<h5 id="各类协议"><a href="#各类协议" class="headerlink" title="各类协议"></a>各类协议</h5><p><strong>TFTP</strong>是使用UDP进行数据传输的</p>
+<p><strong>TELNET</strong>，终端仿真协议，也是使用客户服务器方式，采用TCP连接</p>
+<p>网络虚拟终端<strong>NVT</strong>即TELNET交互中所用的命令，8位一字节，7位传送数据，1位用作控制命令</p>
+<p>万维网：<strong>WWW</strong>是一个分布式的超媒体系统，它是超文本系统的扩产，以客户服务器方式工作</p>
+<p>同一资源定位符<strong>URL</strong>，标志分布在整个互联网上的万维网文档</p>
+<p>超文本传送协议<strong>HTTP</strong>：实现万维网上的各种链接，面向事务的应用层协议，流水线和非流水线工作方式</p>
+<p>超文本标记语言<strong>HTML</strong>，显示页面，跳转链接</p>
+<p>邮件发送协议<strong>SMTP</strong></p>
+<p>邮件接收协议<strong>POP3</strong>、<strong>IMAP</strong>，其中IMAP是联机协议</p>
+<p><strong>MIME</strong>，通用互联网邮件扩产，可发送文本、图像、音频、视频</p>
+<p><strong>DHCP</strong>，动态主机配置协议，使用客户服务器方式，提供了即插即用联网机制，需要IP的主机在启动时向DHCP服务器广播发送报文（255.255.255.255），即可成为DHCP客户</p>
+<h5 id="各应用协议在层次中的位置"><a href="#各应用协议在层次中的位置" class="headerlink" title="各应用协议在层次中的位置"></a>各应用协议在层次中的位置</h5><img src="/2019/12/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E5%BA%94%E7%94%A8%E5%B1%82/yingyong.png" class="" title="各协议分布">
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/12/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E5%BA%94%E7%94%A8%E5%B1%82/" data-id="cljy06in8003bvt1yar6n83d8" data-title="计算机网络-应用层" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" rel="tag">面试准备</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-计算机网络-运输层" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/12/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E8%BF%90%E8%BE%93%E5%B1%82/" class="article-date">
+  <time class="dt-published" datetime="2019-12-06T02:30:29.000Z" itemprop="datePublished">2019-12-06</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2019/12/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E8%BF%90%E8%BE%93%E5%B1%82/">计算机网络-运输层</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h5 id="五层模型"><a href="#五层模型" class="headerlink" title="五层模型"></a>五层模型</h5><table>
+<thead>
+<tr>
+<th>应用层</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>运输层</td>
+</tr>
+<tr>
+<td>网络层</td>
+</tr>
+<tr>
+<td>数据链路层</td>
+</tr>
+<tr>
+<td>物理层</td>
+</tr>
+</tbody></table>
+<p>运输层向它上面的应用层提供通信服务</p>
+<h5 id="复用："><a href="#复用：" class="headerlink" title="复用："></a>复用：</h5><p>指发送方不同的应用进程都可以使用同一个运输层协议传输数据</p>
+<h5 id="分用："><a href="#分用：" class="headerlink" title="分用："></a>分用：</h5><p>指接收方的运输层在剥去报文的首部后能把这些数据正确交付目的应用进程</p>
+<h5 id="网络层、运输层的区别："><a href="#网络层、运输层的区别：" class="headerlink" title="网络层、运输层的区别："></a>网络层、运输层的区别：</h5><p>网络层提供主机间的逻辑通信，运输层提供应用进程间的逻辑通信且运输层还要对报文进行差错检测</p>
+<h5 id="TCP、IP、UDP的差别"><a href="#TCP、IP、UDP的差别" class="headerlink" title="TCP、IP、UDP的差别"></a>TCP、IP、UDP的差别</h5><table>
+<thead>
+<tr>
+<th>TCP</th>
+<th>IP</th>
+<th>UDP</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>面向连接服务</td>
+<td>面向无连接服务</td>
+<td>面向无连接服务</td>
+</tr>
+<tr>
+<td>字节流接口、流量控制、拥塞控制、保证可靠性</td>
+<td>IP数据报接口、主机与主机的通信协议</td>
+<td>不可靠传输、进程与进程的通信协议</td>
+</tr>
+</tbody></table>
+<h5 id="端口号"><a href="#端口号" class="headerlink" title="端口号"></a>端口号</h5><p>端口号只具有<strong>本地意义</strong>，且为16位端口号标志一个端口</p>
+<p><strong>熟知端口号</strong>：0～1023</p>
+<p><strong>登记端口号</strong>：1024～49151</p>
+<h5 id="UDP"><a href="#UDP" class="headerlink" title="UDP"></a>UDP</h5><p>UDP数据报格式有首部和数据两个部分。首部很简单，共8字节</p>
+<img src="/2019/12/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E8%BF%90%E8%BE%93%E5%B1%82/udp.jpg" class="" title="udp">
+
+<ul>
+<li>源端口：2字节，源端口号</li>
+<li>目的端口：2字节，目的端口号</li>
+<li>长度：2字节，UDP用户数据报的总长度，以字节为单位</li>
+<li>检验和：2字节，用于校验UDP数据报的字段和包含UDP数据报首部的“伪首部”，其校验方法同IP分组首部中的首部校验和</li>
+<li>伪首部：是指在TCP的分段或UDP的数据报格式中，在数据报首部前面增加源IP地址、目的IP地址、IP分组的协议字段、TCP或UDP数据报的总长度等共12字节，所构成的扩展首部结构。<strong>其中伪首部是临时添加的，只用来计算检验和，不会上下传递</strong></li>
+</ul>
+<p>TCP连接的断点叫<strong>套接字</strong>：IP地址+端口号</p>
+<h5 id="停止等待协议："><a href="#停止等待协议：" class="headerlink" title="停止等待协议："></a>停止等待协议：</h5><p>每发送完一个分组就停止发送，等待对方的确认，确认后，发送下一个分组</p>
+<h5 id="连续ARQ："><a href="#连续ARQ：" class="headerlink" title="连续ARQ："></a>连续ARQ：</h5><p>一次发送多个分组，而无需等待确认，至最后一个分组确认，即可发送下一次的多个分组</p>
+<h5 id="GO-Back-N："><a href="#GO-Back-N：" class="headerlink" title="GO-Back-N："></a>GO-Back-N：</h5><p>丢失第N个分组，则确认第N-1个分组，重发N及其之后的分组</p>
+<h5 id="TCP数据报格式："><a href="#TCP数据报格式：" class="headerlink" title="TCP数据报格式："></a>TCP数据报格式：</h5><p>首部前20个字节固定，后4n字节可以根据需要而增加</p>
+<img src="/2019/12/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E8%BF%90%E8%BE%93%E5%B1%82/tcp-0.png" class="" title="tcp数据报">
+
+<table>
+<thead>
+<tr>
+<th>源端口</th>
+<th>目的端口</th>
+<th>序号</th>
+<th>确认号</th>
+<th>数据偏移</th>
+<th>保留</th>
+<th>紧急URG</th>
+<th>确认ACK</th>
+<th>推送PSH</th>
+<th>复位RST</th>
+<th>同步SYN</th>
+<th>终止FIN</th>
+<th>窗口</th>
+<th>检验和</th>
+<th>紧急指针</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2字节</td>
+<td>2字节</td>
+<td>4字节</td>
+<td>4字节</td>
+<td>4</td>
+<td>6</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>可变，最长40字节</td>
+</tr>
+</tbody></table>
+<ul>
+<li>紧急URG：为1时，代表最高优先级数据，应尽快传送</li>
+<li>确认ACK：建立连接后，必须置为1</li>
+<li>同步SYN：置为1时，表示一个连接请求</li>
+<li>推送PSH：置为1时，应尽快交付接收应用进程</li>
+<li>复位RST：置为1时，表明TCP连接有严重差错，必须释放连接</li>
+<li>终止FIN：置为1时，表明数据发送完毕，释放连接</li>
+</ul>
+<h5 id="可靠传输："><a href="#可靠传输：" class="headerlink" title="可靠传输："></a>可靠传输：</h5><ul>
+<li><p>1⃣️以字节为单位的滑动窗口（流量控制）</p>
+</li>
+<li><p>2⃣️停止等待协议、连续ARQ、GO-Back-N（确认机制）</p>
+</li>
+<li><p>3⃣️窗口机制、主动队列管理AQM（拥塞控制）</p>
+</li>
+</ul>
+<h5 id="TCP／IP"><a href="#TCP／IP" class="headerlink" title="TCP／IP"></a>TCP／IP</h5><p>传输控制协议／网际协议，是指能够在多个不同网络间实现信息传输的<strong>协议族</strong>，里面有FTP、SMTP、TCP、UDP、IP等协议</p>
+<h5 id="TCP三次握手："><a href="#TCP三次握手：" class="headerlink" title="TCP三次握手："></a>TCP三次握手：</h5><img src="/2019/12/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E8%BF%90%E8%BE%93%E5%B1%82/tcp-1.png" class="" title="三次握手">
+
+<ul>
+<li>第一次握手：Client将标志位SYN置为1，随机产生一个值seq&#x3D;j，并将该数据报发送给Server，Client进入SYN_SENT状态，等待Server确认</li>
+<li>第二次握手：Server收到数据包后由标志位SYN&#x3D;1知道Client请求建立连接，Server将标志位SYN和ACK都置为1，ack&#x3D;J+1，随机产生一个值seq&#x3D;K，并将该数据包发送给Client以确认连接请求，Server进入SYN_RCVD状态。</li>
+<li>第三次握手：Client收到确认后，检查ack是否为J+1，ACK是否为1，如果正确则将标志位ACK置为1，ack&#x3D;K+1，并将该数据包发送给Server，Server检查ack是否为K+1，ACK是否为1，如果正确则连接建立成功，Client和Server进入ESTABLISHED状态，完成三次握手，随后Client与Server之间可以开始传输数据了。</li>
+</ul>
+<h5 id="TCP四次挥手："><a href="#TCP四次挥手：" class="headerlink" title="TCP四次挥手："></a>TCP四次挥手：</h5><p>第一次挥手：Client发送一个FIN，用来关闭Client到Server的数据传送，Client进入FIN_WAIT_1状态。<br>第二次挥手：Server收到FIN后，发送一个ACK给Client，确认序号为收到序号+1（与SYN相同，一个FIN占用一个序号），Server进入CLOSE_WAIT状态。<br>第三次挥手：Server发送一个FIN，用来关闭Server到Client的数据传送，Server进入LAST_ACK状态。<br>第四次挥手：Client收到FIN后，Client进入TIME_WAIT状态，接着发送一个ACK给Server，确认序号为收到序号+1，Server进入CLOSED状态，完成四次挥手。</p>
+<img src="/2019/12/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E8%BF%90%E8%BE%93%E5%B1%82/tcp-2.png" class="" title="四次挥手">
+
+<p>上面是一方主动关闭，另一方被动关闭的情况，</p>
+<p>实际中还会出现<strong>同时发起主动关闭</strong>的情况，具体流程如下图：</p>
+<img src="/2019/12/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E8%BF%90%E8%BE%93%E5%B1%82/tcp-3.png" class="" title="四次挥手">
+
+
+
+<h5 id="为什么建立连接是三次握手，而关闭连接却是四次挥手呢？"><a href="#为什么建立连接是三次握手，而关闭连接却是四次挥手呢？" class="headerlink" title="为什么建立连接是三次握手，而关闭连接却是四次挥手呢？"></a>为什么建立连接是三次握手，而关闭连接却是四次挥手呢？</h5><p>​    这是因为服务端在LISTEN状态下，收到建立连接请求的SYN报文后，把ACK和SYN放在一个报文里发送给客户端。而关闭连接时，当收到对方的FIN报文时，仅仅表示对方不再发送数据了但是还能接收数据，己方也未必全部数据都发送给对方了，所以己方可以立即close，也可以发送一些数据给对方后，再发送FIN报文给对方来表示同意现在关闭连接，因此，己方ACK和FIN一般都会分开发送</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/12/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E8%BF%90%E8%BE%93%E5%B1%82/" data-id="cljy06ina003svt1y1j2d4rre" data-title="计算机网络-运输层" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" rel="tag">面试准备</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-剑指offer-24二叉树中和为某一值的路径" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/12/05/%E5%89%91%E6%8C%87offer-24%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E5%92%8C%E4%B8%BA%E6%9F%90%E4%B8%80%E5%80%BC%E7%9A%84%E8%B7%AF%E5%BE%84/" class="article-date">
+  <time class="dt-published" datetime="2019-12-05T10:09:24.000Z" itemprop="datePublished">2019-12-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%89%91%E6%8C%87offer/">剑指offer</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2019/12/05/%E5%89%91%E6%8C%87offer-24%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E5%92%8C%E4%B8%BA%E6%9F%90%E4%B8%80%E5%80%BC%E7%9A%84%E8%B7%AF%E5%BE%84/">剑指offer_24二叉树中和为某一值的路径</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>输入一颗二叉树的跟节点和一个整数，打印出二叉树中结点值的和为输入整数的所有路径。路径定义为从树的根结点开始往下一直到叶结点所经过的结点形成一条路径。(注意: 在返回值的list中，数组长度大的数组靠前)</p>
+<hr>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>这是一个深度遍历的问题，先定义两个列表，一个列表array存储单个路径，一个列表result_all存储整个可行的路径，直接从根节点开始遍历，然后为空就返回，不然的话，就减去root的值，然后把这个节点添加到array列表，再进行判断左右节点是否为空，同时exceptnumber是否为0，也就是看看是否遍历到了叶子节点，且是否和刚好等于exceptnumbert，是的话就把array添加到result_all列表。然后再进行递归遍历左右节点，因为走到这一步，就是没有找到，所以array要pop一下，回溯，返回到上一层，最后result_all返回。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">TreeNode</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, x</span>):</span><br><span class="line">        self.val = x</span><br><span class="line">        self.left = <span class="literal">None</span></span><br><span class="line">        self.right = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"><span class="comment">### 前序遍历，深度优先遍历dfs</span></span><br><span class="line">result_all = []</span><br><span class="line">array = []</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">FindPath</span>(<span class="params">root, expectNumber</span>):</span><br><span class="line">    <span class="comment"># write code here</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> root: <span class="keyword">return</span> []</span><br><span class="line">    array.append(root.val)</span><br><span class="line">    expectNumber -= root.val</span><br><span class="line">    <span class="keyword">if</span> expectNumber == <span class="number">0</span> <span class="keyword">and</span> <span class="keyword">not</span> root.left <span class="keyword">and</span> <span class="keyword">not</span> root.right:</span><br><span class="line">        result_all.append(array[:]) 			<span class="comment">#深拷贝</span></span><br><span class="line">    FindPath(root.left, expectNumber)</span><br><span class="line">    FindPath(root.right, expectNumber)</span><br><span class="line">    array.pop()</span><br><span class="line">    <span class="keyword">return</span> result_all</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">root = TreeNode(<span class="number">10</span>)</span><br><span class="line">root.left = TreeNode(<span class="number">5</span>)</span><br><span class="line">root.right = TreeNode(<span class="number">12</span>)</span><br><span class="line">root.left.left = TreeNode(<span class="number">4</span>)</span><br><span class="line">root.left.right = TreeNode(<span class="number">7</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(FindPath(root, <span class="number">19</span>))</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/12/05/%E5%89%91%E6%8C%87offer-24%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E5%92%8C%E4%B8%BA%E6%9F%90%E4%B8%80%E5%80%BC%E7%9A%84%E8%B7%AF%E5%BE%84/" data-id="cljy06in7002qvt1y5mf13p0z" data-title="剑指offer_24二叉树中和为某一值的路径" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-剑指offer-23二叉搜索树的后序遍历序列" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/12/05/%E5%89%91%E6%8C%87offer-23%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97/" class="article-date">
+  <time class="dt-published" datetime="2019-12-05T08:51:48.000Z" itemprop="datePublished">2019-12-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%89%91%E6%8C%87offer/">剑指offer</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2019/12/05/%E5%89%91%E6%8C%87offer-23%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97/">剑指offer_23二叉搜索树的后序遍历序列</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>输入一个整数数组，判断该数组是不是某二叉搜索树的后序遍历的结果。如果是则输出Yes,否则输出No。假设输入的数组的任意两个数字都互不相同。</p>
+<hr>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>二叉搜索树也就是二叉排序树，任意节点的左子树的节点都比该节点小，右子树的节点都比该节点大。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">    6	</span><br><span class="line">   / \</span><br><span class="line">  5   7</span><br><span class="line"> /     \</span><br><span class="line">3       9</span><br><span class="line"> \     /</span><br><span class="line">   4   8</span><br></pre></td></tr></table></figure>
+
+<p>就比如这个二叉排序树，后序遍历为435 897 6，可以看出来，最后一个就是根节点，而前半部分就是左子树，后半部分就是右子树，而且这两个子树也符合后序遍历的规则。</p>
+<p>也就是采用分治法的思想，找到根结点、左子树的序列、右子树的序列，分别判断左右子序列是否为二叉树的后序序列。 </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">VerifySquenceOfBST</span>(<span class="params">self, sequence</span>):</span><br><span class="line">        <span class="comment"># write code here</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> sequence:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        <span class="keyword">return</span> self.helper(sequence)</span><br><span class="line">     <span class="comment"># 增加helper函数是因为对于递归来说sequence为空可以作为终止条件，而对于判断BST而言 sequence为空是False</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">helper</span>(<span class="params">self,sequence</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> sequence:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        root=sequence[-<span class="number">1</span>]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(sequence)):</span><br><span class="line">            <span class="keyword">if</span> sequence[i]&gt;root:		<span class="comment">#通过与root比较，找到左子树序列</span></span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">for</span> right <span class="keyword">in</span> sequence[i:-<span class="number">1</span>]:	<span class="comment">#如果右子树序列有小于root的数直接false</span></span><br><span class="line">            <span class="keyword">if</span> right&lt;root:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">            <span class="comment">#返回前后序列是否都是正确的</span></span><br><span class="line">        <span class="keyword">return</span> self.helper(sequence[:i]) <span class="keyword">and</span> self.helper(sequence[i:-<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/12/05/%E5%89%91%E6%8C%87offer-23%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97/" data-id="cljy06in6002mvt1y9ltt78z6" data-title="剑指offer_23二叉搜索树的后序遍历序列" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-剑指offer-22从上往下打印二叉树" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/12/05/%E5%89%91%E6%8C%87offer-22%E4%BB%8E%E4%B8%8A%E5%BE%80%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/" class="article-date">
+  <time class="dt-published" datetime="2019-12-05T08:03:59.000Z" itemprop="datePublished">2019-12-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%89%91%E6%8C%87offer/">剑指offer</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2019/12/05/%E5%89%91%E6%8C%87offer-22%E4%BB%8E%E4%B8%8A%E5%BE%80%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/">剑指offer_22从上往下打印二叉树</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>从上往下打印出二叉树的每个节点，同层节点从左至右打印。</p>
+<hr>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>很明显这就是个层次遍历的题目</p>
+<p>打算把整个二叉树放在一个栈currentstack里面，然后遍历这个栈，把每个结点的左右子树加到nextstack栈里面，把该结点的值放在res列表里，然后把让这两个栈相等，再遍历这个栈，依次类推，就可以从左到右从上到下遍历整个二叉树了，最后返回res列表即可</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="comment"># class TreeNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.left = None</span></span><br><span class="line"><span class="comment">#         self.right = None</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="comment"># 返回从上到下每个节点值列表，例：[1,2,3]</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">PrintFromTopToBottom</span>(<span class="params">self, root</span>):</span><br><span class="line">        <span class="comment"># write code here</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line">            <span class="keyword">return</span> []</span><br><span class="line">        res=[]</span><br><span class="line">        currentstack=[root]</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> currentstack:</span><br><span class="line">            nextstack=[]</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> currentstack:</span><br><span class="line">                <span class="keyword">if</span> i.left:</span><br><span class="line">                    nextstack.append(i.left)</span><br><span class="line">                <span class="keyword">if</span> i.right:</span><br><span class="line">                    nextstack.append(i.right)</span><br><span class="line">                res.append(i.val)</span><br><span class="line">            currentstack=nextstack</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/12/05/%E5%89%91%E6%8C%87offer-22%E4%BB%8E%E4%B8%8A%E5%BE%80%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/" data-id="cljy06in6002jvt1yemk8c1p6" data-title="剑指offer_22从上往下打印二叉树" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-剑指offer-21栈的压入、弹出序列" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/12/05/%E5%89%91%E6%8C%87offer-21%E6%A0%88%E7%9A%84%E5%8E%8B%E5%85%A5%E3%80%81%E5%BC%B9%E5%87%BA%E5%BA%8F%E5%88%97/" class="article-date">
+  <time class="dt-published" datetime="2019-12-05T07:18:36.000Z" itemprop="datePublished">2019-12-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%89%91%E6%8C%87offer/">剑指offer</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2019/12/05/%E5%89%91%E6%8C%87offer-21%E6%A0%88%E7%9A%84%E5%8E%8B%E5%85%A5%E3%80%81%E5%BC%B9%E5%87%BA%E5%BA%8F%E5%88%97/">剑指offer_21栈的压入、弹出序列</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>输入两个整数序列，第一个序列表示栈的压入顺序，请判断第二个序列是否可能为该栈的弹出顺序。假设压入栈的所有数字均不相等。例如序列1,2,3,4,5是某栈的压入顺序，序列4,5,3,2,1是该压栈序列对应的一个弹出序列，但4,3,5,1,2就不可能是该压栈序列的弹出序列。（注意：这两个序列的长度是相等的）</p>
+<hr>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>借助一个栈stack来存储从pushV中取出的数据，并且都是取pushV第一个数据，在stack末尾加入这个元素，然后依次遍历popV中的元素，如果第一个元素相同，就把pushV和popV中的第一个元素都弹出，如果stack中的最后一个元素与popV中的第一个元素相同，就两个都弹出；如果pushV有数据，就压入stack，如果上述情况都不满足，就直接返回False</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">IsPopOrder</span>(<span class="params">self, pushV, popV</span>):</span><br><span class="line">        <span class="comment"># write code here</span></span><br><span class="line">        stack=[]</span><br><span class="line">        <span class="keyword">while</span> popV:</span><br><span class="line">            <span class="keyword">if</span> pushV <span class="keyword">and</span> pushV[<span class="number">0</span>]==popV[<span class="number">0</span>]:</span><br><span class="line">                pushV.pop(<span class="number">0</span>)</span><br><span class="line">                popV.pop(<span class="number">0</span>)</span><br><span class="line">            <span class="keyword">elif</span> stack <span class="keyword">and</span> stack[-<span class="number">1</span>]==popV[<span class="number">0</span>]:</span><br><span class="line">                stack.pop()</span><br><span class="line">                popV.pop(<span class="number">0</span>)</span><br><span class="line">            <span class="keyword">elif</span> pushV:</span><br><span class="line">                stack.append(pushV.pop(<span class="number">0</span>))</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        </span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/12/05/%E5%89%91%E6%8C%87offer-21%E6%A0%88%E7%9A%84%E5%8E%8B%E5%85%A5%E3%80%81%E5%BC%B9%E5%87%BA%E5%BA%8F%E5%88%97/" data-id="cljy06in6002fvt1y5jj83sv7" data-title="剑指offer_21栈的压入、弹出序列" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-剑指offer-20包含min函数的栈" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/12/05/%E5%89%91%E6%8C%87offer-20%E5%8C%85%E5%90%ABmin%E5%87%BD%E6%95%B0%E7%9A%84%E6%A0%88/" class="article-date">
+  <time class="dt-published" datetime="2019-12-05T06:35:21.000Z" itemprop="datePublished">2019-12-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%89%91%E6%8C%87offer/">剑指offer</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2019/12/05/%E5%89%91%E6%8C%87offer-20%E5%8C%85%E5%90%ABmin%E5%87%BD%E6%95%B0%E7%9A%84%E6%A0%88/">剑指offer_20包含min函数的栈</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>定义栈的数据结构，请在该类型中实现一个能够得到栈中所含最小元素的min函数（时间复杂度应为O（1））。</p>
+<hr>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>定义一个列表list_a，然后把栈直接当列表来处理，append从末尾加入，pop从末尾出，和栈的先进后出一样，list_a[-1]也就是栈顶top，求最小值可以用列表的min函数，运行可以通过，但是min函数，时间复杂度肯定不是O(1)，绝对超了</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        self.list_a=[]</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">push</span>(<span class="params">self, node</span>):</span><br><span class="line">        <span class="comment"># write code here</span></span><br><span class="line">        self.list_a.append(node)</span><br><span class="line">        <span class="keyword">return</span> self.list_a</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">pop</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="comment"># write code here</span></span><br><span class="line">        <span class="keyword">return</span> self.list_a.pop()</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">top</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="comment"># write code here</span></span><br><span class="line">        <span class="keyword">return</span> self.list_a[-<span class="number">1</span>]</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">min</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="comment"># write code here</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">min</span>(self.list_a)</span><br></pre></td></tr></table></figure>
+
+<p>第二种方法就是用空间复杂度来替代时间复杂度，也就是再建个栈，也就是列表来存放最小值</p>
+<p>比如 栈 3，4，2，5，1  </p>
+<p>辅助栈 3，3，2，2，1</p>
+<p>每次入栈的时候，就与辅助栈顶进行比较大小，如果小就入栈和辅助栈，如果大就只入栈，而辅助栈依旧入栈顶；出栈的时候，则两个栈都要出栈，这样就可以保证辅助栈顶一定是当前栈的最小值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        self.stack = []</span><br><span class="line">        self.assist = []</span><br><span class="line">         </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">push</span>(<span class="params">self, node</span>):</span><br><span class="line">        <span class="built_in">min</span> = self.<span class="built_in">min</span>()</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> <span class="built_in">min</span> <span class="keyword">or</span> node &lt; <span class="built_in">min</span>:</span><br><span class="line">            self.assist.append(node)		<span class="comment">#小于就把这个值入辅助栈</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            self.assist.append(<span class="built_in">min</span>)			<span class="comment">#否则就把原本辅助栈顶的元素再一次入辅助栈</span></span><br><span class="line">        self.stack.append(node)</span><br><span class="line">         </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">pop</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">if</span> self.stack:</span><br><span class="line">            self.assist.pop()</span><br><span class="line">            <span class="keyword">return</span> self.stack.pop()</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">top</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="comment"># write code here</span></span><br><span class="line">        <span class="keyword">if</span> self.stack:</span><br><span class="line">            <span class="keyword">return</span> self.stack[-<span class="number">1</span>]</span><br><span class="line">         </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">min</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="comment"># write code here</span></span><br><span class="line">        <span class="keyword">if</span> self.assist:</span><br><span class="line">            <span class="keyword">return</span> self.assist[-<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/12/05/%E5%89%91%E6%8C%87offer-20%E5%8C%85%E5%90%ABmin%E5%87%BD%E6%95%B0%E7%9A%84%E6%A0%88/" data-id="cljy06in6002cvt1ygbqebjnb" data-title="剑指offer_20包含min函数的栈" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python%E8%84%9A%E6%9C%AC/">python脚本</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/">产品经理</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%AC%E8%80%83/">公考</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%89%91%E6%8C%87offer/">剑指offer</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/">区块链</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%89%AB%E8%A1%97/">扫街</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BE%8E%E9%A3%9F/">美食</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E7%BB%8F/">面经</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/">面试准备</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/" rel="tag">Mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python%E8%84%9A%E6%9C%AC/" rel="tag">python脚本</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E6%88%90%E9%95%BF/" rel="tag">产品经理成长</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A/" rel="tag">以太坊</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%AC%E8%80%83/" rel="tag">公考</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/" rel="tag">区块链</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AF%BB%E5%91%B3%E9%A1%BA%E5%BE%B7/" rel="tag">寻味顺德</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B9%BF%E5%B7%9E%E5%A1%94/" rel="tag">广州塔</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" rel="tag">排序算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">操作系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%B7%E7%8F%A0%E5%8C%BA/" rel="tag">海珠区</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BE%8E%E9%A3%9F%E6%8E%A2%E5%BA%97/" rel="tag">美食探店</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B6%8A%E7%A7%80%E5%8C%BA/" rel="tag">越秀区</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" rel="tag">软件测试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E7%BB%8F/" rel="tag">面经</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" rel="tag">面试准备</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mysql/" style="font-size: 12px;">Mysql</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/python%E8%84%9A%E6%9C%AC/" style="font-size: 14px;">python脚本</a> <a href="/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E6%88%90%E9%95%BF/" style="font-size: 10px;">产品经理成长</a> <a href="/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A/" style="font-size: 10px;">以太坊</a> <a href="/tags/%E5%85%AC%E8%80%83/" style="font-size: 10px;">公考</a> <a href="/tags/%E5%89%91%E6%8C%87offer/" style="font-size: 20px;">剑指offer</a> <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/" style="font-size: 10px;">区块链</a> <a href="/tags/%E5%AF%BB%E5%91%B3%E9%A1%BA%E5%BE%B7/" style="font-size: 10px;">寻味顺德</a> <a href="/tags/%E5%B9%BF%E5%B7%9E%E5%A1%94/" style="font-size: 10px;">广州塔</a> <a href="/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" style="font-size: 10px;">排序算法</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%B5%B7%E7%8F%A0%E5%8C%BA/" style="font-size: 10px;">海珠区</a> <a href="/tags/%E7%BE%8E%E9%A3%9F%E6%8E%A2%E5%BA%97/" style="font-size: 10px;">美食探店</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 16px;">计算机网络</a> <a href="/tags/%E8%B6%8A%E7%A7%80%E5%8C%BA/" style="font-size: 10px;">越秀区</a> <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">软件测试</a> <a href="/tags/%E9%9D%A2%E7%BB%8F/" style="font-size: 10px;">面经</a> <a href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" style="font-size: 18px;">面试准备</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/07/11/%E9%A1%BA%E5%BE%B7%E7%BE%8E%E9%A3%9F%E6%8E%A8%E8%8D%90/">顺德美食推荐</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/09/2022%E5%B9%B41%E6%9C%88%E5%B9%BF%E5%B7%9E%E6%89%AB%E8%A1%97%E6%97%A5%E8%AE%B0/">2022年1月广州扫街日记</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/09/%E5%85%AC%E8%80%83%E7%AC%94%E8%AE%B0/">初识公考</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/07/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/">产品经理成长之路01</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/30/eos%E8%8A%82%E7%82%B9%E8%AF%BB%E5%8F%96%E8%A7%A3%E6%9E%90/">eos节点读取解析</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>计算机网络-网络层 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="两种服务： 虚电路服务：建立连接、有短的虚电路号、顺序到达 数据报服务：无连接、有终点的完整地址、不一定顺序到达  主要协议：IP网际协议、ARP地址解析协议、ICMP网际控制报文协议、IGMP网际组管理协议 IP地址&#x3D;网络号+主机号 	32位标识符 IP地址——ARP——&gt;硬件地址		每台主机都有一个ARP告诉缓存 ARP是解决同一局域网上的主机或路由器的IP地址和硬件地址的转换">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机网络-网络层">
+<meta property="og:url" content="http://example.com/2019/12/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%BD%91%E7%BB%9C%E5%B1%82/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="两种服务： 虚电路服务：建立连接、有短的虚电路号、顺序到达 数据报服务：无连接、有终点的完整地址、不一定顺序到达  主要协议：IP网际协议、ARP地址解析协议、ICMP网际控制报文协议、IGMP网际组管理协议 IP地址&#x3D;网络号+主机号 	32位标识符 IP地址——ARP——&gt;硬件地址		每台主机都有一个ARP告诉缓存 ARP是解决同一局域网上的主机或路由器的IP地址和硬件地址的转换">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-12-01T05:16:26.000Z">
+<meta property="article:modified_time" content="2020-11-13T05:31:09.000Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="面试准备">
+<meta property="article:tag" content="计算机网络">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-计算机网络-网络层" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/12/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%BD%91%E7%BB%9C%E5%B1%82/" class="article-date">
+  <time class="dt-published" datetime="2019-12-01T05:16:26.000Z" itemprop="datePublished">2019-12-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      计算机网络-网络层
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h5 id="两种服务："><a href="#两种服务：" class="headerlink" title="两种服务："></a>两种服务：</h5><ul>
+<li>虚电路服务：建立连接、有短的虚电路号、顺序到达</li>
+<li>数据报服务：无连接、有终点的完整地址、不一定顺序到达</li>
+</ul>
+<h5 id="主要协议："><a href="#主要协议：" class="headerlink" title="主要协议："></a>主要协议：</h5><p>IP网际协议、ARP地址解析协议、ICMP网际控制报文协议、IGMP网际组管理协议</p>
+<p>IP地址&#x3D;网络号+主机号 	32位标识符</p>
+<p>IP地址——ARP——&gt;硬件地址		每台主机都有一个ARP告诉缓存</p>
+<p><strong>ARP</strong>是解决同一局域网上的主机或路由器的IP地址和硬件地址的转换</p>
+<h5 id="IP数据报"><a href="#IP数据报" class="headerlink" title="IP数据报"></a>IP数据报</h5><p><strong>IP数据报格式</strong>：首部+数据</p>
+<p>首部：固定长度20字节+可选字段</p>
+<p>最长首部：60字节      最大数据报：576字节</p>
+<table>
+<thead>
+<tr>
+<th>版本</th>
+<th>首部长度</th>
+<th>区分服务</th>
+<th>总长度</th>
+<th>标识</th>
+<th>标志</th>
+<th>片偏移</th>
+<th>生存时间</th>
+<th>协议</th>
+<th>首部校验和</th>
+<th>源地址</th>
+<th>目的地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>4位</td>
+<td>4位</td>
+<td>8位</td>
+<td>16位</td>
+<td>16位</td>
+<td>3位</td>
+<td>13位</td>
+<td>8位</td>
+<td>8位</td>
+<td>16位</td>
+<td>32位</td>
+<td>32位</td>
+</tr>
+</tbody></table>
+<p>三级IP地址：网络号+子网号+主机号</p>
+<p>变长子网掩码VLSM		无分类域间路由选择CIDR  	</p>
+<p>IP地址：网络前缀+主机号／前缀占位数</p>
+<p><strong>路由聚合</strong>：利用CIDR地址来查找目的网络</p>
+<p><strong>最长前缀匹配</strong>：在路由查找中，应当从匹配结果中选择具有最长网络前缀的路由</p>
+<p><strong>ICMP报文</strong>：数据报的数据（IP层)+数据报首部，并且ICMP报文作为IP数据报的数据部门</p>
+<h5 id="ICMP五种差错报文："><a href="#ICMP五种差错报文：" class="headerlink" title="ICMP五种差错报文："></a>ICMP五种差错报文：</h5><ul>
+<li><p>1⃣️终点不可达</p>
+</li>
+<li><p>2⃣️时间超过</p>
+</li>
+<li><p>3⃣️参数问题  </p>
+</li>
+<li><p>4⃣️重定向</p>
+</li>
+<li><p>5⃣️源点抑制</p>
+</li>
+</ul>
+<h5 id="两种询问报文："><a href="#两种询问报文：" class="headerlink" title="两种询问报文："></a>两种询问报文：</h5><ul>
+<li>1⃣️回送请求和回答 </li>
+<li>2⃣️时间戳请求和回答</li>
+</ul>
+<h5 id="路由选择："><a href="#路由选择：" class="headerlink" title="路由选择："></a>路由选择：</h5><ul>
+<li>1⃣️静态路由即人工配置</li>
+<li>2⃣️动态路由：IGP内部网关协议、BGP外部网关协议</li>
+</ul>
+<h5 id="IGP内部网关协议："><a href="#IGP内部网关协议：" class="headerlink" title="IGP内部网关协议："></a>IGP内部网关协议：</h5><ul>
+<li>RIP 基于距离向量的路由选择协议</li>
+<li>OSPF 分布式的链路状态协议，即最短路径优先</li>
+</ul>
+<h5 id="RIP的特点："><a href="#RIP的特点：" class="headerlink" title="RIP的特点："></a>RIP的特点：</h5><ul>
+<li>1⃣️仅和相邻路由交换信息。</li>
+<li>2⃣️所交换的信息为自己现在的路由表</li>
+<li>3⃣️按固定时间间隔交换</li>
+</ul>
+<p>RIP报文最大长度为504字节，用UDP传送</p>
+<h5 id="OSPF的特点："><a href="#OSPF的特点：" class="headerlink" title="OSPF的特点："></a>OSPF的特点：</h5><ul>
+<li>1⃣️向本自治系统中所有路由器发送信息</li>
+<li>2⃣️发送信息为相邻的所有路由器的链路状态</li>
+<li>3⃣️只有当链路状态发生变化时，才向所有路由采用洪泛法发送信息。    OSPF采用IP数据报进行传送</li>
+</ul>
+<p>BGP采用距离向量路由选择协议，各自治系统中，BGP发言人（边界路由器）与其它自治系统边界路由器建立TCP连接，交换BGP报文以建立BGP会话、利用BGP会话交换路由信息</p>
+<p><strong>IPV6数据报</strong>：基本首部(60 B)+有效载荷(64KB)</p>
+<p><strong>IPV6地址类型</strong>：单播、多播、广播，表示方法：冒号十六进制法</p>
+<p><strong>IPV4至IPV6过渡策略</strong>：1⃣️双协议栈。2⃣️隧道技术</p>
+<p><strong>主要设备</strong>：路由器、三层交换机</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/12/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%BD%91%E7%BB%9C%E5%B1%82/" data-id="cljy06in9003pvt1ya44xcioo" data-title="计算机网络-网络层" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" rel="tag">面试准备</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/12/02/%E5%89%91%E6%8C%87offer-05%E7%94%A8%E4%B8%A4%E4%B8%AA%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          剑指offer_05用两个栈实现队列
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">计算机网络-数据链路层</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python%E8%84%9A%E6%9C%AC/">python脚本</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/">产品经理</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%AC%E8%80%83/">公考</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%89%91%E6%8C%87offer/">剑指offer</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/">区块链</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%89%AB%E8%A1%97/">扫街</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BE%8E%E9%A3%9F/">美食</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E7%BB%8F/">面经</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/">面试准备</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/" rel="tag">Mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python%E8%84%9A%E6%9C%AC/" rel="tag">python脚本</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E6%88%90%E9%95%BF/" rel="tag">产品经理成长</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A/" rel="tag">以太坊</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%AC%E8%80%83/" rel="tag">公考</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/" rel="tag">区块链</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AF%BB%E5%91%B3%E9%A1%BA%E5%BE%B7/" rel="tag">寻味顺德</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B9%BF%E5%B7%9E%E5%A1%94/" rel="tag">广州塔</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" rel="tag">排序算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">操作系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%B7%E7%8F%A0%E5%8C%BA/" rel="tag">海珠区</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BE%8E%E9%A3%9F%E6%8E%A2%E5%BA%97/" rel="tag">美食探店</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B6%8A%E7%A7%80%E5%8C%BA/" rel="tag">越秀区</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" rel="tag">软件测试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E7%BB%8F/" rel="tag">面经</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" rel="tag">面试准备</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mysql/" style="font-size: 12px;">Mysql</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/python%E8%84%9A%E6%9C%AC/" style="font-size: 14px;">python脚本</a> <a href="/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E6%88%90%E9%95%BF/" style="font-size: 10px;">产品经理成长</a> <a href="/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A/" style="font-size: 10px;">以太坊</a> <a href="/tags/%E5%85%AC%E8%80%83/" style="font-size: 10px;">公考</a> <a href="/tags/%E5%89%91%E6%8C%87offer/" style="font-size: 20px;">剑指offer</a> <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/" style="font-size: 10px;">区块链</a> <a href="/tags/%E5%AF%BB%E5%91%B3%E9%A1%BA%E5%BE%B7/" style="font-size: 10px;">寻味顺德</a> <a href="/tags/%E5%B9%BF%E5%B7%9E%E5%A1%94/" style="font-size: 10px;">广州塔</a> <a href="/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" style="font-size: 10px;">排序算法</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%B5%B7%E7%8F%A0%E5%8C%BA/" style="font-size: 10px;">海珠区</a> <a href="/tags/%E7%BE%8E%E9%A3%9F%E6%8E%A2%E5%BA%97/" style="font-size: 10px;">美食探店</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 16px;">计算机网络</a> <a href="/tags/%E8%B6%8A%E7%A7%80%E5%8C%BA/" style="font-size: 10px;">越秀区</a> <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">软件测试</a> <a href="/tags/%E9%9D%A2%E7%BB%8F/" style="font-size: 10px;">面经</a> <a href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" style="font-size: 18px;">面试准备</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/07/11/%E9%A1%BA%E5%BE%B7%E7%BE%8E%E9%A3%9F%E6%8E%A8%E8%8D%90/">顺德美食推荐</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/09/2022%E5%B9%B41%E6%9C%88%E5%B9%BF%E5%B7%9E%E6%89%AB%E8%A1%97%E6%97%A5%E8%AE%B0/">2022年1月广州扫街日记</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/09/%E5%85%AC%E8%80%83%E7%AC%94%E8%AE%B0/">初识公考</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/07/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/">产品经理成长之路01</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/30/eos%E8%8A%82%E7%82%B9%E8%AF%BB%E5%8F%96%E8%A7%A3%E6%9E%90/">eos节点读取解析</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

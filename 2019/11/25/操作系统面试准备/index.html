@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>操作系统面试准备 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="线程间通信的方法：同一进程的各线程可以直接读写进程数据段进行通信，同时，需要同步和互斥手段的辅助，而不同进程间的线程通信可以参考不同进程间的通信 多线程同步方式：事件event，临界区域，互斥器、信号量 同步和异步的区别：同步是阻塞模式，即发送方发出数据后，等待接受法发回响应以后才发送下一个数据包的通讯方式；异步是非阻塞方式，发送方发出数据后，不等接收方发回响应，接着发送下一个数据包的通讯方式 普">
+<meta property="og:type" content="article">
+<meta property="og:title" content="操作系统面试准备">
+<meta property="og:url" content="http://example.com/2019/11/25/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="线程间通信的方法：同一进程的各线程可以直接读写进程数据段进行通信，同时，需要同步和互斥手段的辅助，而不同进程间的线程通信可以参考不同进程间的通信 多线程同步方式：事件event，临界区域，互斥器、信号量 同步和异步的区别：同步是阻塞模式，即发送方发出数据后，等待接受法发回响应以后才发送下一个数据包的通讯方式；异步是非阻塞方式，发送方发出数据后，不等接收方发回响应，接着发送下一个数据包的通讯方式 普">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-11-24T16:03:03.000Z">
+<meta property="article:modified_time" content="2020-11-13T05:31:09.000Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="面试准备">
+<meta property="article:tag" content="操作系统">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-操作系统面试准备" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/11/25/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" class="article-date">
+  <time class="dt-published" datetime="2019-11-24T16:03:03.000Z" itemprop="datePublished">2019-11-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/">面试准备</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      操作系统面试准备
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h5 id="线程间通信的方法："><a href="#线程间通信的方法：" class="headerlink" title="线程间通信的方法："></a>线程间通信的方法：</h5><p>同一进程的各线程可以直接读写进程数据段进行通信，同时，需要同步和互斥手段的辅助，而不同进程间的线程通信可以参考不同进程间的通信</p>
+<h5 id="多线程同步方式："><a href="#多线程同步方式：" class="headerlink" title="多线程同步方式："></a>多线程同步方式：</h5><p>事件event，临界区域，互斥器、信号量</p>
+<h5 id="同步和异步的区别："><a href="#同步和异步的区别：" class="headerlink" title="同步和异步的区别："></a>同步和异步的区别：</h5><p>同步是阻塞模式，即发送方发出数据后，等待接受法发回响应以后才发送下一个数据包的通讯方式；异步是非阻塞方式，发送方发出数据后，不等接收方发回响应，接着发送下一个数据包的通讯方式</p>
+<h5 id="普通B-x2F-S模式（同步）AJAX技术（异步）"><a href="#普通B-x2F-S模式（同步）AJAX技术（异步）" class="headerlink" title="普通B&#x2F;S模式（同步）AJAX技术（异步）"></a>普通B&#x2F;S模式（同步）AJAX技术（异步）</h5><p>同步：提交请求—&gt;等待服务器处理—&gt;处理完毕返回 。这期间客户端浏览器不能干任何事<br>异步：请求通过事件触发—&gt;服务器处理（这时浏览器可以做其他事情）—&gt;处理完毕</p>
+<h5 id="进程和线程的概念："><a href="#进程和线程的概念：" class="headerlink" title="进程和线程的概念："></a>进程和线程的概念：</h5><h6 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h6><p>是操作系统结构的基础，进程是一个程序的一次执行过程；是一个正在执行的程序；计算机中正在运行的程序实例；可以分配给处理器并由处理器执行的一个实体；由单一顺序的执行显示，一个当前状态和一组相关的系统资源所描述的活动单元</p>
+<h6 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h6><p>有时被称为轻量级进程，是程序执行流的最小单元。一个标准的线程由线程ID、当前指令指针(PC)，寄存器集合和堆栈组成。另外，线程是进程中的一个实体，是呗系统独立调度和分派的基本单位，线程自己不拥有系统资源，只拥有一点在运行中必不可少的资源，但它可以与同属一个进程的其它线程共享进程所拥有的全部资源。一个线程可以创建和撤销另一个线程，同一个进程中的多个线程之间可以并发执行。由于线程之间的相互制约，致使线程在运行中呈现出间断性，线程也有就绪、阻塞和运行三种基本状态</p>
+<h5 id="进程和线程的区别："><a href="#进程和线程的区别：" class="headerlink" title="进程和线程的区别："></a>进程和线程的区别：</h5><p>子进程和父进程有不同的代码和数据空间，而多个线程则共享数据空间，每个线程有自己的执行堆栈和程序计数器为其执行上下文，多线程主要是为了节约CPU事件，发挥利用。根据具体情况而定，线程的运行中需要使用计算机的内存资源和CPU。通常在一个进程中可以包含若干个线程，它们可以利用进程所拥有的资源。在进入线程的操作系统中，通常都是把进程作为分配资源的基本单位，而把线程作为独立运行和独立调度的基本单位</p>
+<h5 id="进程的地址空间是怎么回事？虚拟内存是如何实现的？"><a href="#进程的地址空间是怎么回事？虚拟内存是如何实现的？" class="headerlink" title="进程的地址空间是怎么回事？虚拟内存是如何实现的？"></a>进程的地址空间是怎么回事？虚拟内存是如何实现的？</h5><p>虚拟内存的存在使得CPU上的指令访问的地址都是虚拟地址，而这些地址是需要在物理内存中真实存在的，这里就需要在虚拟地址和物理地址直接建立一个映射关系（应当是多对一的关系），说白了就是一个整数集合到另一个整数集合的映射。然后在查找时，根据相应的算法（如先进先出，最多使用等）进行调度</p>
+<h5 id="死锁的定义："><a href="#死锁的定义：" class="headerlink" title="死锁的定义："></a>死锁的定义：</h5><p>​	死锁是指多个进程因竞争资源而造成的一种僵局（互相等待），若无外力作用，这些进程都将无法向前推进</p>
+<h5 id="死锁产生的原因："><a href="#死锁产生的原因：" class="headerlink" title="死锁产生的原因："></a>死锁产生的原因：</h5><p>​	1、系统资源的竞争<br>​	2、进程运行推进顺序不合适</p>
+<h5 id="产生死锁有四个必要条件："><a href="#产生死锁有四个必要条件：" class="headerlink" title="产生死锁有四个必要条件："></a>产生死锁有四个必要条件：</h5><p>1、互斥条件。一个资源只能被一个进程占用<br>2、不可剥夺条件。某个进程占用了资源，就只能他自己去释放。<br>3、请求和保持条件。某个进程之前申请了资源，我还想再申请资源，之前的资源还是我占用着，别人别想动。除非我自己不想用了，释放掉。<br>4、循环等待条件。一定会有一个环互相等待。</p>
+<h5 id="死锁避免和预防："><a href="#死锁避免和预防：" class="headerlink" title="死锁避免和预防："></a>死锁避免和预防：</h5><h6 id="1、死锁避免"><a href="#1、死锁避免" class="headerlink" title="1、死锁避免"></a>1、死锁避免</h6><p>死锁避免的基本思想：系统对进程发出的每一个系统能够满足的资源申请进行动态检查，并根据检查结果决定是否分配资源，如果分配后系统可能发生死锁，则不予分配，否则予以分配，这是一种保证系统不进入死锁状态的动态策略。</p>
+<h6 id="2、死锁预防"><a href="#2、死锁预防" class="headerlink" title="2、死锁预防"></a>2、死锁预防</h6><p>1⃣️破坏“不可剥夺”条件：一个进程不能获得所需要的全部资源时便处于等待状态，等待期间他占有的资源将被隐式的释放重新加入到 系统的资源列表中，可以被其他的进程使用，而等待的进程只有重新获得自己原有的资源以及新申请的资源才可以重新启动，执行。<br>2⃣️破坏”请求与保持条件“：第一种方法静态分配即每个进程在开始执行时就申请他所需要的全部资源。第二种是动态分配即每个进程在申请所需要的资源时他本身不占用系统资源。<br>3⃣️破坏“循环等待”条件：采用资源有序分配其基本思想是将系统中的所有资源顺序编号，将紧缺的，稀少的采用较大的编号，在申请资源时必须按照编号的顺序进行，一个进程只有获得较小编号的进程才能申请较大编号的进程。</p>
+<h5 id="linux进程间通信有哪些方式，优缺点如何"><a href="#linux进程间通信有哪些方式，优缺点如何" class="headerlink" title="linux进程间通信有哪些方式，优缺点如何"></a>linux进程间通信有哪些方式，优缺点如何</h5><h6 id="管道-pipe-："><a href="#管道-pipe-：" class="headerlink" title="管道( pipe )："></a>管道( pipe )：</h6><p>管道包括三种:<br>1⃣️普通管道PIPE： 通常有两种限制,一是单工,只能单向传输;二是只能在父子或者兄弟进程间使用.<br>2⃣️流管道s_pipe: 去除了第一种限制,为半双工，只能在父子或兄弟进程间使用，可以双向传输.<br>3⃣️命名管道:name_pipe：去除了第二种限制,可以在许多并不相关的进程之间进行通讯.</p>
+<h6 id="信号量-semophore-："><a href="#信号量-semophore-：" class="headerlink" title="信号量( semophore ) ："></a>信号量( semophore ) ：</h6><p>​	信号量是一个计数器，可以用来控制多个进程对共享资源的访问。它常作为一种锁机制，防止某进程正在访问共享资源时，其他进程也访问该资源。因此，主要作为进程间以及同一进程内不同线程之间的同步手段。</p>
+<h6 id="消息队列-message-queue-："><a href="#消息队列-message-queue-：" class="headerlink" title="消息队列( message queue ) ："></a>消息队列( message queue ) ：</h6><p>​	消息队列是由消息的链表，存放在内核中并由消息队列标识符标识。消息队列克服了信号传递信息少、管道只能承载无格式字节流以及缓冲区大小受限等缺点。</p>
+<h6 id="信号-sinal-："><a href="#信号-sinal-：" class="headerlink" title="信号 ( sinal ) ："></a>信号 ( sinal ) ：</h6><p>​	信号是一种比较复杂的通信方式，用于通知接收进程某个事件已经发生。</p>
+<h6 id="共享内存-shared-memory-："><a href="#共享内存-shared-memory-：" class="headerlink" title="共享内存( shared memory ) ："></a>共享内存( shared memory ) ：</h6><p>​	共享内存就是映射一段能被其他进程所访问的内存，这段共享内存由一个进程创建，但多个进程都可以访问。共享内存是最快的 IPC 方式，它是针对其他进程间通信方式运行效率低而专门设计的。它往往与其他通信机制，如信号两，配合使用，来实现进程间的同步和通信。</p>
+<h6 id="套接字-socket-："><a href="#套接字-socket-：" class="headerlink" title="套接字( socket ) ："></a>套接字( socket ) ：</h6><p>​	套解口也是一种进程间通信机制，与其他通信机制不同的是，它可用于不同机器间的进程通信。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/11/25/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" data-id="cljy06in8002zvt1yb0ly9ugl" data-title="操作系统面试准备" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">操作系统</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" rel="tag">面试准备</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/11/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          计算机网络-基础概念
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/11/24/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">排序算法</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python%E8%84%9A%E6%9C%AC/">python脚本</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/">产品经理</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%AC%E8%80%83/">公考</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%89%91%E6%8C%87offer/">剑指offer</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/">区块链</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%89%AB%E8%A1%97/">扫街</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BE%8E%E9%A3%9F/">美食</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E7%BB%8F/">面经</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/">面试准备</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/" rel="tag">Mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python%E8%84%9A%E6%9C%AC/" rel="tag">python脚本</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E6%88%90%E9%95%BF/" rel="tag">产品经理成长</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A/" rel="tag">以太坊</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%AC%E8%80%83/" rel="tag">公考</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/" rel="tag">区块链</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AF%BB%E5%91%B3%E9%A1%BA%E5%BE%B7/" rel="tag">寻味顺德</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B9%BF%E5%B7%9E%E5%A1%94/" rel="tag">广州塔</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" rel="tag">排序算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">操作系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%B7%E7%8F%A0%E5%8C%BA/" rel="tag">海珠区</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BE%8E%E9%A3%9F%E6%8E%A2%E5%BA%97/" rel="tag">美食探店</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B6%8A%E7%A7%80%E5%8C%BA/" rel="tag">越秀区</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" rel="tag">软件测试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E7%BB%8F/" rel="tag">面经</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" rel="tag">面试准备</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mysql/" style="font-size: 12px;">Mysql</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/python%E8%84%9A%E6%9C%AC/" style="font-size: 14px;">python脚本</a> <a href="/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E6%88%90%E9%95%BF/" style="font-size: 10px;">产品经理成长</a> <a href="/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A/" style="font-size: 10px;">以太坊</a> <a href="/tags/%E5%85%AC%E8%80%83/" style="font-size: 10px;">公考</a> <a href="/tags/%E5%89%91%E6%8C%87offer/" style="font-size: 20px;">剑指offer</a> <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/" style="font-size: 10px;">区块链</a> <a href="/tags/%E5%AF%BB%E5%91%B3%E9%A1%BA%E5%BE%B7/" style="font-size: 10px;">寻味顺德</a> <a href="/tags/%E5%B9%BF%E5%B7%9E%E5%A1%94/" style="font-size: 10px;">广州塔</a> <a href="/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" style="font-size: 10px;">排序算法</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%B5%B7%E7%8F%A0%E5%8C%BA/" style="font-size: 10px;">海珠区</a> <a href="/tags/%E7%BE%8E%E9%A3%9F%E6%8E%A2%E5%BA%97/" style="font-size: 10px;">美食探店</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 16px;">计算机网络</a> <a href="/tags/%E8%B6%8A%E7%A7%80%E5%8C%BA/" style="font-size: 10px;">越秀区</a> <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">软件测试</a> <a href="/tags/%E9%9D%A2%E7%BB%8F/" style="font-size: 10px;">面经</a> <a href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" style="font-size: 18px;">面试准备</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/07/11/%E9%A1%BA%E5%BE%B7%E7%BE%8E%E9%A3%9F%E6%8E%A8%E8%8D%90/">顺德美食推荐</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/09/2022%E5%B9%B41%E6%9C%88%E5%B9%BF%E5%B7%9E%E6%89%AB%E8%A1%97%E6%97%A5%E8%AE%B0/">2022年1月广州扫街日记</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/09/%E5%85%AC%E8%80%83%E7%AC%94%E8%AE%B0/">初识公考</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/07/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/">产品经理成长之路01</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/30/eos%E8%8A%82%E7%82%B9%E8%AF%BB%E5%8F%96%E8%A7%A3%E6%9E%90/">eos节点读取解析</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

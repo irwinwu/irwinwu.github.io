@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>剑指offer_15反转链表 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="题目描述输入一个链表，反转链表后，输出新链表的表头。  解题思路遍历整个链表，然后让头结点指向空，其他结点依次指向前一个结点，这样就达到了反转链表。先定义一个last指针，指向为空，然后定义一个temp指针指向头结点的下一个， 链表这样1—-&gt;2——&gt;3——-&gt;4 一个循环的具体过程：  先让temp指针指向pHead所指元素的下一个，此时last指向空  		    pHead">
+<meta property="og:type" content="article">
+<meta property="og:title" content="剑指offer_15反转链表">
+<meta property="og:url" content="http://example.com/2019/12/04/%E5%89%91%E6%8C%87offer-15%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="题目描述输入一个链表，反转链表后，输出新链表的表头。  解题思路遍历整个链表，然后让头结点指向空，其他结点依次指向前一个结点，这样就达到了反转链表。先定义一个last指针，指向为空，然后定义一个temp指针指向头结点的下一个， 链表这样1—-&gt;2——&gt;3——-&gt;4 一个循环的具体过程：  先让temp指针指向pHead所指元素的下一个，此时last指向空  		    pHead">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-12-04T07:58:07.000Z">
+<meta property="article:modified_time" content="2020-11-13T05:31:09.000Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="剑指offer">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-剑指offer-15反转链表" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/12/04/%E5%89%91%E6%8C%87offer-15%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/" class="article-date">
+  <time class="dt-published" datetime="2019-12-04T07:58:07.000Z" itemprop="datePublished">2019-12-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%89%91%E6%8C%87offer/">剑指offer</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      剑指offer_15反转链表
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>输入一个链表，反转链表后，输出新链表的表头。</p>
+<hr>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>遍历整个链表，然后让头结点指向空，其他结点依次指向前一个结点，这样就达到了反转链表。先定义一个last指针，指向为空，然后定义一个temp指针指向头结点的下一个，</p>
+<p>链表这样1—-&gt;2——&gt;3——-&gt;4</p>
+<p>一个循环的具体过程：</p>
+<ul>
+<li>先让temp指针指向pHead所指元素的下一个，此时last指向空</li>
+</ul>
+<p>		</p>
+<table>
+<thead>
+<tr>
+<th>pHead（指向1）</th>
+<th>temp</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1—————&gt;</td>
+<td>2——————&gt;</td>
+<td>3———————&gt;</td>
+<td>4————————&gt;NuLL</td>
+</tr>
+</tbody></table>
+<ul>
+<li>然后让pHead所指元素的下一个指向last所指的元素（也就是前一个元素）</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">last(指向Null)      pHead(指向1）</th>
+<th align="left">temp</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Null&lt;—————1</td>
+<td align="left">2——–——&gt;</td>
+<td>3————&gt;</td>
+<td>4————&gt;NuLL</td>
+</tr>
+</tbody></table>
+<ul>
+<li>然后再移动last指针，使它和pHead指向同一个，</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="right">last pHead(都指向1)</th>
+<th>temp</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">Null&lt;———————1</td>
+<td>2——————&gt;</td>
+<td>3———————&gt;</td>
+<td>4————————&gt;NuLL</td>
+</tr>
+</tbody></table>
+<ul>
+<li>最后让pHead指向temp所指的元素</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="right">last（指向1）</th>
+<th>temp pHead</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">Null&lt;—–—————1</td>
+<td>2——————&gt;</td>
+<td>3———————&gt;</td>
+<td>4————————&gt;NuLL</td>
+</tr>
+</tbody></table>
+<p>依次执行循环，知道最后pHead指向空，此时last指向最后一个结点（也就是反转后的第一个结点），跳出循环</p>
+<p>特殊情况就是这个链表只有一个结点的时候，就直接输出这个结点</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ListNode</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, x</span>):</span><br><span class="line">        self.val = x</span><br><span class="line">        self.<span class="built_in">next</span> = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="comment"># 返回ListNode</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">ReverseList</span>(<span class="params">self, pHead</span>):</span><br><span class="line">        <span class="comment"># write code here</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> pHead <span class="keyword">or</span> <span class="keyword">not</span> pHead.<span class="built_in">next</span>:</span><br><span class="line">            <span class="keyword">return</span> pHead</span><br><span class="line"></span><br><span class="line">        last = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> pHead:</span><br><span class="line">            tmp = pHead.<span class="built_in">next</span></span><br><span class="line">            pHead.<span class="built_in">next</span> = last</span><br><span class="line">            last = pHead</span><br><span class="line">            pHead = tmp</span><br><span class="line"></span><br><span class="line">        <span class="comment">#return last.val</span></span><br><span class="line">        <span class="keyword">return</span> last</span><br><span class="line"></span><br><span class="line">LN=ListNode(<span class="number">1</span>)</span><br><span class="line">LN_1=ListNode(<span class="number">2</span>)</span><br><span class="line">LN_2=ListNode(<span class="number">3</span>)</span><br><span class="line">LN_3=ListNode(<span class="number">4</span>)</span><br><span class="line">LN.<span class="built_in">next</span>=LN_1</span><br><span class="line">LN_1.<span class="built_in">next</span>=LN_2</span><br><span class="line">LN_2.<span class="built_in">next</span>=LN_3</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">s1=Solution()</span><br><span class="line"><span class="built_in">print</span>(s1.ReverseList(LN))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/12/04/%E5%89%91%E6%8C%87offer-15%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/" data-id="cljy06in4001uvt1yh6lfd9ql" data-title="剑指offer_15反转链表" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/12/04/%E5%89%91%E6%8C%87offer-16%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%8E%92%E5%BA%8F%E7%9A%84%E9%93%BE%E8%A1%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          剑指offer_16合并两个排序的链表
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/12/04/%E5%89%91%E6%8C%87offer-14%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACK%E4%B8%AA%E7%BB%93%E7%82%B9/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">剑指offer_14链表中倒数第K个结点</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python%E8%84%9A%E6%9C%AC/">python脚本</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/">产品经理</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%AC%E8%80%83/">公考</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%89%91%E6%8C%87offer/">剑指offer</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/">区块链</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%89%AB%E8%A1%97/">扫街</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BE%8E%E9%A3%9F/">美食</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E7%BB%8F/">面经</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/">面试准备</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/" rel="tag">Mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python%E8%84%9A%E6%9C%AC/" rel="tag">python脚本</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E6%88%90%E9%95%BF/" rel="tag">产品经理成长</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A/" rel="tag">以太坊</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%AC%E8%80%83/" rel="tag">公考</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/" rel="tag">区块链</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AF%BB%E5%91%B3%E9%A1%BA%E5%BE%B7/" rel="tag">寻味顺德</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B9%BF%E5%B7%9E%E5%A1%94/" rel="tag">广州塔</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" rel="tag">排序算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">操作系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%B7%E7%8F%A0%E5%8C%BA/" rel="tag">海珠区</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BE%8E%E9%A3%9F%E6%8E%A2%E5%BA%97/" rel="tag">美食探店</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B6%8A%E7%A7%80%E5%8C%BA/" rel="tag">越秀区</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" rel="tag">软件测试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E7%BB%8F/" rel="tag">面经</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" rel="tag">面试准备</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mysql/" style="font-size: 12px;">Mysql</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/python%E8%84%9A%E6%9C%AC/" style="font-size: 14px;">python脚本</a> <a href="/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E6%88%90%E9%95%BF/" style="font-size: 10px;">产品经理成长</a> <a href="/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A/" style="font-size: 10px;">以太坊</a> <a href="/tags/%E5%85%AC%E8%80%83/" style="font-size: 10px;">公考</a> <a href="/tags/%E5%89%91%E6%8C%87offer/" style="font-size: 20px;">剑指offer</a> <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/" style="font-size: 10px;">区块链</a> <a href="/tags/%E5%AF%BB%E5%91%B3%E9%A1%BA%E5%BE%B7/" style="font-size: 10px;">寻味顺德</a> <a href="/tags/%E5%B9%BF%E5%B7%9E%E5%A1%94/" style="font-size: 10px;">广州塔</a> <a href="/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" style="font-size: 10px;">排序算法</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%B5%B7%E7%8F%A0%E5%8C%BA/" style="font-size: 10px;">海珠区</a> <a href="/tags/%E7%BE%8E%E9%A3%9F%E6%8E%A2%E5%BA%97/" style="font-size: 10px;">美食探店</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 16px;">计算机网络</a> <a href="/tags/%E8%B6%8A%E7%A7%80%E5%8C%BA/" style="font-size: 10px;">越秀区</a> <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">软件测试</a> <a href="/tags/%E9%9D%A2%E7%BB%8F/" style="font-size: 10px;">面经</a> <a href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" style="font-size: 18px;">面试准备</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/07/11/%E9%A1%BA%E5%BE%B7%E7%BE%8E%E9%A3%9F%E6%8E%A8%E8%8D%90/">顺德美食推荐</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/09/2022%E5%B9%B41%E6%9C%88%E5%B9%BF%E5%B7%9E%E6%89%AB%E8%A1%97%E6%97%A5%E8%AE%B0/">2022年1月广州扫街日记</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/09/%E5%85%AC%E8%80%83%E7%AC%94%E8%AE%B0/">初识公考</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/07/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/">产品经理成长之路01</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/30/eos%E8%8A%82%E7%82%B9%E8%AF%BB%E5%8F%96%E8%A7%A3%E6%9E%90/">eos节点读取解析</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

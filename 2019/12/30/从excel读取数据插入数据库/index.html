@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>从excel读取数据插入数据库 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="从excel中读取每一列数据，然后对应的数据库创建列，写入进去 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从excel读取数据插入数据库">
+<meta property="og:url" content="http://example.com/2019/12/30/%E4%BB%8Eexcel%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE%E5%BA%93/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="从excel中读取每一列数据，然后对应的数据库创建列，写入进去 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-12-30T06:27:10.000Z">
+<meta property="article:modified_time" content="2020-11-13T05:31:09.000Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="python脚本">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-从excel读取数据插入数据库" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/12/30/%E4%BB%8Eexcel%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE%E5%BA%93/" class="article-date">
+  <time class="dt-published" datetime="2019-12-30T06:27:10.000Z" itemprop="datePublished">2019-12-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/python%E8%84%9A%E6%9C%AC/">python脚本</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      从excel读取数据插入数据库
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>从excel中读取每一列数据，然后对应的数据库创建列，写入进去</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#conding=utf-8</span></span><br><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"><span class="keyword">import</span> xlrd</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> io</span><br><span class="line"><span class="comment">#sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding=&#x27;utf8&#x27;) #改变标准输出的默认编码</span></span><br><span class="line"></span><br><span class="line">usermessage=&#123;</span><br><span class="line">    <span class="string">&#x27;host&#x27;</span>:<span class="string">&#x27;服务器地址&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;user&#x27;</span>:<span class="string">&#x27;用户名&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;passwd&#x27;</span>:<span class="string">&#x27;密码&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;db&#x27;</span>:<span class="string">&#x27;数据库名称&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">#定义字典保存域名、描述、ipv6地址</span></span><br><span class="line">dic_data=&#123;<span class="string">&#x27;name&#x27;</span>:[],<span class="string">&#x27;organization&#x27;</span>:[],<span class="string">&#x27;type&#x27;</span>:[],<span class="string">&#x27;country&#x27;</span>:[],<span class="string">&#x27;province&#x27;</span>:[],<span class="string">&#x27;city&#x27;</span>:[],<span class="string">&#x27;ip&#x27;</span>:[],<span class="string">&#x27;port&#x27;</span>:[],<span class="string">&#x27;update_time&#x27;</span>:[]&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">#连接数据库，执行操作</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">mysql_db</span>(<span class="params">usermessage,dicdata,port= <span class="number">3306</span>,charset = <span class="string">&#x27;utf8&#x27;</span></span>):</span><br><span class="line">    <span class="comment">#建立连接</span></span><br><span class="line">    count=<span class="number">1</span></span><br><span class="line">    coon = pymysql.connect(**usermessage)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#建立游标</span></span><br><span class="line">    cur = coon.cursor()</span><br><span class="line">    <span class="keyword">for</span> name,org,<span class="built_in">type</span>,country,province,city,ip,port <span class="keyword">in</span> <span class="built_in">zip</span>(dicdata[<span class="string">&#x27;name&#x27;</span>],dicdata[<span class="string">&#x27;organization&#x27;</span>],dicdata[<span class="string">&#x27;type&#x27;</span>],dicdata[<span class="string">&#x27;country&#x27;</span>],dicdata[<span class="string">&#x27;province&#x27;</span>],dicdata[<span class="string">&#x27;city&#x27;</span>],dicdata[<span class="string">&#x27;ip&#x27;</span>],dicdata[<span class="string">&#x27;port&#x27;</span>]):</span><br><span class="line">        time=<span class="string">&quot;2019-12-24 16:54:24&quot;</span></span><br><span class="line">        <span class="comment">#执行sql操作</span></span><br><span class="line">        sql_insert=<span class="string">&quot;insert into xml_nodes(name,organization,type,country,province,city,ip,port,update_time) values (%s,%s,%s,%s,%s,%s,%s,%s,%s)&quot;</span></span><br><span class="line">        val=(name,org,<span class="built_in">type</span>,country,province,city,ip,port,time)</span><br><span class="line">        <span class="comment"># print(sql_insert,val)</span></span><br><span class="line">        <span class="comment"># exit(0)</span></span><br><span class="line">        cur.execute(sql_insert,val)</span><br><span class="line">        coon.commit()</span><br><span class="line"></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;已插入第&quot;</span>+<span class="built_in">str</span>(count)+<span class="string">&quot;条数据&quot;</span>)</span><br><span class="line">        count += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#关闭游标，关闭连接</span></span><br><span class="line">    cur.close()</span><br><span class="line">    coon.close()</span><br><span class="line"></span><br><span class="line"><span class="comment">#读取ecxcel</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">read_excel</span>(<span class="params">filename</span>):</span><br><span class="line"></span><br><span class="line">    data=xlrd.open_workbook(filename)           <span class="comment">#打开execel</span></span><br><span class="line">    table=data.sheet_by_index(<span class="number">0</span>)                <span class="comment">#读取表1</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;该excel表一共有&quot;</span>+<span class="built_in">str</span>(table.nrows)+<span class="string">&quot;行&quot;</span>)                          <span class="comment">#打印行数</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;该excel表一共有&quot;</span>+<span class="built_in">str</span>(table.ncols)+<span class="string">&quot;列&quot;</span>)                          <span class="comment">#打印列数</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i  <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,table.nrows):</span><br><span class="line">        name=table.cell(i,<span class="number">0</span>).value               <span class="comment">#读取第一列的每一个值</span></span><br><span class="line">        dic_data[<span class="string">&#x27;name&#x27;</span>].append(name)                    <span class="comment">#写入到列表里</span></span><br><span class="line">        org=table.cell(i,<span class="number">1</span>).value</span><br><span class="line">        dic_data[<span class="string">&#x27;organization&#x27;</span>].append(org)</span><br><span class="line">        <span class="built_in">type</span>=table.cell(i,<span class="number">2</span>).value</span><br><span class="line">        dic_data[<span class="string">&#x27;type&#x27;</span>].append(<span class="built_in">type</span>)</span><br><span class="line">        country = table.cell(i, <span class="number">3</span>).value</span><br><span class="line">        dic_data[<span class="string">&#x27;country&#x27;</span>].append(country)</span><br><span class="line">        province = table.cell(i, <span class="number">4</span>).value</span><br><span class="line">        dic_data[<span class="string">&#x27;province&#x27;</span>].append(province)</span><br><span class="line">        city = table.cell(i, <span class="number">5</span>).value</span><br><span class="line">        dic_data[<span class="string">&#x27;city&#x27;</span>].append(city)</span><br><span class="line">        ip = table.cell(i, <span class="number">6</span>).value</span><br><span class="line">        dic_data[<span class="string">&#x27;ip&#x27;</span>].append(ip)</span><br><span class="line">        port= table.cell(i, <span class="number">7</span>).value</span><br><span class="line">        dic_data[<span class="string">&#x27;port&#x27;</span>].append(port)</span><br><span class="line">        update_time = table.cell(i, <span class="number">8</span>).value</span><br><span class="line">        dic_data[<span class="string">&#x27;update_time&#x27;</span>].append(update_time)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    filename=<span class="string">&quot;XLM.xlsx&quot;</span></span><br><span class="line">    read_excel(filename)</span><br><span class="line">    mysql_db(usermessage,dic_data)</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;successful&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">使用说明：</span></span><br><span class="line"><span class="string">16行定义的字典用来保存从excel中读取的每一列的元素，根据excel表的列表名修改</span></span><br><span class="line"><span class="string">同时记得26行for循环里的元素</span></span><br><span class="line"><span class="string">29行、30行的插入语句，根据数据库设计的不同进行修改</span></span><br><span class="line"><span class="string">51~60行，按照excel的列表名进行修改</span></span><br><span class="line"><span class="string">77行，改成要导入的excel表名路径</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/12/30/%E4%BB%8Eexcel%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE%E5%BA%93/" data-id="cljy06imz000kvt1y3icga4jx" data-title="从excel读取数据插入数据库" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python%E8%84%9A%E6%9C%AC/" rel="tag">python脚本</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/12/30/%E8%A7%A3%E6%9E%90ip%E5%9C%B0%E5%9D%80/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          解析ip地址
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/12/09/%E5%89%91%E6%8C%87offer-25%E5%A4%8D%E6%9D%82%E9%93%BE%E8%A1%A8%E7%9A%84%E5%A4%8D%E5%88%B6/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">剑指offer_25复杂链表的复制</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python%E8%84%9A%E6%9C%AC/">python脚本</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/">产品经理</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%AC%E8%80%83/">公考</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%89%91%E6%8C%87offer/">剑指offer</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/">区块链</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%89%AB%E8%A1%97/">扫街</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BE%8E%E9%A3%9F/">美食</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E7%BB%8F/">面经</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/">面试准备</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/" rel="tag">Mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python%E8%84%9A%E6%9C%AC/" rel="tag">python脚本</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E6%88%90%E9%95%BF/" rel="tag">产品经理成长</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A/" rel="tag">以太坊</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%AC%E8%80%83/" rel="tag">公考</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/" rel="tag">区块链</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AF%BB%E5%91%B3%E9%A1%BA%E5%BE%B7/" rel="tag">寻味顺德</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B9%BF%E5%B7%9E%E5%A1%94/" rel="tag">广州塔</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" rel="tag">排序算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">操作系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%B7%E7%8F%A0%E5%8C%BA/" rel="tag">海珠区</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BE%8E%E9%A3%9F%E6%8E%A2%E5%BA%97/" rel="tag">美食探店</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B6%8A%E7%A7%80%E5%8C%BA/" rel="tag">越秀区</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" rel="tag">软件测试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E7%BB%8F/" rel="tag">面经</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" rel="tag">面试准备</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mysql/" style="font-size: 12px;">Mysql</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/python%E8%84%9A%E6%9C%AC/" style="font-size: 14px;">python脚本</a> <a href="/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E6%88%90%E9%95%BF/" style="font-size: 10px;">产品经理成长</a> <a href="/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A/" style="font-size: 10px;">以太坊</a> <a href="/tags/%E5%85%AC%E8%80%83/" style="font-size: 10px;">公考</a> <a href="/tags/%E5%89%91%E6%8C%87offer/" style="font-size: 20px;">剑指offer</a> <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/" style="font-size: 10px;">区块链</a> <a href="/tags/%E5%AF%BB%E5%91%B3%E9%A1%BA%E5%BE%B7/" style="font-size: 10px;">寻味顺德</a> <a href="/tags/%E5%B9%BF%E5%B7%9E%E5%A1%94/" style="font-size: 10px;">广州塔</a> <a href="/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" style="font-size: 10px;">排序算法</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%B5%B7%E7%8F%A0%E5%8C%BA/" style="font-size: 10px;">海珠区</a> <a href="/tags/%E7%BE%8E%E9%A3%9F%E6%8E%A2%E5%BA%97/" style="font-size: 10px;">美食探店</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 16px;">计算机网络</a> <a href="/tags/%E8%B6%8A%E7%A7%80%E5%8C%BA/" style="font-size: 10px;">越秀区</a> <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">软件测试</a> <a href="/tags/%E9%9D%A2%E7%BB%8F/" style="font-size: 10px;">面经</a> <a href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" style="font-size: 18px;">面试准备</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/07/11/%E9%A1%BA%E5%BE%B7%E7%BE%8E%E9%A3%9F%E6%8E%A8%E8%8D%90/">顺德美食推荐</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/09/2022%E5%B9%B41%E6%9C%88%E5%B9%BF%E5%B7%9E%E6%89%AB%E8%A1%97%E6%97%A5%E8%AE%B0/">2022年1月广州扫街日记</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/09/%E5%85%AC%E8%80%83%E7%AC%94%E8%AE%B0/">初识公考</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/07/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/">产品经理成长之路01</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/30/eos%E8%8A%82%E7%82%B9%E8%AF%BB%E5%8F%96%E8%A7%A3%E6%9E%90/">eos节点读取解析</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
