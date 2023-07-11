@@ -1,976 +1,961 @@
+
+
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
   
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
+    <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/page/4/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+<meta name="twitter:card" content="summary_large_image">
   
   
-    <link rel="shortcut icon" href="/favicon.png">
   
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+  <title>Hexo</title>
 
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
 
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
   
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
   
 <meta name="generator" content="Hexo 6.3.0"></head>
 
+
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
         
-          <a class="main-nav-link" href="/">Home</a>
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
         
-          <a class="main-nav-link" href="/archives">Archives</a>
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
         
-      </nav>
-      <nav id="sub-nav">
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
         
         
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-剑指offer-09变态跳台阶" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2019/12/03/%E5%89%91%E6%8C%87offer-09%E5%8F%98%E6%80%81%E8%B7%B3%E5%8F%B0%E9%98%B6/" class="article-date">
-  <time class="dt-published" datetime="2019-12-03T03:51:32.000Z" itemprop="datePublished">2019-12-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%89%91%E6%8C%87offer/">剑指offer</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2019/12/03/%E5%89%91%E6%8C%87offer-09%E5%8F%98%E6%80%81%E8%B7%B3%E5%8F%B0%E9%98%B6/">剑指offer_09变态跳台阶</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>一只青蛙一次可以跳上1级台阶，也可以跳上2级……它也可以跳上n级。求该青蛙跳上一个n级的台阶总共有多少种跳法。</p>
-<hr>
-<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>比起前一题的要求是可以跳上n级,依旧画表格演示</p>
-<table>
-<thead>
-<tr>
-<th>台阶</th>
-<th>跳法（1表示跳一次1阶，2表示跳一次2阶，3表示跳一次3阶）</th>
-<th>跳法次数</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-</tr>
-<tr>
-<td>2</td>
-<td>（1，1）,（2）</td>
-<td>2</td>
-</tr>
-<tr>
-<td>3</td>
-<td>（1，1，1），（1，2），（2，1），（3）</td>
-<td>4</td>
-</tr>
-<tr>
-<td>4</td>
-<td>（1，1，1，1），（1，1，2），（1，2，1），（2，1，1），（2，2）       （1，3），（3，1），（4）</td>
-<td>8</td>
-</tr>
-</tbody></table>
-<p>f(1)&#x3D;1, f(2)&#x3D;2, f(3)&#x3D;4, f(4)&#x3D;8 </p>
-<p>f(2)&#x3D;f(2-1)+f(2-2)&#x3D;f(1)+f(0)					#f(2-1)表示2阶一次跳1阶的次数，类似于上一题最后递归 </p>
-<p>f(3)&#x3D;f(3-1)+f(3-2)+f(3-3)&#x3D;f(2)+f(1)+f(0)</p>
-<p>可知f(0)&#x3D;1</p>
-<p>设n+1级f(n+1),有</p>
-<p>f(n+1) &#x3D; f(0)+f(1) + f(2) + … + f(n)</p>
-<p>f(n+2) &#x3D; f(0)+f(1) + f(2) + … + f(n+1)</p>
-<p>f(n+2)&#x3D; f(0)+f(1) + f(2) + … + f(n)+f(1)+f(2)+…+f(n)&#x3D;2【f(0)+f(1)+f(2)+…+f(n)】&#x3D;2f(n+1)</p>
-<p>其实这是一个无穷级数的题目，故f（n）&#x3D;2f(n-1)&#x3D;2*2f(n-2)</p>
-<p>所以f(n)&#x3D;2^(n-1)</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">jumpFloorII</span>(<span class="params">number</span>):</span><br><span class="line"> </span><br><span class="line">    f1 = <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> number == <span class="number">1</span>: <span class="keyword">return</span> f1			</span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(number-<span class="number">1</span>):</span><br><span class="line">        f1 = <span class="number">2</span>*f1</span><br><span class="line">    <span class="keyword">return</span> f1</span><br><span class="line">	<span class="comment">#return 2**(number-1)		#或者直接2^（number-1）</span></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/03/%E5%89%91%E6%8C%87offer-09%E5%8F%98%E6%80%81%E8%B7%B3%E5%8F%B0%E9%98%B6/" data-id="cljy06in4001yvt1yc7pd9pt5" data-title="剑指offer_09变态跳台阶" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-剑指offer-08跳台阶" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2019/12/03/%E5%89%91%E6%8C%87offer-08%E8%B7%B3%E5%8F%B0%E9%98%B6/" class="article-date">
-  <time class="dt-published" datetime="2019-12-03T02:32:30.000Z" itemprop="datePublished">2019-12-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%89%91%E6%8C%87offer/">剑指offer</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2019/12/03/%E5%89%91%E6%8C%87offer-08%E8%B7%B3%E5%8F%B0%E9%98%B6/">剑指offer_08跳台阶</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法（先后次序不同算不同的结果）。</p>
-<hr>
-<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>一开始我以为直接两个for循环，判断i+2*j&#x3D;n就行了，结果发现这样会漏掉次数，比如跳三阶台阶，跳法可以是跳三次一阶，或者先跳一次两阶和再一次一阶，或者先跳一次一阶，再跳一次两阶。</p>
-<p>画个表格来演示下</p>
-<table>
-<thead>
-<tr>
-<th>台阶</th>
-<th>跳法（1代表跳一次一阶，2代表跳一次2阶）</th>
-<th>跳法次数</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-</tr>
-<tr>
-<td>2</td>
-<td>（1，1），（2）</td>
-<td>2</td>
-</tr>
-<tr>
-<td>3</td>
-<td>（1，1，1），（1，2），（2，1）</td>
-<td>3</td>
-</tr>
-<tr>
-<td>4</td>
-<td>（1，1，1，1），（1，1，2）（1，2，1），（2，1，1），（2，2）</td>
-<td>5</td>
-</tr>
-</tbody></table>
-<p>逐渐发现规律了，f（1）&#x3D;1</p>
-<p>​							   f（2）&#x3D;2</p>
-<p>​							   f（3）&#x3D;f（1）+f（2）</p>
-<p>​							   f（4）&#x3D;f（2）+f（3）</p>
-<p>显然了，这就是一个斐波那契数列</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#递归，然而时间复杂度比较大</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">jumpFloor</span>(<span class="params">number</span>):</span><br><span class="line">        <span class="keyword">if</span> number==<span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> number==<span class="number">2</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">2</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> jumpFloor(number-<span class="number">1</span>)+jumpFloor(number-<span class="number">2</span>)</span><br><span class="line">   </span><br><span class="line"><span class="comment">#循环</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">jumpFloor</span>(<span class="params"> number</span>):</span><br><span class="line">    <span class="comment"># write code here</span></span><br><span class="line">    a = <span class="number">1</span></span><br><span class="line">    b = <span class="number">2</span></span><br><span class="line">    <span class="keyword">if</span> number==<span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> a</span><br><span class="line">    <span class="keyword">if</span> number==<span class="number">2</span>:</span><br><span class="line">        <span class="keyword">return</span> b</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">for</span> _  <span class="keyword">in</span> <span class="built_in">range</span>(number-<span class="number">1</span>):</span><br><span class="line">            a,b=b,a+b</span><br><span class="line">    <span class="keyword">return</span> a</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(jumpFloor(<span class="number">4</span>))</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/03/%E5%89%91%E6%8C%87offer-08%E8%B7%B3%E5%8F%B0%E9%98%B6/" data-id="cljy06in3001dvt1y4d99aqy8" data-title="剑指offer_08跳台阶" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-剑指offer-07斐波那契数列" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2019/12/02/%E5%89%91%E6%8C%87offer-07%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/" class="article-date">
-  <time class="dt-published" datetime="2019-12-02T09:57:14.000Z" itemprop="datePublished">2019-12-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%89%91%E6%8C%87offer/">剑指offer</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2019/12/02/%E5%89%91%E6%8C%87offer-07%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/">剑指offer_07斐波那契数列</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>大家都知道斐波那契数列，现在要求输入一个整数n，请你输出斐波那契数列的第n项（从0开始，第0项为0）n&lt;&#x3D;39</p>
-<hr>
-<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>方法有两种，第一种就是最常规的解法，用递归方法，缺点是时间复杂度太大了，第二种就是用循环，然后每次循环进行a，b值的交换，a&#x3D;b，b&#x3D;a+b，第三种方法也是用循环，先定义一个列表，然后每次都末尾追加最后两项相加之后的和</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#递归</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">Fibonacci</span>(<span class="params">n</span>):</span><br><span class="line">    a=<span class="number">0</span></span><br><span class="line">    b=<span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> n==<span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> a</span><br><span class="line">    <span class="keyword">elif</span> n==<span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> b</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">    	<span class="keyword">return</span> Fibonacci(n-<span class="number">1</span>)+Fibonacci(n-<span class="number">2</span>)</span><br><span class="line">    </span><br><span class="line"><span class="comment">#循环</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">Fibonacci</span>(<span class="params">n</span>):</span><br><span class="line">    a=<span class="number">0</span></span><br><span class="line">    b=<span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> n==<span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> a</span><br><span class="line">    <span class="keyword">elif</span> n==<span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> b</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">    	<span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            a,b=b,a+b</span><br><span class="line">    <span class="keyword">return</span> a</span><br><span class="line">		</span><br><span class="line"></span><br><span class="line"><span class="comment">#循环</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">Fibonacci</span>(<span class="params">n</span>):</span><br><span class="line">   </span><br><span class="line">    a = [<span class="number">0</span>, <span class="number">1</span>]</span><br><span class="line">    <span class="keyword">while</span> <span class="built_in">len</span>(a) &lt;= n:</span><br><span class="line">        a.append(a[-<span class="number">1</span>] + a[-<span class="number">2</span>])</span><br><span class="line">    <span class="keyword">return</span> a[n]</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/02/%E5%89%91%E6%8C%87offer-07%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/" data-id="cljy06in3001bvt1y5jhkh89h" data-title="剑指offer_07斐波那契数列" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-剑指offer-06旋转数组的最小数字" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2019/12/02/%E5%89%91%E6%8C%87offer-06%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97/" class="article-date">
-  <time class="dt-published" datetime="2019-12-02T09:26:26.000Z" itemprop="datePublished">2019-12-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%89%91%E6%8C%87offer/">剑指offer</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2019/12/02/%E5%89%91%E6%8C%87offer-06%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97/">剑指offer_06旋转数组的最小数字</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。<br>输入一个非递减排序的数组的一个旋转，输出旋转数组的最小元素。<br>例如数组{3,4,5,1,2}为{1,2,3,4,5}的一个旋转，该数组的最小值为1。<br>NOTE：给出的所有元素都大于0，若数组大小为0，请返回0。</p>
-<hr>
-<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>首先说明了是非递减排序的数列，即旋转后不会出现{5，4，3，1，2}，也就是旋转后的数组依旧是由两个非递减数组组成，如{3，4，5，1，2}由3，4，5和1，2组成，故只需要两两依次比较即可，如果后面的那个数小于前面的就return后面那个数，即可</p>
-<p>当然python也有min函数，可以直接求出最小的数；也可以用sort排序后，直接取第一个数，也是最小的数，但这显然不是本题要考察的</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#coding=utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#min函数的方法</span></span><br><span class="line"><span class="comment">#min(rotateArray)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#sort排序的方法</span></span><br><span class="line"><span class="comment">#rotateArray.sort()</span></span><br><span class="line"><span class="comment">#print(rotateArray[0])</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">minNumberInRotateArray</span>(<span class="params"> rotateArray</span>):</span><br><span class="line">        <span class="comment"># write code here</span></span><br><span class="line">        length = <span class="built_in">len</span>(rotateArray)</span><br><span class="line">        <span class="keyword">if</span> length == <span class="number">0</span>:</span><br><span class="line">           <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">elif</span> length == <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> rotateArray[<span class="number">0</span>]</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(length-<span class="number">1</span>):</span><br><span class="line">                <span class="keyword">if</span> rotateArray[i] &gt; rotateArray[i+<span class="number">1</span>]:</span><br><span class="line">                    <span class="keyword">return</span> rotateArray[i+<span class="number">1</span>]</span><br><span class="line">            <span class="keyword">return</span> rotateArray[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">a=[<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line"><span class="built_in">print</span>(minNumberInRotateArray(a))</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/02/%E5%89%91%E6%8C%87offer-06%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97/" data-id="cljy06in20017vt1y84qi8w3n" data-title="剑指offer_06旋转数组的最小数字" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-剑指offer-05用两个栈实现队列" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2019/12/02/%E5%89%91%E6%8C%87offer-05%E7%94%A8%E4%B8%A4%E4%B8%AA%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97/" class="article-date">
-  <time class="dt-published" datetime="2019-12-02T09:01:12.000Z" itemprop="datePublished">2019-12-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%89%91%E6%8C%87offer/">剑指offer</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2019/12/02/%E5%89%91%E6%8C%87offer-05%E7%94%A8%E4%B8%A4%E4%B8%AA%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97/">剑指offer_05用两个栈实现队列</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>用两个栈来实现一个队列，完成队列的Push和Pop操作。 队列中的元素为int类型。</p>
-<hr>
-<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>append函数都是在末尾追加，故用stackA模拟进队操作</p>
-<p>pop函数默认从末尾删除，故从stackA里面删除，然后把该元素添加进stackB里面，然后再从stackB里面pop出来，即实现了队列的先进先出</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#coding=utf-8</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        self.stackA=[]      <span class="comment">#入队使用的栈A</span></span><br><span class="line">        self.stackB=[]      <span class="comment">#出队使用的栈B</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">push</span>(<span class="params">self,node</span>):</span><br><span class="line">        self.stackA.append(node)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">pop</span>(<span class="params">self</span>):</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> self.stackB:		<span class="comment">#栈B为空的时候就执行把A的元素依次进来</span></span><br><span class="line">            <span class="keyword">while</span> self.stackA:</span><br><span class="line">                self.stackB.append(self.stackA.pop())</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> self.stackB.pop()</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">a=Solution()</span><br><span class="line">a.push(<span class="number">1</span>)</span><br><span class="line">a.push(<span class="number">2</span>)</span><br><span class="line">a.push(<span class="number">3</span>)</span><br><span class="line"><span class="built_in">print</span>(a.pop())</span><br><span class="line"><span class="built_in">print</span>(a.pop())</span><br><span class="line"><span class="built_in">print</span>(a.pop())</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/02/%E5%89%91%E6%8C%87offer-05%E7%94%A8%E4%B8%A4%E4%B8%AA%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97/" data-id="cljy06in20012vt1yebei8vcg" data-title="剑指offer_05用两个栈实现队列" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-计算机网络-网络层" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2019/12/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%BD%91%E7%BB%9C%E5%B1%82/" class="article-date">
-  <time class="dt-published" datetime="2019-12-01T05:16:26.000Z" itemprop="datePublished">2019-12-01</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2019/12/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%BD%91%E7%BB%9C%E5%B1%82/">计算机网络-网络层</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h5 id="两种服务："><a href="#两种服务：" class="headerlink" title="两种服务："></a>两种服务：</h5><ul>
-<li>虚电路服务：建立连接、有短的虚电路号、顺序到达</li>
-<li>数据报服务：无连接、有终点的完整地址、不一定顺序到达</li>
-</ul>
-<h5 id="主要协议："><a href="#主要协议：" class="headerlink" title="主要协议："></a>主要协议：</h5><p>IP网际协议、ARP地址解析协议、ICMP网际控制报文协议、IGMP网际组管理协议</p>
-<p>IP地址&#x3D;网络号+主机号 	32位标识符</p>
-<p>IP地址——ARP——&gt;硬件地址		每台主机都有一个ARP告诉缓存</p>
-<p><strong>ARP</strong>是解决同一局域网上的主机或路由器的IP地址和硬件地址的转换</p>
-<h5 id="IP数据报"><a href="#IP数据报" class="headerlink" title="IP数据报"></a>IP数据报</h5><p><strong>IP数据报格式</strong>：首部+数据</p>
-<p>首部：固定长度20字节+可选字段</p>
-<p>最长首部：60字节      最大数据报：576字节</p>
-<table>
-<thead>
-<tr>
-<th>版本</th>
-<th>首部长度</th>
-<th>区分服务</th>
-<th>总长度</th>
-<th>标识</th>
-<th>标志</th>
-<th>片偏移</th>
-<th>生存时间</th>
-<th>协议</th>
-<th>首部校验和</th>
-<th>源地址</th>
-<th>目的地址</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>4位</td>
-<td>4位</td>
-<td>8位</td>
-<td>16位</td>
-<td>16位</td>
-<td>3位</td>
-<td>13位</td>
-<td>8位</td>
-<td>8位</td>
-<td>16位</td>
-<td>32位</td>
-<td>32位</td>
-</tr>
-</tbody></table>
-<p>三级IP地址：网络号+子网号+主机号</p>
-<p>变长子网掩码VLSM		无分类域间路由选择CIDR  	</p>
-<p>IP地址：网络前缀+主机号／前缀占位数</p>
-<p><strong>路由聚合</strong>：利用CIDR地址来查找目的网络</p>
-<p><strong>最长前缀匹配</strong>：在路由查找中，应当从匹配结果中选择具有最长网络前缀的路由</p>
-<p><strong>ICMP报文</strong>：数据报的数据（IP层)+数据报首部，并且ICMP报文作为IP数据报的数据部门</p>
-<h5 id="ICMP五种差错报文："><a href="#ICMP五种差错报文：" class="headerlink" title="ICMP五种差错报文："></a>ICMP五种差错报文：</h5><ul>
-<li><p>1⃣️终点不可达</p>
-</li>
-<li><p>2⃣️时间超过</p>
-</li>
-<li><p>3⃣️参数问题  </p>
-</li>
-<li><p>4⃣️重定向</p>
-</li>
-<li><p>5⃣️源点抑制</p>
-</li>
-</ul>
-<h5 id="两种询问报文："><a href="#两种询问报文：" class="headerlink" title="两种询问报文："></a>两种询问报文：</h5><ul>
-<li>1⃣️回送请求和回答 </li>
-<li>2⃣️时间戳请求和回答</li>
-</ul>
-<h5 id="路由选择："><a href="#路由选择：" class="headerlink" title="路由选择："></a>路由选择：</h5><ul>
-<li>1⃣️静态路由即人工配置</li>
-<li>2⃣️动态路由：IGP内部网关协议、BGP外部网关协议</li>
-</ul>
-<h5 id="IGP内部网关协议："><a href="#IGP内部网关协议：" class="headerlink" title="IGP内部网关协议："></a>IGP内部网关协议：</h5><ul>
-<li>RIP 基于距离向量的路由选择协议</li>
-<li>OSPF 分布式的链路状态协议，即最短路径优先</li>
-</ul>
-<h5 id="RIP的特点："><a href="#RIP的特点：" class="headerlink" title="RIP的特点："></a>RIP的特点：</h5><ul>
-<li>1⃣️仅和相邻路由交换信息。</li>
-<li>2⃣️所交换的信息为自己现在的路由表</li>
-<li>3⃣️按固定时间间隔交换</li>
-</ul>
-<p>RIP报文最大长度为504字节，用UDP传送</p>
-<h5 id="OSPF的特点："><a href="#OSPF的特点：" class="headerlink" title="OSPF的特点："></a>OSPF的特点：</h5><ul>
-<li>1⃣️向本自治系统中所有路由器发送信息</li>
-<li>2⃣️发送信息为相邻的所有路由器的链路状态</li>
-<li>3⃣️只有当链路状态发生变化时，才向所有路由采用洪泛法发送信息。    OSPF采用IP数据报进行传送</li>
-</ul>
-<p>BGP采用距离向量路由选择协议，各自治系统中，BGP发言人（边界路由器）与其它自治系统边界路由器建立TCP连接，交换BGP报文以建立BGP会话、利用BGP会话交换路由信息</p>
-<p><strong>IPV6数据报</strong>：基本首部(60 B)+有效载荷(64KB)</p>
-<p><strong>IPV6地址类型</strong>：单播、多播、广播，表示方法：冒号十六进制法</p>
-<p><strong>IPV4至IPV6过渡策略</strong>：1⃣️双协议栈。2⃣️隧道技术</p>
-<p><strong>主要设备</strong>：路由器、三层交换机</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%BD%91%E7%BB%9C%E5%B1%82/" data-id="cljy06in9003pvt1ya44xcioo" data-title="计算机网络-网络层" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" rel="tag">面试准备</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-计算机网络-数据链路层" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2019/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/" class="article-date">
-  <time class="dt-published" datetime="2019-11-30T00:35:03.000Z" itemprop="datePublished">2019-11-30</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2019/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/">计算机网络-数据链路层</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h5 id="两种信道："><a href="#两种信道：" class="headerlink" title="两种信道："></a>两种信道：</h5><p>1⃣️点对点信道</p>
-<p>2⃣️广播信道</p>
-<p>数据链路层的<strong>协议数据单位</strong>——————<strong>帧</strong></p>
-<h5 id="帧定界："><a href="#帧定界：" class="headerlink" title="帧定界："></a>帧定界：</h5><ul>
-<li><p>1⃣️起始字符：SOH</p>
-</li>
-<li><p>2⃣️终止字符：EOT</p>
-</li>
-<li><p>3⃣️最大传送单元：MTU</p>
-</li>
-</ul>
-<p><strong>字符填充：</strong></p>
-<p>在数据部分中出现SOH、EOT，在其前面加入转义字符<strong>ESC</strong>即可</p>
-<h5 id="循环冗余检验CRC："><a href="#循环冗余检验CRC：" class="headerlink" title="循环冗余检验CRC："></a>循环冗余检验CRC：</h5><p>若余数R&#x3D;0，则无差错，反之则有</p>
-<h5 id="多项式表示："><a href="#多项式表示：" class="headerlink" title="多项式表示："></a>多项式表示：</h5><p>P&#x3D;1101，即P(X)&#x3D;X^3+X^2+1</p>
-<p>p&#x3D;10011，即P(X)&#x3D;X^4+X+1</p>
-<h5 id="PPP协议的帧格式："><a href="#PPP协议的帧格式：" class="headerlink" title="PPP协议的帧格式："></a>PPP协议的帧格式：</h5><table>
-<thead>
-<tr>
-<th>标志字段F</th>
-<th>地址字段A</th>
-<th>控制字段C</th>
-<th>协议</th>
-<th>IP数据报</th>
-<th>检验序列FCS</th>
-<th>标志字段F</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>7E</td>
-<td>FF</td>
-<td>03</td>
-<td>2个字节</td>
-<td>不超过1500字节</td>
-<td>2个字节</td>
-<td>7E</td>
-</tr>
-</tbody></table>
-<h5 id="字节填充-异步传输-："><a href="#字节填充-异步传输-：" class="headerlink" title="字节填充(异步传输)："></a>字节填充(异步传输)：</h5><ul>
-<li>1⃣️出现7E，变成7D5E</li>
-<li>2⃣️出现7D，变成7D5D</li>
-<li>3⃣️出现控制字符，在其前面加7D</li>
-</ul>
-<h5 id="零比特填充-同步传输-："><a href="#零比特填充-同步传输-：" class="headerlink" title="零比特填充(同步传输)："></a>零比特填充(同步传输)：</h5><p>只要发现有5个连续的1，就立即填入0</p>
-<h5 id="广播信道共享技术："><a href="#广播信道共享技术：" class="headerlink" title="广播信道共享技术："></a>广播信道共享技术：</h5><ul>
-<li>1⃣️静态划分信道：频分复用、时分复用、波分复用、码分复用</li>
-<li>2⃣️动态媒体接入控制(多点介入)：随机接入，受控接入</li>
-</ul>
-<h5 id="802-3标准："><a href="#802-3标准：" class="headerlink" title="802.3标准："></a>802.3标准：</h5><p>CSMA／CD协议➕物理层规范</p>
-<h5 id="数据链路层："><a href="#数据链路层：" class="headerlink" title="数据链路层："></a>数据链路层：</h5><p>逻辑链路控制LLC➕媒体接入控制MAC</p>
-<h5 id="载波监听多点接入／碰撞检测-CSMA-x2F-CD-：工作过程"><a href="#载波监听多点接入／碰撞检测-CSMA-x2F-CD-：工作过程" class="headerlink" title="载波监听多点接入／碰撞检测(CSMA&#x2F;CD)：工作过程"></a>载波监听多点接入／碰撞检测(CSMA&#x2F;CD)：工作过程</h5><ul>
-<li>1⃣️先听先发</li>
-<li>2⃣️边听边发</li>
-<li>3⃣️冲突停发</li>
-<li>4⃣️随机重发</li>
-</ul>
-<h5 id="重发机制："><a href="#重发机制：" class="headerlink" title="重发机制："></a>重发机制：</h5><p>使用截断二进制指数退避算法进行重发，[0，2^k  —1]中任取一个数，k&#x3D;min[重复次数，10]，当重传达到16次，则丢弃</p>
-<h5 id="两类地址"><a href="#两类地址" class="headerlink" title="两类地址"></a>两类地址</h5><ul>
-<li>物理地址：MAC地址，48位二进制</li>
-<li>逻辑地址：IP地址</li>
-</ul>
-<h5 id="MAC帧格式："><a href="#MAC帧格式：" class="headerlink" title="MAC帧格式："></a>MAC帧格式：</h5><table>
-<thead>
-<tr>
-<th>目的地址</th>
-<th>源地址</th>
-<th>类型</th>
-<th>IP数据报</th>
-<th>FCS</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>6字节</td>
-<td>6字节</td>
-<td>2字节</td>
-<td>46～1500字节</td>
-<td>4字节</td>
-</tr>
-</tbody></table>
-<p>以太网<strong>不负责重传</strong>丢弃的帧</p>
-<h5 id="集线器和交换机的区别"><a href="#集线器和交换机的区别" class="headerlink" title="集线器和交换机的区别"></a>集线器和交换机的区别</h5><p>集线器只进行<strong>转发</strong>而不能把帧进行缓存，交换机则采用<strong>存储转发</strong>的方式</p>
-<p>交换机的地址表是通过自学习算法自动建立起来的，且交换机每次都要跑一遍<strong>生成树协议STP</strong></p>
-<h5 id="VLAN的优点："><a href="#VLAN的优点：" class="headerlink" title="VLAN的优点："></a>VLAN的优点：</h5><ul>
-<li>1⃣️控制网络的广播风暴</li>
-<li>2⃣️确保网络的安全性</li>
-<li>3⃣️简化网络管理</li>
-</ul>
-<p><strong>主要设备：</strong>网桥、交换机、桥接器</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/" data-id="cljy06in9003evt1y8n156jk9" data-title="计算机网络-数据链路层" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" rel="tag">面试准备</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-剑指offer-04重建二叉树" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2019/11/29/%E5%89%91%E6%8C%87offer-04%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91/" class="article-date">
-  <time class="dt-published" datetime="2019-11-29T02:13:12.000Z" itemprop="datePublished">2019-11-29</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%89%91%E6%8C%87offer/">剑指offer</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2019/11/29/%E5%89%91%E6%8C%87offer-04%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91/">剑指offer_04重建二叉树</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,5,3,6,7}和中序遍历序列{4,2,5,1,6,3,7}，则重建二叉树并返回。</p>
-<hr>
-<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>前序遍历的第一个元素就是每次二次的根节点，所以确定在中序遍历中根节点所在的位置就可以把中序遍历一分为二，根节点前面的为左子树的元素，根节点后面的为右子树的元素。每次遍历前，都把前序中的根节点移除。</p>
-<p>初始：</p>
-<table>
-<thead>
-<tr>
-<th>前序遍历</th>
-<th>1</th>
-<th>2</th>
-<th>4</th>
-<th>5</th>
-<th>3</th>
-<th>6</th>
-<th>7</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>中序遍历</td>
-<td>4</td>
-<td>2</td>
-<td>5</td>
-<td>1</td>
-<td>6</td>
-<td>3</td>
-<td>7</td>
-</tr>
-</tbody></table>
-<p>可知1是根节点，在中序遍历中第3个位置（列表从0开始数），则前三个为左子树的，后三个为右子树的</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#构建二叉树</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">TreeNode</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, x</span>):</span><br><span class="line">        self.val = x        <span class="comment">#中间节点</span></span><br><span class="line">        self.left = <span class="literal">None</span>    <span class="comment">#左节点</span></span><br><span class="line">        self.right = <span class="literal">None</span>   <span class="comment">#右节点</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">reConstructBinaryTree</span>(<span class="params">self, pre, tin</span>):      <span class="comment">#传入前序遍历序列、中序遍历序列</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> pre <span class="keyword">or</span> <span class="keyword">not</span> tin:                  <span class="comment">#判断是否为空</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">        root = TreeNode(pre.pop(<span class="number">0</span>))             <span class="comment">#把前序遍历序列的第一个pop出来给root，即根节点</span></span><br><span class="line"></span><br><span class="line">        index = tin.index(root.val)             <span class="comment">#找根节点在中序遍历的那个位置，然后分割左右子树</span></span><br><span class="line">        root.left = self.reConstructBinaryTree(pre, tin[:index])            <span class="comment">#先构建左子树，此时的前序序列已经是删去了根节点，中序序列只取序列中，根节点前的元素</span></span><br><span class="line">        root.right = self.reConstructBinaryTree(pre, tin[index + <span class="number">1</span>:])       <span class="comment">#构建右子树，此时的前序序列也是删去了根节点，中序序列只取序列中，根节点后的元素</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> root         <span class="comment">#返回整棵二叉树</span></span><br><span class="line"></span><br><span class="line">    </span><br><span class="line"><span class="comment">#再写一个层次遍历，检验二叉树构建是否成功</span></span><br><span class="line"><span class="comment">#思路是遍历queue中的以每一个节点为根节点的树，然后存储到outlist里面，然后删除根节点，加入左右子树，继续遍历</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">PrintFromTopToBottom</span>(<span class="params"> root</span>):</span><br><span class="line"></span><br><span class="line">    outList=[]      <span class="comment">#建立一个列表来存储</span></span><br><span class="line">    queue=[root]        <span class="comment">#把二叉树放到queue列表里</span></span><br><span class="line">    <span class="keyword">while</span> queue!=[] <span class="keyword">and</span> root:           <span class="comment">#queue不为空，且root不为空</span></span><br><span class="line">        outList.append(queue[<span class="number">0</span>].val)        <span class="comment">#把二叉树的根节点加入到outlist列表里</span></span><br><span class="line">        <span class="keyword">if</span> queue[<span class="number">0</span>].left!=<span class="literal">None</span>:             <span class="comment">#如果左子树不为空，则也添加到queue队列里</span></span><br><span class="line">            queue.append(queue[<span class="number">0</span>].left)</span><br><span class="line">        <span class="keyword">if</span> queue[<span class="number">0</span>].right!=<span class="literal">None</span>:            <span class="comment">#如果右子树不为空，则也添加到queue队列里</span></span><br><span class="line">            queue.append(queue[<span class="number">0</span>].right)</span><br><span class="line">        queue.pop(<span class="number">0</span>)                    <span class="comment">#删除queue的根节点</span></span><br><span class="line">    <span class="keyword">return</span> outList</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sl=Solution()</span><br><span class="line">s1=sl.reConstructBinaryTree([<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">6</span>, <span class="number">7</span>], [<span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">1</span>, <span class="number">6</span>, <span class="number">3</span>, <span class="number">7</span>])</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(PrintFromTopToBottom(s1))</span><br><span class="line"><span class="comment">#层序遍历的结果为1，2，3，4，5，6，7，即构建二叉树成功</span></span><br><span class="line"><span class="comment">#可自己动手画一下二叉树，遍历一下检验是否有误</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/11/29/%E5%89%91%E6%8C%87offer-04%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91/" data-id="cljy06in20014vt1yhlyeba6t" data-title="剑指offer_04重建二叉树" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hexo文章插入图片不显示" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2019/11/28/hexo%E6%96%87%E7%AB%A0%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E4%B8%8D%E6%98%BE%E7%A4%BA/" class="article-date">
-  <time class="dt-published" datetime="2019-11-28T07:35:28.000Z" itemprop="datePublished">2019-11-28</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/hexo/">hexo</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2019/11/28/hexo%E6%96%87%E7%AB%A0%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E4%B8%8D%E6%98%BE%E7%A4%BA/">hexo文章插入图片不显示</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><h3 id="一、修改配置文件"><a href="#一、修改配置文件" class="headerlink" title="一、修改配置文件"></a>一、修改配置文件</h3><p>修改根目录下的_config.yml文件，原本是false，改成true，之后新建文章的时候会生成一个文章同名的文件夹，把照片放进去就可以了</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: true</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="二、安装插件"><a href="#二、安装插件" class="headerlink" title="二、安装插件"></a>二、安装插件</h3><p> 我们需要安装一个图片路径转换的插件，这个插件名字是<strong>hexo-asset-image</strong> </p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image --save</span><br></pre></td></tr></table></figure>
-
-<p>但是这个插件的内容需要修改【不然可能会出Bug】</p>
-<p>打开&#x2F;node_modules&#x2F;hexo-asset-image&#x2F;index.js，将内容更换为下面的代码</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&#x27;use strict&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> cheerio = <span class="built_in">require</span>(<span class="string">&#x27;cheerio&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in-a-string</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">getPosition</span>(<span class="params">str, m, i</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> str.<span class="title function_">split</span>(m, i).<span class="title function_">join</span>(m).<span class="property">length</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> version = <span class="title class_">String</span>(hexo.<span class="property">version</span>).<span class="title function_">split</span>(<span class="string">&#x27;.&#x27;</span>);</span><br><span class="line">hexo.<span class="property">extend</span>.<span class="property">filter</span>.<span class="title function_">register</span>(<span class="string">&#x27;after_post_render&#x27;</span>, <span class="keyword">function</span>(<span class="params">data</span>)&#123;</span><br><span class="line">  <span class="keyword">var</span> config = hexo.<span class="property">config</span>;</span><br><span class="line">  <span class="keyword">if</span>(config.<span class="property">post_asset_folder</span>)&#123;</span><br><span class="line">    	<span class="keyword">var</span> link = data.<span class="property">permalink</span>;</span><br><span class="line">	<span class="keyword">if</span>(version.<span class="property">length</span> &gt; <span class="number">0</span> &amp;&amp; <span class="title class_">Number</span>(version[<span class="number">0</span>]) == <span class="number">3</span>)</span><br><span class="line">	   <span class="keyword">var</span> beginPos = <span class="title function_">getPosition</span>(link, <span class="string">&#x27;/&#x27;</span>, <span class="number">1</span>) + <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	   <span class="keyword">var</span> beginPos = <span class="title function_">getPosition</span>(link, <span class="string">&#x27;/&#x27;</span>, <span class="number">3</span>) + <span class="number">1</span>;</span><br><span class="line">	<span class="comment">// In hexo 3.1.1, the permalink of &quot;about&quot; page is like &quot;.../about/index.html&quot;.</span></span><br><span class="line">	<span class="keyword">var</span> endPos = link.<span class="title function_">lastIndexOf</span>(<span class="string">&#x27;/&#x27;</span>) + <span class="number">1</span>;</span><br><span class="line">    link = link.<span class="title function_">substring</span>(beginPos, endPos);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> toprocess = [<span class="string">&#x27;excerpt&#x27;</span>, <span class="string">&#x27;more&#x27;</span>, <span class="string">&#x27;content&#x27;</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; toprocess.<span class="property">length</span>; i++)&#123;</span><br><span class="line">      <span class="keyword">var</span> key = toprocess[i];</span><br><span class="line"> </span><br><span class="line">      <span class="keyword">var</span> $ = cheerio.<span class="title function_">load</span>(data[key], &#123;</span><br><span class="line">        <span class="attr">ignoreWhitespace</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="attr">xmlMode</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="attr">lowerCaseTags</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="attr">decodeEntities</span>: <span class="literal">false</span></span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      $(<span class="string">&#x27;img&#x27;</span>).<span class="title function_">each</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">		<span class="keyword">if</span> ($(<span class="variable language_">this</span>).<span class="title function_">attr</span>(<span class="string">&#x27;src&#x27;</span>))&#123;</span><br><span class="line">			<span class="comment">// For windows style path, we replace &#x27;\&#x27; to &#x27;/&#x27;.</span></span><br><span class="line">			<span class="keyword">var</span> src = $(<span class="variable language_">this</span>).<span class="title function_">attr</span>(<span class="string">&#x27;src&#x27;</span>).<span class="title function_">replace</span>(<span class="string">&#x27;\\&#x27;</span>, <span class="string">&#x27;/&#x27;</span>);</span><br><span class="line">			<span class="keyword">if</span>(!<span class="regexp">/http[s]*.*|\/\/.*/</span>.<span class="title function_">test</span>(src) &amp;&amp;</span><br><span class="line">			   !<span class="regexp">/^\s*\//</span>.<span class="title function_">test</span>(src)) &#123;</span><br><span class="line">			  <span class="comment">// For &quot;about&quot; page, the first part of &quot;src&quot; can&#x27;t be removed.</span></span><br><span class="line">			  <span class="comment">// In addition, to support multi-level local directory.</span></span><br><span class="line">			  <span class="keyword">var</span> linkArray = link.<span class="title function_">split</span>(<span class="string">&#x27;/&#x27;</span>).<span class="title function_">filter</span>(<span class="keyword">function</span>(<span class="params">elem</span>)&#123;</span><br><span class="line">				<span class="keyword">return</span> elem != <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">			  &#125;);</span><br><span class="line">			  <span class="keyword">var</span> srcArray = src.<span class="title function_">split</span>(<span class="string">&#x27;/&#x27;</span>).<span class="title function_">filter</span>(<span class="keyword">function</span>(<span class="params">elem</span>)&#123;</span><br><span class="line">				<span class="keyword">return</span> elem != <span class="string">&#x27;&#x27;</span> &amp;&amp; elem != <span class="string">&#x27;.&#x27;</span>;</span><br><span class="line">			  &#125;);</span><br><span class="line">			  <span class="keyword">if</span>(srcArray.<span class="property">length</span> &gt; <span class="number">1</span>)</span><br><span class="line">				srcArray.<span class="title function_">shift</span>();</span><br><span class="line">			  src = srcArray.<span class="title function_">join</span>(<span class="string">&#x27;/&#x27;</span>);</span><br><span class="line">			  $(<span class="variable language_">this</span>).<span class="title function_">attr</span>(<span class="string">&#x27;src&#x27;</span>, config.<span class="property">root</span> + link + src);</span><br><span class="line">			  <span class="variable language_">console</span>.<span class="property">info</span>&amp;&amp;<span class="variable language_">console</span>.<span class="title function_">info</span>(<span class="string">&quot;update link as:--&gt;&quot;</span>+config.<span class="property">root</span> + link + src);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">			<span class="variable language_">console</span>.<span class="property">info</span>&amp;&amp;<span class="variable language_">console</span>.<span class="title function_">info</span>(<span class="string">&quot;no src attr, skipped...&quot;</span>);</span><br><span class="line">			<span class="variable language_">console</span>.<span class="property">info</span>&amp;&amp;<span class="variable language_">console</span>.<span class="title function_">info</span>($(<span class="variable language_">this</span>));</span><br><span class="line">		&#125;</span><br><span class="line">      &#125;);</span><br><span class="line">      data[key] = $.<span class="title function_">html</span>();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="三、md文章中插入图片"><a href="#三、md文章中插入图片" class="headerlink" title="三、md文章中插入图片"></a>三、md文章中插入图片</h3><p>1、直接把图片拖进md文件，会自动生成以下代码，但这只支持hexo3.0以下的</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](<span class="link">image.jpg</span>)</span><br></pre></td></tr></table></figure>
-
-<p>2、hexo3.0以上的语法是</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset<span class="emphasis">_img image.jpg This is an image %&#125;</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">#其中image.jpg为你要插入的图片名，This is an image为图片的说明</span></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/11/28/hexo%E6%96%87%E7%AB%A0%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E4%B8%8D%E6%98%BE%E7%A4%BA/" data-id="cljy06imy000bvt1yhsosfvl6" data-title="hexo文章插入图片不显示" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-剑指offer-03从尾到头打印链表" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2019/11/28/%E5%89%91%E6%8C%87offer-03%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8/" class="article-date">
-  <time class="dt-published" datetime="2019-11-28T03:34:49.000Z" itemprop="datePublished">2019-11-28</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%89%91%E6%8C%87offer/">剑指offer</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2019/11/28/%E5%89%91%E6%8C%87offer-03%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8/">剑指offer_03从尾到头打印链表</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>输入一个链表，按链表从尾到头的顺序返回一个ArrayList。</p>
-<hr>
-<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>采用递归方法，一直递归到最后一个节点，然后从最后一个点的值开始添加到列表上，直到回溯完成，列表里的存储的元素就是链表尾的元素到头的元素。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="comment">#定义一个节点类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Node</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, item,<span class="built_in">next</span>=<span class="literal">None</span></span>):</span><br><span class="line">        self.item = item        <span class="comment">#定义元素</span></span><br><span class="line">        self.<span class="built_in">next</span> = <span class="literal">None</span>        <span class="comment">#定义指针</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#定义一个列表存储元素</span></span><br><span class="line">array_list=[]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">printListFromTailToHead</span>(<span class="params">listNode</span>):</span><br><span class="line">    <span class="keyword">if</span> listNode:</span><br><span class="line">        printListFromTailToHead(listNode.<span class="built_in">next</span>)  <span class="comment">#递归</span></span><br><span class="line">        array_list.append(listNode.item)        <span class="comment">#取节点的元素</span></span><br><span class="line">    <span class="keyword">return</span> array_list</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">LN=Node(<span class="number">1</span>)      <span class="comment">#定义节点LN的元素为1</span></span><br><span class="line">LN_1=Node(<span class="number">2</span>)    <span class="comment">#定义节点LN_1的元素为2</span></span><br><span class="line">LN_2=Node(<span class="number">3</span>)    <span class="comment">#定义节点LN_2的元素为3</span></span><br><span class="line">LN.<span class="built_in">next</span>=LN_1            <span class="comment">#把节点LN_1连接到LN后面</span></span><br><span class="line">LN_1.<span class="built_in">next</span>=LN_2            <span class="comment">#把节点LN_2连接到LN_1后面</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#形成了LN——&gt;LN_1——&gt;LN_2的一个链表，值分别是1，2，3</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(printListFromTailToHead(LN))</span><br><span class="line"><span class="comment">#输出的array_list列表为[3,2,1]       	</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/11/28/%E5%89%91%E6%8C%87offer-03%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8/" data-id="cljy06in2000zvt1y42406fgf" data-title="剑指offer_03从尾到头打印链表" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
-  <nav id="page-nav">
-    
-    <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
-  </nav>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python%E8%84%9A%E6%9C%AC/">python脚本</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/">产品经理</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%AC%E8%80%83/">公考</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%89%91%E6%8C%87offer/">剑指offer</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/">区块链</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%89%AB%E8%A1%97/">扫街</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BE%8E%E9%A3%9F/">美食</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E7%BB%8F/">面经</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/">面试准备</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/" rel="tag">Mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python%E8%84%9A%E6%9C%AC/" rel="tag">python脚本</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E6%88%90%E9%95%BF/" rel="tag">产品经理成长</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A/" rel="tag">以太坊</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%AC%E8%80%83/" rel="tag">公考</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/" rel="tag">区块链</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AF%BB%E5%91%B3%E9%A1%BA%E5%BE%B7/" rel="tag">寻味顺德</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B9%BF%E5%B7%9E%E5%A1%94/" rel="tag">广州塔</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" rel="tag">排序算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">操作系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%B7%E7%8F%A0%E5%8C%BA/" rel="tag">海珠区</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BE%8E%E9%A3%9F%E6%8E%A2%E5%BA%97/" rel="tag">美食探店</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B6%8A%E7%A7%80%E5%8C%BA/" rel="tag">越秀区</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" rel="tag">软件测试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E7%BB%8F/" rel="tag">面经</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" rel="tag">面试准备</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mysql/" style="font-size: 12px;">Mysql</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/python%E8%84%9A%E6%9C%AC/" style="font-size: 14px;">python脚本</a> <a href="/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E6%88%90%E9%95%BF/" style="font-size: 10px;">产品经理成长</a> <a href="/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A/" style="font-size: 10px;">以太坊</a> <a href="/tags/%E5%85%AC%E8%80%83/" style="font-size: 10px;">公考</a> <a href="/tags/%E5%89%91%E6%8C%87offer/" style="font-size: 20px;">剑指offer</a> <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/" style="font-size: 10px;">区块链</a> <a href="/tags/%E5%AF%BB%E5%91%B3%E9%A1%BA%E5%BE%B7/" style="font-size: 10px;">寻味顺德</a> <a href="/tags/%E5%B9%BF%E5%B7%9E%E5%A1%94/" style="font-size: 10px;">广州塔</a> <a href="/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" style="font-size: 10px;">排序算法</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%B5%B7%E7%8F%A0%E5%8C%BA/" style="font-size: 10px;">海珠区</a> <a href="/tags/%E7%BE%8E%E9%A3%9F%E6%8E%A2%E5%BA%97/" style="font-size: 10px;">美食探店</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 16px;">计算机网络</a> <a href="/tags/%E8%B6%8A%E7%A7%80%E5%8C%BA/" style="font-size: 10px;">越秀区</a> <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">软件测试</a> <a href="/tags/%E9%9D%A2%E7%BB%8F/" style="font-size: 10px;">面经</a> <a href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" style="font-size: 18px;">面试准备</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2023/07/11/%E9%A1%BA%E5%BE%B7%E7%BE%8E%E9%A3%9F%E6%8E%A8%E8%8D%90/">顺德美食推荐</a>
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
           </li>
+          
         
-          <li>
-            <a href="/2022/01/09/2022%E5%B9%B41%E6%9C%88%E5%B9%BF%E5%B7%9E%E6%89%AB%E8%A1%97%E6%97%A5%E8%AE%B0/">2022年1月广州扫街日记</a>
-          </li>
         
-          <li>
-            <a href="/2021/12/09/%E5%85%AC%E8%80%83%E7%AC%94%E8%AE%B0/">初识公考</a>
-          </li>
-        
-          <li>
-            <a href="/2020/06/07/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/">产品经理成长之路01</a>
-          </li>
-        
-          <li>
-            <a href="/2019/12/30/eos%E8%8A%82%E7%82%B9%E8%AF%BB%E5%8F%96%E8%A7%A3%E6%9E%90/">eos节点读取解析</a>
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
           </li>
         
       </ul>
     </div>
   </div>
+</nav>
 
   
-</aside>
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="An elegant Material-Design theme for Hexo"></span>
+          
+        </div>
+
         
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
+
       
-      &copy; 2023 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
     </div>
   </div>
-</footer>
+</div>
 
-    </div>
-    <nav id="mobile-nav">
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          style="margin-top: 0">
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2019/12/03/%E5%89%91%E6%8C%87offer-09%E5%8F%98%E6%80%81%E8%B7%B3%E5%8F%B0%E9%98%B6/" target="_self">
+          剑指offer_09变态跳台阶
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/12/03/%E5%89%91%E6%8C%87offer-09%E5%8F%98%E6%80%81%E8%B7%B3%E5%8F%B0%E9%98%B6/" target="_self">
+        <div>
+          题目描述一只青蛙一次可以跳上1级台阶，也可以跳上2级……它也可以跳上n级。求该青蛙跳上一个n级的台阶总共有多少种跳法。  解题思路比起前一题的要求是可以跳上n级,依旧画表格演示    台阶 跳法（1表示跳一次1阶，2表示跳一次2阶，3表示跳一次3阶） 跳法次数    1 1 1   2 （1，1）,（2） 2   3 （1，1，1），（1，2），（2，1），（3） 4   4 （1，1，1，1），
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-12-03 11:51" pubdate>
+              2019-12-03
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
   
-    <a href="/" class="mobile-nav-link">Home</a>
   
-    <a href="/archives" class="mobile-nav-link">Archives</a>
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%89%91%E6%8C%87offer/" class="category-chain-item">剑指offer</a>
   
-</nav>
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%89%91%E6%8C%87offer/">#剑指offer</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2019/12/03/%E5%89%91%E6%8C%87offer-08%E8%B7%B3%E5%8F%B0%E9%98%B6/" target="_self">
+          剑指offer_08跳台阶
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/12/03/%E5%89%91%E6%8C%87offer-08%E8%B7%B3%E5%8F%B0%E9%98%B6/" target="_self">
+        <div>
+          题目描述一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法（先后次序不同算不同的结果）。  解题思路一开始我以为直接两个for循环，判断i+2*j&#x3D;n就行了，结果发现这样会漏掉次数，比如跳三阶台阶，跳法可以是跳三次一阶，或者先跳一次两阶和再一次一阶，或者先跳一次一阶，再跳一次两阶。 画个表格来演示下    台阶 跳法（1代表跳一次一阶，2代表跳一次2
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-12-03 10:32" pubdate>
+              2019-12-03
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%89%91%E6%8C%87offer/" class="category-chain-item">剑指offer</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%89%91%E6%8C%87offer/">#剑指offer</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2019/12/02/%E5%89%91%E6%8C%87offer-07%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/" target="_self">
+          剑指offer_07斐波那契数列
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/12/02/%E5%89%91%E6%8C%87offer-07%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/" target="_self">
+        <div>
+          题目描述大家都知道斐波那契数列，现在要求输入一个整数n，请你输出斐波那契数列的第n项（从0开始，第0项为0）n&lt;&#x3D;39  解题思路方法有两种，第一种就是最常规的解法，用递归方法，缺点是时间复杂度太大了，第二种就是用循环，然后每次循环进行a，b值的交换，a&#x3D;b，b&#x3D;a+b，第三种方法也是用循环，先定义一个列表，然后每次都末尾追加最后两项相加之后的和 1234567
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-12-02 17:57" pubdate>
+              2019-12-02
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%89%91%E6%8C%87offer/" class="category-chain-item">剑指offer</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%89%91%E6%8C%87offer/">#剑指offer</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2019/12/02/%E5%89%91%E6%8C%87offer-06%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97/" target="_self">
+          剑指offer_06旋转数组的最小数字
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/12/02/%E5%89%91%E6%8C%87offer-06%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97/" target="_self">
+        <div>
+          题目描述把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。输入一个非递减排序的数组的一个旋转，输出旋转数组的最小元素。例如数组{3,4,5,1,2}为{1,2,3,4,5}的一个旋转，该数组的最小值为1。NOTE：给出的所有元素都大于0，若数组大小为0，请返回0。  解题思路首先说明了是非递减排序的数列，即旋转后不会出现{5，4，3，1，2}，也就是旋转后的数组依旧是由两个非递减数
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-12-02 17:26" pubdate>
+              2019-12-02
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%89%91%E6%8C%87offer/" class="category-chain-item">剑指offer</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%89%91%E6%8C%87offer/">#剑指offer</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2019/12/02/%E5%89%91%E6%8C%87offer-05%E7%94%A8%E4%B8%A4%E4%B8%AA%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97/" target="_self">
+          剑指offer_05用两个栈实现队列
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/12/02/%E5%89%91%E6%8C%87offer-05%E7%94%A8%E4%B8%A4%E4%B8%AA%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97/" target="_self">
+        <div>
+          题目描述用两个栈来实现一个队列，完成队列的Push和Pop操作。 队列中的元素为int类型。  解题思路append函数都是在末尾追加，故用stackA模拟进队操作 pop函数默认从末尾删除，故从stackA里面删除，然后把该元素添加进stackB里面，然后再从stackB里面pop出来，即实现了队列的先进先出 1234567891011121314151617181920212223242526
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-12-02 17:01" pubdate>
+              2019-12-02
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%89%91%E6%8C%87offer/" class="category-chain-item">剑指offer</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%89%91%E6%8C%87offer/">#剑指offer</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2019/12/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%BD%91%E7%BB%9C%E5%B1%82/" target="_self">
+          计算机网络-网络层
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/12/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%BD%91%E7%BB%9C%E5%B1%82/" target="_self">
+        <div>
+          两种服务： 虚电路服务：建立连接、有短的虚电路号、顺序到达 数据报服务：无连接、有终点的完整地址、不一定顺序到达  主要协议：IP网际协议、ARP地址解析协议、ICMP网际控制报文协议、IGMP网际组管理协议 IP地址&#x3D;网络号+主机号 	32位标识符 IP地址——ARP——&gt;硬件地址		每台主机都有一个ARP告诉缓存 ARP是解决同一局域网上的主机或路由器的IP地址和硬件地址的转换
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-12-01 13:16" pubdate>
+              2019-12-01
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="category-chain-item">计算机网络</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/">#面试准备</a>
+            
+              <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">#计算机网络</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2019/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/" target="_self">
+          计算机网络-数据链路层
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/11/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/" target="_self">
+        <div>
+          两种信道：1⃣️点对点信道 2⃣️广播信道 数据链路层的协议数据单位——————帧 帧定界： 1⃣️起始字符：SOH  2⃣️终止字符：EOT  3⃣️最大传送单元：MTU   字符填充： 在数据部分中出现SOH、EOT，在其前面加入转义字符ESC即可 循环冗余检验CRC：若余数R&#x3D;0，则无差错，反之则有 多项式表示：P&#x3D;1101，即P(X)&#x3D;X^3+X^2+1 p&
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-11-30 08:35" pubdate>
+              2019-11-30
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="category-chain-item">计算机网络</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/">#面试准备</a>
+            
+              <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">#计算机网络</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2019/11/29/%E5%89%91%E6%8C%87offer-04%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91/" target="_self">
+          剑指offer_04重建二叉树
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/11/29/%E5%89%91%E6%8C%87offer-04%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91/" target="_self">
+        <div>
+          题目描述输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,5,3,6,7}和中序遍历序列{4,2,5,1,6,3,7}，则重建二叉树并返回。  解题思路前序遍历的第一个元素就是每次二次的根节点，所以确定在中序遍历中根节点所在的位置就可以把中序遍历一分为二，根节点前面的为左子树的元素，根节点后面的为右子树
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-11-29 10:13" pubdate>
+              2019-11-29
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%89%91%E6%8C%87offer/" class="category-chain-item">剑指offer</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%89%91%E6%8C%87offer/">#剑指offer</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2019/11/28/hexo%E6%96%87%E7%AB%A0%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E4%B8%8D%E6%98%BE%E7%A4%BA/" target="_self">
+          hexo文章插入图片不显示
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/11/28/hexo%E6%96%87%E7%AB%A0%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E4%B8%8D%E6%98%BE%E7%A4%BA/" target="_self">
+        <div>
+          解决方法一、修改配置文件修改根目录下的_config.yml文件，原本是false，改成true，之后新建文章的时候会生成一个文章同名的文件夹，把照片放进去就可以了 1post_asset_folder: true    二、安装插件 我们需要安装一个图片路径转换的插件，这个插件名字是hexo-asset-image  1npm install https://github.com/CodeFal
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-11-28 15:35" pubdate>
+              2019-11-28
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/hexo/" class="category-chain-item">hexo</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/hexo/">#hexo</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2019/11/28/%E5%89%91%E6%8C%87offer-03%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8/" target="_self">
+          剑指offer_03从尾到头打印链表
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/11/28/%E5%89%91%E6%8C%87offer-03%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8/" target="_self">
+        <div>
+          题目描述输入一个链表，按链表从尾到头的顺序返回一个ArrayList。  解题思路采用递归方法，一直递归到最后一个节点，然后从最后一个点的值开始添加到列表上，直到回溯完成，列表里的存储的元素就是链表尾的元素到头的元素。 12345678910111213141516171819202122232425262728# -*- coding:utf-8 -*-#定义一个节点类class Node(ob
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-11-28 11:34" pubdate>
+              2019-11-28
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%89%91%E6%8C%87offer/" class="category-chain-item">剑指offer</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%89%91%E6%8C%87offer/">#剑指offer</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/3/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#board">2</a><a class="page-number" href="/page/3/#board">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/#board">5</a><a class="extend next" rel="next" href="/page/5/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     
 
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
 
-<script src="/js/jquery-3.6.4.min.js"></script>
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
 
 
 
   
-<script src="/fancybox/jquery.fancybox.min.js"></script>
+    <script  src="/js/img-lazyload.js" ></script>
+  
 
 
 
 
-<script src="/js/script.js"></script>
+  <script  src="/js/local-search.js" ></script>
 
 
 
 
 
-  </div>
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
 </body>
 </html>

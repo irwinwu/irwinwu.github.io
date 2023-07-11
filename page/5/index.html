@@ -1,952 +1,908 @@
+
+
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
   
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
+    <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/page/5/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+<meta name="twitter:card" content="summary_large_image">
   
   
-    <link rel="shortcut icon" href="/favicon.png">
   
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+  <title>Hexo</title>
 
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
 
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
   
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
   
 <meta name="generator" content="Hexo 6.3.0"></head>
 
+
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
         
-          <a class="main-nav-link" href="/">Home</a>
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
         
-          <a class="main-nav-link" href="/archives">Archives</a>
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
         
-      </nav>
-      <nav id="sub-nav">
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
         
         
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-剑指offer-02替换空格" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2019/11/28/%E5%89%91%E6%8C%87offer-02%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC/" class="article-date">
-  <time class="dt-published" datetime="2019-11-28T03:31:26.000Z" itemprop="datePublished">2019-11-28</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%89%91%E6%8C%87offer/">剑指offer</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2019/11/28/%E5%89%91%E6%8C%87offer-02%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC/">剑指offer_02替换空格</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>请实现一个函数，将一个字符串中的每个空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。</p>
-<hr>
-<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>replace函数直接替换</p>
-<p>replace（“old”，“new”，max），其中max是替换次数，可不填</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">replaceSpace</span>(<span class="params">s</span>):</span><br><span class="line">    s=s.replace(<span class="string">&quot; &quot;</span>,<span class="string">&quot;%20&quot;</span>)		</span><br><span class="line">   <span class="comment"># s=&quot;%20&quot;.join(list(s.split(&quot; &quot;)))		#或者字符串以空格来进行切片，然后再填充%20</span></span><br><span class="line">    <span class="keyword">return</span> s</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">string=<span class="string">&quot;We are happy&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(replaceSpace(string))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/11/28/%E5%89%91%E6%8C%87offer-02%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC/" data-id="cljy06in1000vvt1yamk445q4" data-title="剑指offer_02替换空格" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-剑指offer-01二维数组中的查找" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2019/11/28/%E5%89%91%E6%8C%87offer-01%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9F%A5%E6%89%BE/" class="article-date">
-  <time class="dt-published" datetime="2019-11-28T03:13:18.000Z" itemprop="datePublished">2019-11-28</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%89%91%E6%8C%87offer/">剑指offer</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2019/11/28/%E5%89%91%E6%8C%87offer-01%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9F%A5%E6%89%BE/">剑指offer_01二维数组中的查找</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>在一个二维数组中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。</p>
-<hr>
-<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>首先我们选择从左下角开始搜寻，（为什么不从左上角开始搜寻，因为左上角向右和向下都是递增，那么对于一个点，对于向右和向下就会产生一个岔路；如果选择从左下角开始搜寻，如果大于就右，小于就向上），当然也可以从右上角开始搜寻。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">matrix_find</span>(<span class="params">target,matrix</span>):</span><br><span class="line">    rows=<span class="built_in">len</span>(matrix)-<span class="number">1</span>        <span class="comment">#行长减1</span></span><br><span class="line">    cols=<span class="built_in">len</span>(matrix[<span class="number">0</span>])-<span class="number">1</span>        <span class="comment">#列长减1</span></span><br><span class="line"></span><br><span class="line">    i=rows          <span class="comment">#从matrix的左下角开始</span></span><br><span class="line">    j=<span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> j&lt;=cols <span class="keyword">and</span> i&gt;=<span class="number">0</span>:          <span class="comment">#判断是否超过边界</span></span><br><span class="line">        <span class="keyword">if</span> target&lt;matrix[i][j]:     <span class="comment">#小于，则i-1，即上移</span></span><br><span class="line">            i-=<span class="number">1</span></span><br><span class="line">        <span class="keyword">elif</span> target&gt;matrix[i][j]:       <span class="comment">#大于，则j+1，即右移</span></span><br><span class="line">            j+=<span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a = [[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>,<span class="number">4</span>], [<span class="number">2</span>,<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>], [<span class="number">3</span>,<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>]]</span><br><span class="line">b = <span class="number">3</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(matrix_find(b,a))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<p>二维数组如下：</p>
-<table>
-<thead>
-<tr>
-<th align="center">1</th>
-<th align="center">2</th>
-<th align="center">3</th>
-<th align="center">4</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">2</td>
-<td align="center">3</td>
-<td align="center">4</td>
-<td align="center">5</td>
-</tr>
-<tr>
-<td align="center">3</td>
-<td align="center">4</td>
-<td align="center">5</td>
-<td align="center">6</td>
-</tr>
-<tr>
-<td align="center">4</td>
-<td align="center">5</td>
-<td align="center">6</td>
-<td align="center">7</td>
-</tr>
-</tbody></table>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/11/28/%E5%89%91%E6%8C%87offer-01%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9F%A5%E6%89%BE/" data-id="cljy06in1000rvt1y130decmb" data-title="剑指offer_01二维数组中的查找" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-计算机网络-物理层" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2019/11/27/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%89%A9%E7%90%86%E5%B1%82/" class="article-date">
-  <time class="dt-published" datetime="2019-11-27T13:45:24.000Z" itemprop="datePublished">2019-11-27</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2019/11/27/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%89%A9%E7%90%86%E5%B1%82/">计算机网络-物理层</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h5 id="数据通信系统三大部分："><a href="#数据通信系统三大部分：" class="headerlink" title="数据通信系统三大部分："></a>数据通信系统三大部分：</h5><p>信源、信宿、通信媒体</p>
-<p>通信的<strong>目的</strong>是传递消息</p>
-<p><strong>数据</strong>是运送消息的<strong>实体</strong></p>
-<h5 id="码元："><a href="#码元：" class="headerlink" title="码元："></a>码元：</h5><p>代表不同离散数值的基本波形</p>
-<h5 id="三种通信方式："><a href="#三种通信方式：" class="headerlink" title="三种通信方式："></a>三种通信方式：</h5><p>1⃣️单工通信</p>
-<p>2⃣️半双工通信</p>
-<p>3⃣️全双工通信</p>
-<p>模拟数据编码：ASK、PSK、FSK</p>
-<p>模拟信号——(PCM脉冲编码)——&gt;数字信号</p>
-<h5 id="PCM的工作："><a href="#PCM的工作：" class="headerlink" title="PCM的工作："></a>PCM的工作：</h5><p>采样、量化、编码</p>
-<h5 id="奈氏准则："><a href="#奈氏准则：" class="headerlink" title="奈氏准则："></a>奈氏准则：</h5><p>在任何信道中，码元传输的速率是有上限的，传输速率超过此上限，就会出现严重的<strong>码间串扰问题</strong>，使接收端对码元的判决成为<strong>不可能</strong>。理想下的最高速率为2W Baud，W为带宽</p>
-<h5 id="香农公式："><a href="#香农公式：" class="headerlink" title="香农公式："></a>香农公式：</h5><p>信道的极限传输速率C&#x3D;W*log2（1+S&#x2F;N）   其中W为带宽，S为平均功率，N为噪声功率，S&#x2F;N为信噪比。即信道的带宽或信噪比越大，极限传输速率就越高</p>
-<h5 id="传输介质："><a href="#传输介质：" class="headerlink" title="传输介质："></a>传输介质：</h5><ul>
-<li>导向型（双绞线，同轴电缆）</li>
-<li>非导向型（微波、卫星通信）</li>
-</ul>
-<h5 id="信道复用技术："><a href="#信道复用技术：" class="headerlink" title="信道复用技术："></a>信道复用技术：</h5><ul>
-<li>频分复用FDM：划分不同频带，同一时间占用不同的带宽资源</li>
-<li>时分复用TDM：不同时间占用同样的频带宽度（还有同步时分复用）</li>
-<li>统计时分复用STDM（异步时分复用）</li>
-<li>波分复用WDM：即光的频分复用</li>
-<li>码分复用CDM：同一时间同一信道带宽，用不同的码型</li>
-</ul>
-<h5 id="电路交换："><a href="#电路交换：" class="headerlink" title="电路交换："></a>电路交换：</h5><p>在连接建立后到连接释放前全程占用信道资源（必须面向连接）</p>
-<h5 id="分组交换："><a href="#分组交换：" class="headerlink" title="分组交换："></a>分组交换：</h5><p>在数据传送时占用信道资源（面向连接或无连接）</p>
-<h5 id="异步通信："><a href="#异步通信：" class="headerlink" title="异步通信："></a>异步通信：</h5><p>发送端可以在任意时刻开始发送字符，且每个字符要加上开始位和停止位，接收端必须时刻做好接收准备</p>
-<h5 id="同步通信："><a href="#同步通信：" class="headerlink" title="同步通信："></a>同步通信：</h5><p>通信双方必须建立同步，即双方的时钟调整到同一频率，两种同步方式，全网同步、准同步</p>
-<h5 id="主要设备："><a href="#主要设备：" class="headerlink" title="主要设备："></a>主要设备：</h5><p>转发器、中继器、集线器、调制解调器</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/11/27/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%89%A9%E7%90%86%E5%B1%82/" data-id="cljy06in9003ivt1y7te2ak1f" data-title="计算机网络-物理层" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" rel="tag">面试准备</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-计算机网络-基础概念" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2019/11/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/" class="article-date">
-  <time class="dt-published" datetime="2019-11-26T13:07:00.000Z" itemprop="datePublished">2019-11-26</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2019/11/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/">计算机网络-基础概念</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h5 id="互联网的组成："><a href="#互联网的组成：" class="headerlink" title="互联网的组成："></a>互联网的组成：</h5><p>资源子网、通信子网</p>
-<h5 id="通信方式："><a href="#通信方式：" class="headerlink" title="通信方式："></a>通信方式：</h5><p>客户-服务器方式，对等方式（p2p）方式</p>
-<p>路由器则是用来转发分组的，即进行分组交换</p>
-<h5 id="计算机网络的定义："><a href="#计算机网络的定义：" class="headerlink" title="计算机网络的定义："></a>计算机网络的定义：</h5><p>即一些互相连接的、自治的计算机集合</p>
-<h5 id="按照网络的作用范围进行分类："><a href="#按照网络的作用范围进行分类：" class="headerlink" title="按照网络的作用范围进行分类："></a>按照网络的作用范围进行分类：</h5><p>广域网WAN、城域网MAN、局域网LAN、个人局域网PAN</p>
-<h5 id="网络性能指标："><a href="#网络性能指标：" class="headerlink" title="网络性能指标："></a>网络性能指标：</h5><p>1⃣️速率：数据的传送速率 bit／s</p>
-<p>2⃣️带宽：用来表示网络中某通道传送数据的能力 bit／s</p>
-<p>3⃣️吞吐量：表示在单位时间内通过某个网络（信道、接口）的实际的数据量</p>
-<p>4⃣️时延：发送时延&#x3D;数据帧长度／发送速率，传播时延&#x3D;信道长度／传播速率，处理时延，排队时延<br>总时延&#x3D;发送时延+传播时延+处理时延+排队时延</p>
-<p>5⃣️时延带宽积&#x3D;传播时延*带宽</p>
-<p>6⃣️往返时间RTT</p>
-<p>7⃣️利用率：D&#x3D;D。／1-U     D表示当前的时延，D。表示空闲的时延，U表示利用率</p>
-<p>信道或网络的<strong>利用率过高</strong>会产生非常大的<strong>时延</strong></p>
-<p><strong>体系结构</strong>是计算机网络的各层及其协议的<strong>集合</strong></p>
-<h5 id="协议三要素："><a href="#协议三要素：" class="headerlink" title="协议三要素："></a>协议三要素：</h5><p>语法、语义、同步</p>
-<h5 id="OSI七层协议："><a href="#OSI七层协议：" class="headerlink" title="OSI七层协议："></a>OSI七层协议：</h5><p>物理层、数据链路层、网络层、运输层、会话层、表示层、应用层</p>
-<h5 id="TCP／IP的四层协议："><a href="#TCP／IP的四层协议：" class="headerlink" title="TCP／IP的四层协议："></a>TCP／IP的四层协议：</h5><p>网络接口层、网际层（IP）、运输层（TCP或UDP）、应用层（各种应用层协议）</p>
-<h5 id="五层协议"><a href="#五层协议" class="headerlink" title="五层协议"></a>五层协议</h5><table>
-<thead>
-<tr>
-<th>各层</th>
-<th align="center">物理层</th>
-<th>数据链路层</th>
-<th>网络层</th>
-<th>运输层</th>
-<th>应用层</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>各层的基础设备</td>
-<td align="center">中继器、转发器、集线器、调制解调器</td>
-<td>网桥、二层交换机</td>
-<td>三层交换机、路由器</td>
-<td>传输网关</td>
-<td>应用网关</td>
-</tr>
-<tr>
-<td>各层的数据基本单位</td>
-<td align="center">比特流</td>
-<td>数据帧</td>
-<td>数据分组</td>
-<td>数据报</td>
-<td>报文</td>
-</tr>
-</tbody></table>
-<p>OSI在对等层次之间传送的数据单位称为<strong>协议数据单元（PDU）</strong></p>
-<h5 id="协议和服务："><a href="#协议和服务：" class="headerlink" title="协议和服务："></a>协议和服务：</h5><p>协议的实现保证了能够向上一层提供服务，使用本层服务的实体只能看见服务，无法看见下面的协议，即下面的协议对上面的实体是<strong>透明的</strong></p>
-<h5 id="各层的协议分布图："><a href="#各层的协议分布图：" class="headerlink" title="各层的协议分布图："></a>各层的协议分布图：</h5><img src="/2019/11/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/1.png" class="" title="picture">
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/11/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/" data-id="cljy06in80037vt1yfc2p1bzx" data-title="计算机网络-基础概念" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" rel="tag">面试准备</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-操作系统面试准备" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2019/11/25/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" class="article-date">
-  <time class="dt-published" datetime="2019-11-24T16:03:03.000Z" itemprop="datePublished">2019-11-25</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/">面试准备</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2019/11/25/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/">操作系统面试准备</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h5 id="线程间通信的方法："><a href="#线程间通信的方法：" class="headerlink" title="线程间通信的方法："></a>线程间通信的方法：</h5><p>同一进程的各线程可以直接读写进程数据段进行通信，同时，需要同步和互斥手段的辅助，而不同进程间的线程通信可以参考不同进程间的通信</p>
-<h5 id="多线程同步方式："><a href="#多线程同步方式：" class="headerlink" title="多线程同步方式："></a>多线程同步方式：</h5><p>事件event，临界区域，互斥器、信号量</p>
-<h5 id="同步和异步的区别："><a href="#同步和异步的区别：" class="headerlink" title="同步和异步的区别："></a>同步和异步的区别：</h5><p>同步是阻塞模式，即发送方发出数据后，等待接受法发回响应以后才发送下一个数据包的通讯方式；异步是非阻塞方式，发送方发出数据后，不等接收方发回响应，接着发送下一个数据包的通讯方式</p>
-<h5 id="普通B-x2F-S模式（同步）AJAX技术（异步）"><a href="#普通B-x2F-S模式（同步）AJAX技术（异步）" class="headerlink" title="普通B&#x2F;S模式（同步）AJAX技术（异步）"></a>普通B&#x2F;S模式（同步）AJAX技术（异步）</h5><p>同步：提交请求—&gt;等待服务器处理—&gt;处理完毕返回 。这期间客户端浏览器不能干任何事<br>异步：请求通过事件触发—&gt;服务器处理（这时浏览器可以做其他事情）—&gt;处理完毕</p>
-<h5 id="进程和线程的概念："><a href="#进程和线程的概念：" class="headerlink" title="进程和线程的概念："></a>进程和线程的概念：</h5><h6 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h6><p>是操作系统结构的基础，进程是一个程序的一次执行过程；是一个正在执行的程序；计算机中正在运行的程序实例；可以分配给处理器并由处理器执行的一个实体；由单一顺序的执行显示，一个当前状态和一组相关的系统资源所描述的活动单元</p>
-<h6 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h6><p>有时被称为轻量级进程，是程序执行流的最小单元。一个标准的线程由线程ID、当前指令指针(PC)，寄存器集合和堆栈组成。另外，线程是进程中的一个实体，是呗系统独立调度和分派的基本单位，线程自己不拥有系统资源，只拥有一点在运行中必不可少的资源，但它可以与同属一个进程的其它线程共享进程所拥有的全部资源。一个线程可以创建和撤销另一个线程，同一个进程中的多个线程之间可以并发执行。由于线程之间的相互制约，致使线程在运行中呈现出间断性，线程也有就绪、阻塞和运行三种基本状态</p>
-<h5 id="进程和线程的区别："><a href="#进程和线程的区别：" class="headerlink" title="进程和线程的区别："></a>进程和线程的区别：</h5><p>子进程和父进程有不同的代码和数据空间，而多个线程则共享数据空间，每个线程有自己的执行堆栈和程序计数器为其执行上下文，多线程主要是为了节约CPU事件，发挥利用。根据具体情况而定，线程的运行中需要使用计算机的内存资源和CPU。通常在一个进程中可以包含若干个线程，它们可以利用进程所拥有的资源。在进入线程的操作系统中，通常都是把进程作为分配资源的基本单位，而把线程作为独立运行和独立调度的基本单位</p>
-<h5 id="进程的地址空间是怎么回事？虚拟内存是如何实现的？"><a href="#进程的地址空间是怎么回事？虚拟内存是如何实现的？" class="headerlink" title="进程的地址空间是怎么回事？虚拟内存是如何实现的？"></a>进程的地址空间是怎么回事？虚拟内存是如何实现的？</h5><p>虚拟内存的存在使得CPU上的指令访问的地址都是虚拟地址，而这些地址是需要在物理内存中真实存在的，这里就需要在虚拟地址和物理地址直接建立一个映射关系（应当是多对一的关系），说白了就是一个整数集合到另一个整数集合的映射。然后在查找时，根据相应的算法（如先进先出，最多使用等）进行调度</p>
-<h5 id="死锁的定义："><a href="#死锁的定义：" class="headerlink" title="死锁的定义："></a>死锁的定义：</h5><p>​	死锁是指多个进程因竞争资源而造成的一种僵局（互相等待），若无外力作用，这些进程都将无法向前推进</p>
-<h5 id="死锁产生的原因："><a href="#死锁产生的原因：" class="headerlink" title="死锁产生的原因："></a>死锁产生的原因：</h5><p>​	1、系统资源的竞争<br>​	2、进程运行推进顺序不合适</p>
-<h5 id="产生死锁有四个必要条件："><a href="#产生死锁有四个必要条件：" class="headerlink" title="产生死锁有四个必要条件："></a>产生死锁有四个必要条件：</h5><p>1、互斥条件。一个资源只能被一个进程占用<br>2、不可剥夺条件。某个进程占用了资源，就只能他自己去释放。<br>3、请求和保持条件。某个进程之前申请了资源，我还想再申请资源，之前的资源还是我占用着，别人别想动。除非我自己不想用了，释放掉。<br>4、循环等待条件。一定会有一个环互相等待。</p>
-<h5 id="死锁避免和预防："><a href="#死锁避免和预防：" class="headerlink" title="死锁避免和预防："></a>死锁避免和预防：</h5><h6 id="1、死锁避免"><a href="#1、死锁避免" class="headerlink" title="1、死锁避免"></a>1、死锁避免</h6><p>死锁避免的基本思想：系统对进程发出的每一个系统能够满足的资源申请进行动态检查，并根据检查结果决定是否分配资源，如果分配后系统可能发生死锁，则不予分配，否则予以分配，这是一种保证系统不进入死锁状态的动态策略。</p>
-<h6 id="2、死锁预防"><a href="#2、死锁预防" class="headerlink" title="2、死锁预防"></a>2、死锁预防</h6><p>1⃣️破坏“不可剥夺”条件：一个进程不能获得所需要的全部资源时便处于等待状态，等待期间他占有的资源将被隐式的释放重新加入到 系统的资源列表中，可以被其他的进程使用，而等待的进程只有重新获得自己原有的资源以及新申请的资源才可以重新启动，执行。<br>2⃣️破坏”请求与保持条件“：第一种方法静态分配即每个进程在开始执行时就申请他所需要的全部资源。第二种是动态分配即每个进程在申请所需要的资源时他本身不占用系统资源。<br>3⃣️破坏“循环等待”条件：采用资源有序分配其基本思想是将系统中的所有资源顺序编号，将紧缺的，稀少的采用较大的编号，在申请资源时必须按照编号的顺序进行，一个进程只有获得较小编号的进程才能申请较大编号的进程。</p>
-<h5 id="linux进程间通信有哪些方式，优缺点如何"><a href="#linux进程间通信有哪些方式，优缺点如何" class="headerlink" title="linux进程间通信有哪些方式，优缺点如何"></a>linux进程间通信有哪些方式，优缺点如何</h5><h6 id="管道-pipe-："><a href="#管道-pipe-：" class="headerlink" title="管道( pipe )："></a>管道( pipe )：</h6><p>管道包括三种:<br>1⃣️普通管道PIPE： 通常有两种限制,一是单工,只能单向传输;二是只能在父子或者兄弟进程间使用.<br>2⃣️流管道s_pipe: 去除了第一种限制,为半双工，只能在父子或兄弟进程间使用，可以双向传输.<br>3⃣️命名管道:name_pipe：去除了第二种限制,可以在许多并不相关的进程之间进行通讯.</p>
-<h6 id="信号量-semophore-："><a href="#信号量-semophore-：" class="headerlink" title="信号量( semophore ) ："></a>信号量( semophore ) ：</h6><p>​	信号量是一个计数器，可以用来控制多个进程对共享资源的访问。它常作为一种锁机制，防止某进程正在访问共享资源时，其他进程也访问该资源。因此，主要作为进程间以及同一进程内不同线程之间的同步手段。</p>
-<h6 id="消息队列-message-queue-："><a href="#消息队列-message-queue-：" class="headerlink" title="消息队列( message queue ) ："></a>消息队列( message queue ) ：</h6><p>​	消息队列是由消息的链表，存放在内核中并由消息队列标识符标识。消息队列克服了信号传递信息少、管道只能承载无格式字节流以及缓冲区大小受限等缺点。</p>
-<h6 id="信号-sinal-："><a href="#信号-sinal-：" class="headerlink" title="信号 ( sinal ) ："></a>信号 ( sinal ) ：</h6><p>​	信号是一种比较复杂的通信方式，用于通知接收进程某个事件已经发生。</p>
-<h6 id="共享内存-shared-memory-："><a href="#共享内存-shared-memory-：" class="headerlink" title="共享内存( shared memory ) ："></a>共享内存( shared memory ) ：</h6><p>​	共享内存就是映射一段能被其他进程所访问的内存，这段共享内存由一个进程创建，但多个进程都可以访问。共享内存是最快的 IPC 方式，它是针对其他进程间通信方式运行效率低而专门设计的。它往往与其他通信机制，如信号两，配合使用，来实现进程间的同步和通信。</p>
-<h6 id="套接字-socket-："><a href="#套接字-socket-：" class="headerlink" title="套接字( socket ) ："></a>套接字( socket ) ：</h6><p>​	套解口也是一种进程间通信机制，与其他通信机制不同的是，它可用于不同机器间的进程通信。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/11/25/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" data-id="cljy06in8002zvt1yb0ly9ugl" data-title="操作系统面试准备" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">操作系统</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" rel="tag">面试准备</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-排序算法" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2019/11/24/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" class="article-date">
-  <time class="dt-published" datetime="2019-11-24T04:18:31.000Z" itemprop="datePublished">2019-11-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/">面试准备</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2019/11/24/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">排序算法</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h4 id="请列举常用的排序算法"><a href="#请列举常用的排序算法" class="headerlink" title="请列举常用的排序算法"></a>请列举常用的排序算法</h4><p>并说明其时间复杂度，并说明排序思路</p>
-<h5 id="冒泡排序："><a href="#冒泡排序：" class="headerlink" title="冒泡排序："></a>冒泡排序：</h5><p>两两比较待排序数据元素的大小，发现两个数据元素的次序相反时即进行交换，直到没有反序的数据元素位置，算法时间复杂度是O(n^2)</p>
-<h5 id="选择排序："><a href="#选择排序：" class="headerlink" title="选择排序："></a>选择排序：</h5><p>每一趟从待排序的数据元素中选出最小（或最大）的一个元素，顺序放在已排好序的数列的最后，直到全部待排序数据元素全部插入完为止，算法时间复杂度是O(n^2)</p>
-<h5 id="插入排序："><a href="#插入排序：" class="headerlink" title="插入排序："></a>插入排序：</h5><p>每次将一个待排序的数据元素，插入到前面已经排好序的数列中的适当位置，使数列依然有序；直到待排序数据元素全部插入完为止，算法复杂度是O(n^2)</p>
-<h5 id="快速排序："><a href="#快速排序：" class="headerlink" title="快速排序："></a>快速排序：</h5><p>在当前无序区R[1，H]中任取一个数据元素作为比较的“基准”，用此基准将当前无序区划分为左右两个较小的无序区：R[1，i-1] 和R[i+1，H]，且左边的无序子区中数据元素均小于或等于基准元素，右边的无序子区中数据元素均大于等于基准元素，而且该基准位于最终排序的位置上，即R[1，i-1]&lt;&#x3D; 基准&lt;&#x3D;R[i+1，H]，当R[1，i-1]和R[i+1，H]均非空时，分别对它们进行上述的划分过程，直至所有无序子区中的数据元素均已排序为止。该排序为不稳定排序，最理想的算法时间复杂度O(nlog2n)，最坏O(n^2)</p>
-<h5 id="堆排序："><a href="#堆排序：" class="headerlink" title="堆排序："></a>堆排序：</h5><p>堆排序是一树形选择排序，在排序过程中，将R[1，N]看成是一颗完全二叉树的顺序存储结构，利用完全二叉树中双亲结点和孩子结点之间的内在关系来选择最小的元素，算法时间复杂度O(nlogn)</p>
-<h5 id="希尔排序："><a href="#希尔排序：" class="headerlink" title="希尔排序："></a>希尔排序：</h5><p>其实就是用步长控制的插入排序，希尔排序通过加大插入排序中元素之间的间隔，并在这些有间隔的元素中进行插入排序，从而让数据项可以大幅度移动，这样的方式使每次移动之后的数据离他们在最终序列中的位置相差不大，保证数据的基本有序，大大提升了排序速度，运算时间复杂度是O(n*logn)</p>
-<h5 id="归并排序："><a href="#归并排序：" class="headerlink" title="归并排序："></a>归并排序：</h5><p>​	DIvide：把长度为n的输入序列分成两个长度为n／2的子序列。<br>​	Conquer：对这两个子序列分别采用归并排序<br>​	Combine：将两个排序好的子序列合并成一个最终的排序序列<br>时间复杂度是O(nlog2n)</p>
-<h4 id="快速排序的多种复杂度"><a href="#快速排序的多种复杂度" class="headerlink" title="快速排序的多种复杂度"></a>快速排序的多种复杂度</h4><p>平均时间复杂度是多少？最坏时间复杂度是什么？在哪些情况下会遇到最坏的时间复杂度？</p>
-<p>​	快速排序的平均时间复杂度O(nlog2n)，最坏时间复杂度O(n^2)<br>​	最坏情况：当每次pivot选择恰好都把列表元素分成（1，n-1）<br>​	采取措施：pivot的选取是通过random来进行</p>
-<h4 id="各排序算法的稳定性"><a href="#各排序算法的稳定性" class="headerlink" title="各排序算法的稳定性"></a>各排序算法的稳定性</h4><h5 id="不稳定排序："><a href="#不稳定排序：" class="headerlink" title="不稳定排序："></a>不稳定排序：</h5><p>选择排序、快速排序、希尔排序、堆排序</p>
-<h5 id="稳定排序："><a href="#稳定排序：" class="headerlink" title="稳定排序："></a>稳定排序：</h5><p>冒泡排序、插入排序、归并排序和基数排序</p>
-<h4 id="一张图总结"><a href="#一张图总结" class="headerlink" title="一张图总结"></a>一张图总结</h4><img src="/2019/11/24/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/suanfa.jpg" class="" title="总结">
-
-
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/11/24/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" data-id="cljy06in7002wvt1y6m4r6px7" data-title="排序算法" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" rel="tag">排序算法</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" rel="tag">面试准备</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-以太坊区块字段和交易字段" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2019/11/23/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%8C%BA%E5%9D%97%E5%AD%97%E6%AE%B5%E5%92%8C%E4%BA%A4%E6%98%93%E5%AD%97%E6%AE%B5/" class="article-date">
-  <time class="dt-published" datetime="2019-11-23T04:17:53.000Z" itemprop="datePublished">2019-11-23</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/">区块链</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2019/11/23/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%8C%BA%E5%9D%97%E5%AD%97%E6%AE%B5%E5%92%8C%E4%BA%A4%E6%98%93%E5%AD%97%E6%AE%B5/">以太坊区块字段和交易字段</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>见图1</p>
-<img src="/2019/11/23/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%8C%BA%E5%9D%97%E5%AD%97%E6%AE%B5%E5%92%8C%E4%BA%A4%E6%98%93%E5%AD%97%E6%AE%B5/1.jpg" class="" title="图1">
-
-<ul>
-<li><p>Difficulty：表示当前区块的难度。</p>
-</li>
-<li><p>ExtraData：与此区块相关的附加数据。</p>
-</li>
-<li><p>gasLimit：当前区块允许使用的最大gas。</p>
-</li>
-<li><p>gasUsed：当前区块累计使用的gas。</p>
-</li>
-<li><p>Hash：区块的哈希值。如果区块没有被确认，这个字段会是null值。</p>
-</li>
-<li><p>LogsBloom：区块日志的布隆过滤器，区块没被确认是值为null。 </p>
-</li>
-<li><p>Miner：取得该区块记账权的矿工。</p>
-</li>
-<li><p>mixHash：一个Hash值，当与nonce组合时，证明此区块已经执行了足够的计</p>
-<p>算。</p>
-</li>
-<li><p>nonce：POW生成的哈希值。</p>
-</li>
-<li><p>Number：区块号。</p>
-</li>
-<li><p>parentHash：前一个区块的哈希值。</p>
-</li>
-<li><p>receiptsRoot：收据树的根哈希值。</p>
-</li>
-<li><p>Sha3Uncles：数据块的哈希值。</p>
-</li>
-<li><p>Size：当前区块的字节大小。</p>
-</li>
-<li><p>stateRoot：区块状态树的根哈希。</p>
-</li>
-<li><p>Timestamp：区块打包时的unix时间戳。</p>
-</li>
-<li><p>totalDifficulty：区块链到当前区块的总难度。</p>
-</li>
-<li><p>Transactions：交易的对象。</p>
-</li>
-<li><p>transactionsRoot：区块的交易树的根哈希。</p>
-</li>
-<li><p>Uncles：叔哈希的数组。</p>
-<p>见图2</p>
-<img src="/2019/11/23/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%8C%BA%E5%9D%97%E5%AD%97%E6%AE%B5%E5%92%8C%E4%BA%A4%E6%98%93%E5%AD%97%E6%AE%B5/2.jpg" class="" title="图2">
-</li>
-<li><p>blockHash：这个交易所在的块的哈希值。</p>
-</li>
-<li><p>blockNumber：这个交易所在的块的编号。</p>
-</li>
-<li><p>from：发起这个交易的账户或者用户。</p>
-</li>
-<li><p>gas：执行这个交易所需要的gas。</p>
-</li>
-<li><p>gasPrice：当前gas与以太币换算的汇率。</p>
-</li>
-<li><p>hash：当前这个交易的哈希值。</p>
-</li>
-<li><p>input：这里是部署智能合约的交易，所以这里的input是合约的16进制代码。</p>
-</li>
-<li><p>nonce：这里的是交易下的nonce值，是账户发起交易所维护的nonce，一个交易对应一个nonce值，注意区分区块中的nonce，区块中的nonce是用于POW的nonce。</p>
-</li>
-<li><p>r，v，s：交易签名和用去决定交易的发送者的对应值。</p>
-</li>
-<li><p>to：交易接收着的地址。这里是合约的创建，合约账户的地址还没有，所以是null。</p>
-</li>
-<li><p>transactionIndex：这个交易在其对应区块的序号。</p>
-</li>
-<li><p>value：指交易要给交易接收着发送的以太币数量。</p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/11/23/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%8C%BA%E5%9D%97%E5%AD%97%E6%AE%B5%E5%92%8C%E4%BA%A4%E6%98%93%E5%AD%97%E6%AE%B5/" data-id="cljy06in0000lvt1yb56u8lwa" data-title="以太坊区块字段和交易字段" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A/" rel="tag">以太坊</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/" rel="tag">区块链</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-软件测试面试准备" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2019/11/23/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" class="article-date">
-  <time class="dt-published" datetime="2019-11-23T03:26:46.000Z" itemprop="datePublished">2019-11-23</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/">面试准备</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2019/11/23/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/">软件测试面试准备</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h4 id="测试方法："><a href="#测试方法：" class="headerlink" title="测试方法："></a>测试方法：</h4><h5 id="黑盒测试："><a href="#黑盒测试：" class="headerlink" title="黑盒测试："></a>黑盒测试：</h5><p>等价类划分、边界值分析、错误检测法</p>
-<h5 id="白盒测试："><a href="#白盒测试：" class="headerlink" title="白盒测试："></a>白盒测试：</h5><p>逻辑覆盖法，主要包括语句覆盖、判断覆盖、条件覆盖、判断条件覆盖、条件组合覆盖、路径覆盖</p>
-<h5 id="静态测试"><a href="#静态测试" class="headerlink" title="静态测试"></a>静态测试</h5><p>​	不运行被测程序本身，仅通过分析或检查源程序的语法、结构、过程、接口等来检查程序的正确性。对需求规格说明书、软件设计说明书、源程序做结构分析、流程图分析、符合执行来找错误。</p>
-<h5 id="动态测试："><a href="#动态测试：" class="headerlink" title="动态测试："></a>动态测试：</h5><p>​	通过运行被测程序，检查运行结果与预期结果的差异，并分析运行效率和健壮性等性能，这种方法由三部分组成：构造测试实例、执行程序、分析程序的输出结果。分为五个步骤：单元测试、集成测试、系统测试、验收测试、回归测试</p>
-<h4 id="等价类划分："><a href="#等价类划分：" class="headerlink" title="等价类划分："></a>等价类划分：</h4><h5 id="有效等价类和无效等价类"><a href="#有效等价类和无效等价类" class="headerlink" title="有效等价类和无效等价类"></a>有效等价类和无效等价类</h5><p>​	有效等价类：对程序的规格说明有意义的，合理的输入数据所构成的集合，利用有效等价类可以验证程序是否实现了规格说明书中的功能和性能<br>​	无效等价类：那些对程序的规格说明不合理或无意义的数据所构成的，为了验证程序做其不应该做的事情</p>
-<h5 id="优缺点："><a href="#优缺点：" class="headerlink" title="优缺点："></a>优缺点：</h5><p>​     优点：考虑了单个数据域的各类情况，避免盲目或随机地选取输入数据的不完整性和不稳定性，同时可有效控制测试设计的数量<br>​     缺点：对组合情况考虑不足，同时等价类划分基于等价类中的输入都能产生相同的效果，在很多情况下用例选择不当会产生问题（如边界）</p>
-<h5 id="等价类划分的原则："><a href="#等价类划分的原则：" class="headerlink" title="等价类划分的原则："></a>等价类划分的原则：</h5><p>​	1⃣️在输入条件规定了取值范围或值的个数的情况下，则可以确立一个有效等价类和两个无效等价类<br>​	2⃣️在输入条件规定了输入值的集合或者规定了“必须如何”的条件的情况下，可确立一个有效等价类和一个无效等价类<br>​	3⃣️在输入条件是布尔量的情况下，可以确定一个有效类和一个无效类<br>​	4⃣️在规定了输入数据的一组值，并且程序要对每一个输入值分别处理的情况下，可确立n个有效等价类和一个无效等价类<br>​	5⃣️在规定了输入数据必须遵守的规则的情况下，可确立一个有效等价类和若干个无效等价类<br>​	6⃣️在确定已知的等价类中各元素在程序处理中的方法不同的情况下，则应再将等价类进一步划分为更小的等价类</p>
-<h4 id="边界值测试："><a href="#边界值测试：" class="headerlink" title="边界值测试："></a>边界值测试：</h4><h5 id="优缺点：-1"><a href="#优缺点：-1" class="headerlink" title="优缺点："></a>优缺点：</h5><p>​	长期的测试工作经验告诉我们，大量的错误是发生在输入或输出范围的边界上，而不是发生在输入输出的范围内，因此针对各种边界值情况设计测试用例，可以查出更多的错误<br>​	不过边界值分析法与等价类划分法一样，没有考虑输入之间的组合情况，因此需要进一步结合其他测试用例设计方法。</p>
-<h4 id="性能测试：如何评价系统的极限性能？"><a href="#性能测试：如何评价系统的极限性能？" class="headerlink" title="性能测试：如何评价系统的极限性能？"></a>性能测试：如何评价系统的极限性能？</h4><p>基本点：并发度、响应时间、单位时间吞吐量、系统稳定性、多场景<br>加分点：新旧版本对比，性能瓶颈分析方法（雪崩、线性拐点等）</p>
-<h4 id="判断测试活动中止的条件："><a href="#判断测试活动中止的条件：" class="headerlink" title="判断测试活动中止的条件："></a>判断测试活动中止的条件：</h4><p>​	1⃣️无新发生bug且严重性高的bug已经修复</p>
-<p>​	2⃣️bug收敛</p>
-<p>​	3⃣️某一级别bug低于一定比例</p>
-<p>​	4⃣️时间耗尽</p>
-<p>​	5⃣️满足特定覆盖率，</p>
-<h4 id="常见的软件测试模型："><a href="#常见的软件测试模型：" class="headerlink" title="常见的软件测试模型："></a>常见的软件测试模型：</h4><p>V模型、W模型、H模型、X模型和前置模型</p>
-<h5 id="杯子测试（校招）"><a href="#杯子测试（校招）" class="headerlink" title="杯子测试（校招）"></a>杯子测试（校招）</h5><p>答案：冒烟测试：速度装一杯水，是否漏水<br>            功能测试：漏水测试、透明度测试、卫生情况测试、杯口平滑测试、重量测试、均匀度测试<br>            压力测试：抗摔测试，抗高温测试</p>
-<h5 id="题目：百度首页是由模版展现的，请问如何对它进行测试"><a href="#题目：百度首页是由模版展现的，请问如何对它进行测试" class="headerlink" title="题目：百度首页是由模版展现的，请问如何对它进行测试"></a>题目：百度首页是由模版展现的，请问如何对它进行测试</h5><p>（不考虑性能相关因素，建议多从用户行为和使用环境角度进行测试）</p>
-<p>答案：<br>    展现检查：文字图片内容，链接，一致性<br>    数据传递：字符串长短与截断；特殊字符；中英文；空格；下拉条提示<br>    兼容性检查：不同浏览器，不同操作系统，不同分辨率<br>    用户行为：窗口拉大，缩小；字号大小，编码格式，刷新，前进后退</p>
-<h5 id="请问BAIDU-HI聊天消息收发的测试思路"><a href="#请问BAIDU-HI聊天消息收发的测试思路" class="headerlink" title="请问BAIDU HI聊天消息收发的测试思路"></a>请问BAIDU HI聊天消息收发的测试思路</h5><p>答案：从 正常测试、异常测试、不同的消息类型、组合测试、长度极值、是否延迟、是否丢失、是否被篡改、安全性</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/11/23/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" data-id="cljy06inf006nvt1y6xrl2vq0" data-title="软件测试面试准备" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" rel="tag">软件测试</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" rel="tag">面试准备</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-2019年百度秋招补招面试" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2019/11/22/2019%E5%B9%B4%E7%99%BE%E5%BA%A6%E7%A7%8B%E6%8B%9B%E8%A1%A5%E6%8B%9B%E9%9D%A2%E8%AF%95/" class="article-date">
-  <time class="dt-published" datetime="2019-11-22T13:35:05.000Z" itemprop="datePublished">2019-11-22</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E9%9D%A2%E7%BB%8F/">面经</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2019/11/22/2019%E5%B9%B4%E7%99%BE%E5%BA%A6%E7%A7%8B%E6%8B%9B%E8%A1%A5%E6%8B%9B%E9%9D%A2%E8%AF%95/">2019年百度秋招补招面试</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>下午两点百度科技园2号楼进行面试，</p>
-<p>​		上来就自我介绍，之后HR就开始问我项目的事情，因为我简历上的项目都是区块链相关的，HR对这方面了解的不是很多，所以没有怎么追根到底地问。据说，一般HR会对简历上写的项目追根到底的问，问你这个项目是怎么做的，用了那些东西，这些东西的原理是什么？</p>
-<hr>
-<p>一面：</p>
-<p>HR：<strong>如何用一行代码实现1+2+3……+100?</strong></p>
-<p>我：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>((<span class="number">1</span>+<span class="number">100</span>)*<span class="number">100</span>/<span class="number">2</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">sum</span>([i <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">101</span>)]))</span><br></pre></td></tr></table></figure>
-
-<p>HR:<strong>数组中有一个数字出现的次数超过数组长度的一半，请找出这个数字。</strong>例如输入一个长度为9的数组{1,2,3,2,2,2,5,4,2}。由于数字2在数组中出现了5次，超过数组长度的一半，因此输出2。如果不存在则输出0。</p>
-<p>我：遍历统计，记录每个元素出现的次数，然后找出出现次数超过一半的那个数</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">traverseEach</span><span class="params">(<span class="type">int</span> *<span class="built_in">array</span>,<span class="type">int</span> number)</span> &#123;</span><br><span class="line">     </span><br><span class="line">    <span class="type">int</span> *tempArray = (<span class="type">int</span> *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">int</span>)*(number / <span class="number">2</span> + <span class="number">1</span>) * <span class="number">2</span>);</span><br><span class="line">     </span><br><span class="line">    <span class="comment">//全部初始化为0</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; number * <span class="number">2</span>; i ++) &#123;</span><br><span class="line">        tempArray[i] = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    <span class="type">int</span> maxNumber = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> returnValue = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> maxCount = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> tempIndex = <span class="number">0</span>;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; number; i ++) &#123;</span><br><span class="line">         </span><br><span class="line">        tempIndex = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (maxCount == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="comment">//初始化一下</span></span><br><span class="line">            tempArray[maxCount] = <span class="built_in">array</span>[i];</span><br><span class="line">            tempArray[number + i] = <span class="number">1</span>;</span><br><span class="line">            maxCount = <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">//</span></span><br><span class="line">            <span class="keyword">for</span> (; tempIndex &lt; maxCount; tempIndex ++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (tempArray[tempIndex] == <span class="built_in">array</span>[i]) &#123;</span><br><span class="line">                    tempArray[number + tempIndex] += <span class="number">1</span>;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (tempIndex == maxCount) &#123;</span><br><span class="line">                <span class="comment">//新的</span></span><br><span class="line">                tempArray[tempIndex] = <span class="built_in">array</span>[i];</span><br><span class="line">                tempArray[number + tempIndex] += <span class="number">1</span>;</span><br><span class="line">                maxCount += <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        <span class="keyword">if</span> (maxNumber &lt; tempArray[number + tempIndex]) &#123;</span><br><span class="line">            maxNumber = tempArray[number + tempIndex];</span><br><span class="line">            returnValue = tempArray[tempIndex];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    <span class="built_in">free</span>(tempArray);</span><br><span class="line">    <span class="comment">//检验是否大于一半</span></span><br><span class="line">    <span class="keyword">if</span> (maxNumber &lt;= number/<span class="number">2</span>) &#123;</span><br><span class="line">        returnValue = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> returnValue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>HR:能不能来个简单一点的方法？</p>
-<p>我：可以进行排序，因为这个数出现次数超过了一半，所以中间那个数肯定就是要求的了</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">maopSort</span><span class="params">(<span class="type">int</span> *<span class="built_in">array</span>,<span class="type">int</span> number)</span> &#123;</span><br><span class="line">    <span class="type">int</span> changed = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = number - <span class="number">1</span>; i &gt; <span class="number">0</span> ; i --) &#123;</span><br><span class="line">        <span class="keyword">if</span> (changed == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        changed = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; i; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">array</span>[j] &gt; <span class="built_in">array</span>[j+<span class="number">1</span>]) &#123;</span><br><span class="line">                <span class="comment">//exchange</span></span><br><span class="line">                <span class="built_in">array</span>[j] += <span class="built_in">array</span>[j+<span class="number">1</span>];</span><br><span class="line">                <span class="built_in">array</span>[j+<span class="number">1</span>] = <span class="built_in">array</span>[j] - <span class="built_in">array</span>[j+<span class="number">1</span>];</span><br><span class="line">                <span class="built_in">array</span>[j] = <span class="built_in">array</span>[j] - <span class="built_in">array</span>[j+<span class="number">1</span>];</span><br><span class="line">                changed = <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="type">int</span> <span class="title function_">sortRelu</span><span class="params">(<span class="type">int</span> *<span class="built_in">array</span>, <span class="type">int</span> number)</span>&#123;</span><br><span class="line">    maopSort(<span class="built_in">array</span>, number);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">array</span>[number/<span class="number">2</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>HR:那万一这个数没有出现一半呢？怎么办？</p>
-<p>我：那遍历时，进行比较，从列表中移除两个不相等的数字，一直到只剩下最后一个数，那个数就是所求</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">neutralize</span><span class="params">(<span class="type">int</span> *<span class="built_in">array</span>,<span class="type">int</span> number)</span> &#123;</span><br><span class="line">     </span><br><span class="line">    <span class="type">int</span> returnValue = <span class="built_in">array</span>[<span class="number">0</span>];</span><br><span class="line">    <span class="type">int</span> count = <span class="number">1</span>;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; number; i ++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (returnValue == <span class="built_in">array</span>[i]) &#123;</span><br><span class="line">            count += <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            count -= <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (count &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">            count = <span class="number">1</span>;</span><br><span class="line">            returnValue = <span class="built_in">array</span>[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> returnValue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>HR:<strong>一行代码实现列表的遍历</strong></p>
-<p>我：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>([[x <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">101</span>)][i:i+<span class="number">1</span>] <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="number">100</span>)])</span><br></pre></td></tr></table></figure>
-
-<p>HR:<strong>一行代码实现将 1-N 的整数列表以 3为单位分组</strong></p>
-<p>我：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print([[x <span class="keyword">for</span> x in range(<span class="number">1</span>,<span class="number">101</span>)][i:i+<span class="number">3</span>] <span class="keyword">for</span> i in range(<span class="number">0</span>,<span class="number">100</span>,<span class="number">3</span>)])</span><br></pre></td></tr></table></figure>
-
-<p>HR：<strong>数据库操作，从students表里面，查询一下相同名字的人数</strong></p>
-<p>我：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select name，count(*) from students group by name having count(*)&gt;1</span><br></pre></td></tr></table></figure>
-
-<p>HR:<strong>Linux命令熟悉吧，你写几个，然后讲一下，拓展一下</strong></p>
-<p>我：ls、find 、cd、tree、cp、mv、pwd、tar、mkdir、rmdir、gzip、ps、kill、crontab、free、chmod</p>
-<p>然后HR挑了几个来问我，用这个命令实现什么什么功能，要加什么参数</p>
-<p>HR：<strong>说下计算机网络的OSI七层模型吧</strong></p>
-<p>我：物理层、数据链路层、网络层、传输层、会话层、表示层、应用层</p>
-<p>HR：<strong>回文知道吧，你写一下代码实现一下。</strong></p>
-<p>我：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    <span class="built_in">str</span>=<span class="built_in">input</span>(<span class="string">&quot;请输入字符串:&quot;</span>)		<span class="comment">#输入一个字符串</span></span><br><span class="line">    length=<span class="built_in">len</span>(<span class="built_in">str</span>)			<span class="comment">#求字符串长度</span></span><br><span class="line">    left=<span class="number">0</span>			<span class="comment">#定义左右‘指针’</span></span><br><span class="line">    right=length-<span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> left&lt;=right:		<span class="comment">#判断</span></span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">str</span>[left]==<span class="built_in">str</span>[right]:</span><br><span class="line">            left+=<span class="number">1</span></span><br><span class="line">            right-=<span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">if</span> left&gt;right:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;是&quot;</span>)</span><br><span class="line">    <span class="keyword">else</span> :</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;不是&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<h1 id="lt-lt-lt-lt-lt-lt-lt-HEADHR：你能用python的字符串切片实现一下吗？"><a href="#lt-lt-lt-lt-lt-lt-lt-HEADHR：你能用python的字符串切片实现一下吗？" class="headerlink" title="&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEADHR：你能用python的字符串切片实现一下吗？"></a>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD<br>HR：你能用python的字符串切片实现一下吗？</h1><p>HR：太复杂了，你再想想简单的</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>1d7a5609698e83b4ddb970e10b6b6edfcb4332fb</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>我：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">reverse</span>(<span class="params">text</span>):</span><br><span class="line">    <span class="keyword">return</span> text[::<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">is_palindrome</span>(<span class="params">text</span>):</span><br><span class="line">    <span class="keyword">return</span> text==reverse(text)</span><br><span class="line"></span><br><span class="line">something = <span class="built_in">input</span>(<span class="string">&quot;请输入字符串&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> is_palindrome(something):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;是&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;不是&quot;</span>)</span><br><span class="line">=======</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">Ishuiwen</span>(<span class="params">text</span>):</span><br><span class="line">    t1=<span class="built_in">list</span>(text)	<span class="comment">#转换成列表</span></span><br><span class="line">    t1.reverse()	<span class="comment">#倒序</span></span><br><span class="line">    t2=<span class="string">&#x27;&#x27;</span>.join(t1)		<span class="comment">#加到字符串里</span></span><br><span class="line">    <span class="keyword">if</span> t2 == text:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;是&quot;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;不是&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>HR：你能用python的字符串切片实现一下吗？</p>
-<p>我：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">Ishuiwen</span>(<span class="params">text</span>):</span><br><span class="line">    t1=text[::-<span class="number">1</span>]		<span class="comment">#倒序切片</span></span><br><span class="line">    <span class="keyword">if</span> t1==text:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;是&quot;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;不是&quot;</span>)</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; 1d7a5609698e83b4ddb970e10b6b6edfcb4332fb</span><br></pre></td></tr></table></figure>
-
-<p>HR：<strong>你看我们那个百度首页，那个输入框，你设计一下测试用例</strong></p>
-<p>我：针对输入框的话：输入的字符串，以及一些奇怪的字符，输入是一张图片，是一个文件呢</p>
-<p>针对页面的话：窗口放大缩小，字号放大缩小、编码格式</p>
-<p>针对整个网站的话：不同的浏览器、不同的操作系统、不同的屏幕分辨率、多人同时访问</p>
-<p>HR：你有什么想问我的吗？</p>
-<p>然后我就随便问了下，工作具体是干嘛的</p>
-<p>就这样一面结束了，然后HR叫我再等等，她去叫二面的HR过来</p>
-<hr>
-<p>二面</p>
-<p>上来HR就介绍了一下她自己，然后再介绍了一下我所应聘的部门以及工作岗位，然后叫我自我介绍一下，然后我又重新复述了一下自我介绍，然后HR又是针对我的区块链项目无从下手，只是问了一下表面，然后没有深入。</p>
-<p>HR：<strong>不借助第三个数实现下a，b值的互换</strong></p>
-<p>我：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a=a-b;</span><br><span class="line">b=a+b;</span><br><span class="line">a=b-a; #利用a,b的差值作为中间媒介来互换</span><br></pre></td></tr></table></figure>
-
-<p>HR:有更简单的方法吗？</p>
-<p>我想了好久，还是不知道，然后HR告诉我了，用python</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a,b=b,a</span><br></pre></td></tr></table></figure>
-
-<p>HR:<strong>你写一下你熟悉的Linux命令吧</strong>。</p>
-<p>我(心里暗暗窃喜)：ls、find 、cd、tree、cp、mv、pwd、tar、mkdir、rmdir、gzip、ps、kill、crontab、free、chmod</p>
-<p>HR：<strong>你知道socket吧，在linux上启动一个，然后你要怎样查看它的端口</strong></p>
-<p>我想了好久，答不出来。</p>
-<p>HR：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">netstat -nltp|grep XXX</span><br><span class="line">lsof -i|grep XXX			#这两个命令都可以</span><br></pre></td></tr></table></figure>
-
-<p>HR：<strong>我看你这写着学过C++，我们这个岗位后端就是用的C++，你说说内存泄漏的几种情况吧</strong></p>
-<p>C++是大二学的，学完就没有怎么用过了，所以现在我完全不会</p>
-<p>HR: 1、在类的构造函数和析构函数中没有匹配的调用new和delete函数</p>
-<p>​        2、没有正确地清除嵌套的对象指针</p>
-<p>​		3、 在释放对象数组时在delete中没有使用方括号</p>
-<p>​		4、指向对象的指针数组不等同于对象数组</p>
-<p>​		5、 缺少拷贝构造函数</p>
-<p>​		6、缺少重载赋值运算符</p>
-<p>​		7、没有将基类的析构函数定义为虚函数</p>
-<p>HR：<strong>你这写着你也学过操作系统，那你说一下Linux中的进程通信吧</strong></p>
-<p>我。。。。。。。</p>
-<p>HR：管道、消息队列、信号量、共享内存、套接字</p>
-<p>HR：<strong>那你说一下死锁，以及怎么解决死锁问题</strong></p>
-<p>我(终于有我会的了)：死锁是指多个进程因竞争资源而造成的一种僵局（互相等待），若无外力作用，这些进程都将无法向前推进</p>
-<p>​	死锁产生的原因：<br>​	1、系统资源的竞争<br>​	2、进程运行推进顺序不合适</p>
-<p>​	产生死锁有四个必要条件：互斥条件、不可剥夺条件、请求和保持条件、循环等待条件</p>
-<p>解决方法：死锁避免，先尝试分配资源，如果分配后可能出现死锁，那就不分配</p>
-<p>​					死锁预防：破坏不可剥夺条件、破坏请求和保持条件、破坏循环条件</p>
-<p>HR：<strong>你有什么想问我的吗？</strong></p>
-<p>我：这边面试什么时候出结果，三面还是技术面吗？</p>
-<p>二面就这样结束了</p>
-<hr>
-<p>我因为没怎么准备，所以面得很烂，尤其是二面的时候，连续几个问题没答上来，HR估计都要放弃我了。一面面了一个多小时，二面大概就四十分钟左右。</p>
-<p>结果：在我刚上西二旗地铁站，就收到百度发来的拒绝邮件。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/11/22/2019%E5%B9%B4%E7%99%BE%E5%BA%A6%E7%A7%8B%E6%8B%9B%E8%A1%A5%E6%8B%9B%E9%9D%A2%E8%AF%95/" data-id="cljy06imt0000vt1yd8z3a9ie" data-title="2019年百度秋招补招面试" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E7%BB%8F/" rel="tag">面经</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
-  <nav id="page-nav">
-    
-    <a class="extend prev" rel="prev" href="/page/4/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span>
-  </nav>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python%E8%84%9A%E6%9C%AC/">python脚本</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/">产品经理</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%AC%E8%80%83/">公考</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%89%91%E6%8C%87offer/">剑指offer</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/">区块链</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%89%AB%E8%A1%97/">扫街</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BE%8E%E9%A3%9F/">美食</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E7%BB%8F/">面经</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/">面试准备</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/" rel="tag">Mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python%E8%84%9A%E6%9C%AC/" rel="tag">python脚本</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E6%88%90%E9%95%BF/" rel="tag">产品经理成长</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A/" rel="tag">以太坊</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%AC%E8%80%83/" rel="tag">公考</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/" rel="tag">区块链</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AF%BB%E5%91%B3%E9%A1%BA%E5%BE%B7/" rel="tag">寻味顺德</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B9%BF%E5%B7%9E%E5%A1%94/" rel="tag">广州塔</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" rel="tag">排序算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">操作系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%B7%E7%8F%A0%E5%8C%BA/" rel="tag">海珠区</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BE%8E%E9%A3%9F%E6%8E%A2%E5%BA%97/" rel="tag">美食探店</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B6%8A%E7%A7%80%E5%8C%BA/" rel="tag">越秀区</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" rel="tag">软件测试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E7%BB%8F/" rel="tag">面经</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" rel="tag">面试准备</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mysql/" style="font-size: 12px;">Mysql</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/python%E8%84%9A%E6%9C%AC/" style="font-size: 14px;">python脚本</a> <a href="/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E6%88%90%E9%95%BF/" style="font-size: 10px;">产品经理成长</a> <a href="/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A/" style="font-size: 10px;">以太坊</a> <a href="/tags/%E5%85%AC%E8%80%83/" style="font-size: 10px;">公考</a> <a href="/tags/%E5%89%91%E6%8C%87offer/" style="font-size: 20px;">剑指offer</a> <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/" style="font-size: 10px;">区块链</a> <a href="/tags/%E5%AF%BB%E5%91%B3%E9%A1%BA%E5%BE%B7/" style="font-size: 10px;">寻味顺德</a> <a href="/tags/%E5%B9%BF%E5%B7%9E%E5%A1%94/" style="font-size: 10px;">广州塔</a> <a href="/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" style="font-size: 10px;">排序算法</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%B5%B7%E7%8F%A0%E5%8C%BA/" style="font-size: 10px;">海珠区</a> <a href="/tags/%E7%BE%8E%E9%A3%9F%E6%8E%A2%E5%BA%97/" style="font-size: 10px;">美食探店</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 16px;">计算机网络</a> <a href="/tags/%E8%B6%8A%E7%A7%80%E5%8C%BA/" style="font-size: 10px;">越秀区</a> <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">软件测试</a> <a href="/tags/%E9%9D%A2%E7%BB%8F/" style="font-size: 10px;">面经</a> <a href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" style="font-size: 18px;">面试准备</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2023/07/11/%E9%A1%BA%E5%BE%B7%E7%BE%8E%E9%A3%9F%E6%8E%A8%E8%8D%90/">顺德美食推荐</a>
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
           </li>
+          
         
-          <li>
-            <a href="/2022/01/09/2022%E5%B9%B41%E6%9C%88%E5%B9%BF%E5%B7%9E%E6%89%AB%E8%A1%97%E6%97%A5%E8%AE%B0/">2022年1月广州扫街日记</a>
-          </li>
         
-          <li>
-            <a href="/2021/12/09/%E5%85%AC%E8%80%83%E7%AC%94%E8%AE%B0/">初识公考</a>
-          </li>
-        
-          <li>
-            <a href="/2020/06/07/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/">产品经理成长之路01</a>
-          </li>
-        
-          <li>
-            <a href="/2019/12/30/eos%E8%8A%82%E7%82%B9%E8%AF%BB%E5%8F%96%E8%A7%A3%E6%9E%90/">eos节点读取解析</a>
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
           </li>
         
       </ul>
     </div>
   </div>
+</nav>
 
   
-</aside>
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="An elegant Material-Design theme for Hexo"></span>
+          
+        </div>
+
         
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
+
       
-      &copy; 2023 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
     </div>
   </div>
-</footer>
+</div>
 
-    </div>
-    <nav id="mobile-nav">
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          style="margin-top: 0">
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2019/11/28/%E5%89%91%E6%8C%87offer-02%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC/" target="_self">
+          剑指offer_02替换空格
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/11/28/%E5%89%91%E6%8C%87offer-02%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC/" target="_self">
+        <div>
+          题目描述请实现一个函数，将一个字符串中的每个空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。  解题思路replace函数直接替换 replace（“old”，“new”，max），其中max是替换次数，可不填 1234567891011# -*- coding:utf-8 -*-def replaceSpace(s):
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-11-28 11:31" pubdate>
+              2019-11-28
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
   
-    <a href="/" class="mobile-nav-link">Home</a>
   
-    <a href="/archives" class="mobile-nav-link">Archives</a>
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%89%91%E6%8C%87offer/" class="category-chain-item">剑指offer</a>
   
-</nav>
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%89%91%E6%8C%87offer/">#剑指offer</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2019/11/28/%E5%89%91%E6%8C%87offer-01%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9F%A5%E6%89%BE/" target="_self">
+          剑指offer_01二维数组中的查找
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/11/28/%E5%89%91%E6%8C%87offer-01%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9F%A5%E6%89%BE/" target="_self">
+        <div>
+          题目描述在一个二维数组中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。  解题思路首先我们选择从左下角开始搜寻，（为什么不从左上角开始搜寻，因为左上角向右和向下都是递增，那么对于一个点，对于向右和向下就会产生一个岔路；如果选择从左下角开始搜寻，如果大于就右，小于就向上）
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-11-28 11:13" pubdate>
+              2019-11-28
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%89%91%E6%8C%87offer/" class="category-chain-item">剑指offer</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%89%91%E6%8C%87offer/">#剑指offer</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2019/11/27/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%89%A9%E7%90%86%E5%B1%82/" target="_self">
+          计算机网络-物理层
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/11/27/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%89%A9%E7%90%86%E5%B1%82/" target="_self">
+        <div>
+          数据通信系统三大部分：信源、信宿、通信媒体 通信的目的是传递消息 数据是运送消息的实体 码元：代表不同离散数值的基本波形 三种通信方式：1⃣️单工通信 2⃣️半双工通信 3⃣️全双工通信 模拟数据编码：ASK、PSK、FSK 模拟信号——(PCM脉冲编码)——&gt;数字信号 PCM的工作：采样、量化、编码 奈氏准则：在任何信道中，码元传输的速率是有上限的，传输速率超过此上限，就会出现严重的码间串
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-11-27 21:45" pubdate>
+              2019-11-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="category-chain-item">计算机网络</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/">#面试准备</a>
+            
+              <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">#计算机网络</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2019/11/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/" target="_self">
+          计算机网络-基础概念
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/11/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/" target="_self">
+        <div>
+          互联网的组成：资源子网、通信子网 通信方式：客户-服务器方式，对等方式（p2p）方式 路由器则是用来转发分组的，即进行分组交换 计算机网络的定义：即一些互相连接的、自治的计算机集合 按照网络的作用范围进行分类：广域网WAN、城域网MAN、局域网LAN、个人局域网PAN 网络性能指标：1⃣️速率：数据的传送速率 bit／s 2⃣️带宽：用来表示网络中某通道传送数据的能力 bit／s 3⃣️吞吐量：表
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-11-26 21:07" pubdate>
+              2019-11-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="category-chain-item">计算机网络</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/">#面试准备</a>
+            
+              <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">#计算机网络</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2019/11/25/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" target="_self">
+          操作系统面试准备
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/11/25/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" target="_self">
+        <div>
+          线程间通信的方法：同一进程的各线程可以直接读写进程数据段进行通信，同时，需要同步和互斥手段的辅助，而不同进程间的线程通信可以参考不同进程间的通信 多线程同步方式：事件event，临界区域，互斥器、信号量 同步和异步的区别：同步是阻塞模式，即发送方发出数据后，等待接受法发回响应以后才发送下一个数据包的通讯方式；异步是非阻塞方式，发送方发出数据后，不等接收方发回响应，接着发送下一个数据包的通讯方式 普
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-11-25 00:03" pubdate>
+              2019-11-25
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" class="category-chain-item">面试准备</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/">#面试准备</a>
+            
+              <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">#操作系统</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2019/11/24/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" target="_self">
+          排序算法
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/11/24/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" target="_self">
+        <div>
+          请列举常用的排序算法并说明其时间复杂度，并说明排序思路 冒泡排序：两两比较待排序数据元素的大小，发现两个数据元素的次序相反时即进行交换，直到没有反序的数据元素位置，算法时间复杂度是O(n^2) 选择排序：每一趟从待排序的数据元素中选出最小（或最大）的一个元素，顺序放在已排好序的数列的最后，直到全部待排序数据元素全部插入完为止，算法时间复杂度是O(n^2) 插入排序：每次将一个待排序的数据元素，插入
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-11-24 12:18" pubdate>
+              2019-11-24
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" class="category-chain-item">面试准备</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/">#面试准备</a>
+            
+              <a href="/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">#排序算法</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2019/11/23/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%8C%BA%E5%9D%97%E5%AD%97%E6%AE%B5%E5%92%8C%E4%BA%A4%E6%98%93%E5%AD%97%E6%AE%B5/" target="_self">
+          以太坊区块字段和交易字段
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/11/23/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%8C%BA%E5%9D%97%E5%AD%97%E6%AE%B5%E5%92%8C%E4%BA%A4%E6%98%93%E5%AD%97%E6%AE%B5/" target="_self">
+        <div>
+          见图1    Difficulty：表示当前区块的难度。  ExtraData：与此区块相关的附加数据。  gasLimit：当前区块允许使用的最大gas。  gasUsed：当前区块累计使用的gas。  Hash：区块的哈希值。如果区块没有被确认，这个字段会是null值。  LogsBloom：区块日志的布隆过滤器，区块没被确认是值为null。   Miner：取得该区块记账权的矿工。  mix
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-11-23 12:17" pubdate>
+              2019-11-23
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/" class="category-chain-item">区块链</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/">#区块链</a>
+            
+              <a href="/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A/">#以太坊</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2019/11/23/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" target="_self">
+          软件测试面试准备
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/11/23/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" target="_self">
+        <div>
+          测试方法：黑盒测试：等价类划分、边界值分析、错误检测法 白盒测试：逻辑覆盖法，主要包括语句覆盖、判断覆盖、条件覆盖、判断条件覆盖、条件组合覆盖、路径覆盖 静态测试​	不运行被测程序本身，仅通过分析或检查源程序的语法、结构、过程、接口等来检查程序的正确性。对需求规格说明书、软件设计说明书、源程序做结构分析、流程图分析、符合执行来找错误。 动态测试：​	通过运行被测程序，检查运行结果与预期结果的差异，
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-11-23 11:26" pubdate>
+              2019-11-23
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" class="category-chain-item">面试准备</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/">#面试准备</a>
+            
+              <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/">#软件测试</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2019/11/22/2019%E5%B9%B4%E7%99%BE%E5%BA%A6%E7%A7%8B%E6%8B%9B%E8%A1%A5%E6%8B%9B%E9%9D%A2%E8%AF%95/" target="_self">
+          2019年百度秋招补招面试
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/11/22/2019%E5%B9%B4%E7%99%BE%E5%BA%A6%E7%A7%8B%E6%8B%9B%E8%A1%A5%E6%8B%9B%E9%9D%A2%E8%AF%95/" target="_self">
+        <div>
+          下午两点百度科技园2号楼进行面试， ​		上来就自我介绍，之后HR就开始问我项目的事情，因为我简历上的项目都是区块链相关的，HR对这方面了解的不是很多，所以没有怎么追根到底地问。据说，一般HR会对简历上写的项目追根到底的问，问你这个项目是怎么做的，用了那些东西，这些东西的原理是什么？  一面： HR：如何用一行代码实现1+2+3……+100? 我： 12print((1+100)*100/2)pr
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-11-22 21:35" pubdate>
+              2019-11-22
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%9D%A2%E7%BB%8F/" class="category-chain-item">面经</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%9D%A2%E7%BB%8F/">#面经</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/4/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/#board">3</a><a class="page-number" href="/page/4/#board">4</a><span class="page-number current">5</span>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     
 
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
 
-<script src="/js/jquery-3.6.4.min.js"></script>
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
 
 
 
   
-<script src="/fancybox/jquery.fancybox.min.js"></script>
+    <script  src="/js/img-lazyload.js" ></script>
+  
 
 
 
 
-<script src="/js/script.js"></script>
+  <script  src="/js/local-search.js" ></script>
 
 
 
 
 
-  </div>
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
 </body>
 </html>

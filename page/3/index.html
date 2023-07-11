@@ -1,903 +1,957 @@
+
+
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
   
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
+    <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/page/3/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+<meta name="twitter:card" content="summary_large_image">
   
   
-    <link rel="shortcut icon" href="/favicon.png">
   
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+  <title>Hexo</title>
 
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
 
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
   
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
   
 <meta name="generator" content="Hexo 6.3.0"></head>
 
+
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
         
-          <a class="main-nav-link" href="/">Home</a>
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
         
-          <a class="main-nav-link" href="/archives">Archives</a>
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
         
-      </nav>
-      <nav id="sub-nav">
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
         
         
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-剑指offer-19顺时针打印矩阵" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2019/12/05/%E5%89%91%E6%8C%87offer-19%E9%A1%BA%E6%97%B6%E9%92%88%E6%89%93%E5%8D%B0%E7%9F%A9%E9%98%B5/" class="article-date">
-  <time class="dt-published" datetime="2019-12-05T03:24:38.000Z" itemprop="datePublished">2019-12-05</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%89%91%E6%8C%87offer/">剑指offer</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2019/12/05/%E5%89%91%E6%8C%87offer-19%E9%A1%BA%E6%97%B6%E9%92%88%E6%89%93%E5%8D%B0%E7%9F%A9%E9%98%B5/">剑指offer_19顺时针打印矩阵</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字，例如，如果输入如下4 X 4矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 则依次打印出数字1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10.</p>
-<table>
-<thead>
-<tr>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>5</td>
-<td>6</td>
-<td>7</td>
-<td>8</td>
-</tr>
-<tr>
-<td>9</td>
-<td>10</td>
-<td>11</td>
-<td>12</td>
-</tr>
-<tr>
-<td>13</td>
-<td>14</td>
-<td>15</td>
-<td>16</td>
-</tr>
-</tbody></table>
-<hr>
-<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>在python里面，二维矩阵就是列表的嵌套</p>
-<p>[[1,2,3,4],</p>
-<p>[5,6,7,8],</p>
-<p>[9,10,11,12],</p>
-<p>[13,14,15,16] ]</p>
-<p>所以可以每次取外面列表的第一位，也就是获得了第一行，同时去除掉第一行，</p>
-<p>此时就剩[[5,6,7,8],[9,10,11,12],[13,14,15,16]],然后遍历剩下的，取每一个列表里面最后的那个数，同时也删除这些数，也就剩下[[5,6,7],[9,10,11],[13,14,15]],再取最后一个列表的倒序，同时删除最后一个列表，也就剩下[[5,6,7],[9,10,11]]，最后在倒序一下整个列表[[9,10,11],[5,6,7]]进行遍历，取第一个数，同时删除第一个数，此时剩下[[6,7],[10,11]]，再开始新的一轮循环</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="comment"># matrix类型为二维列表，需要返回列表</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">printMatrix</span>(<span class="params">self, matrix</span>):</span><br><span class="line">        <span class="comment"># write code here</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        res = []</span><br><span class="line">        <span class="keyword">while</span> matrix:</span><br><span class="line">            res += matrix.pop(<span class="number">0</span>)			<span class="comment">#取第一行</span></span><br><span class="line">            <span class="keyword">if</span> matrix <span class="keyword">and</span> matrix[<span class="number">0</span>]:		<span class="comment">#判断整个矩阵和且第一个矩阵不为空</span></span><br><span class="line">                <span class="keyword">for</span> row <span class="keyword">in</span> matrix:</span><br><span class="line">                    res.append(row.pop())			<span class="comment">#取右边的一列</span></span><br><span class="line">            <span class="keyword">if</span> matrix:</span><br><span class="line">                res += matrix.pop()[::-<span class="number">1</span>]			<span class="comment">#取最下面一行的倒序</span></span><br><span class="line">            <span class="keyword">if</span> matrix <span class="keyword">and</span> matrix[<span class="number">0</span>]:</span><br><span class="line">                <span class="keyword">for</span> row <span class="keyword">in</span> matrix[::-<span class="number">1</span>]:		</span><br><span class="line">                    res.append(row.pop(<span class="number">0</span>))			<span class="comment">#取左边的一列，从下往上取</span></span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/05/%E5%89%91%E6%8C%87offer-19%E9%A1%BA%E6%97%B6%E9%92%88%E6%89%93%E5%8D%B0%E7%9F%A9%E9%98%B5/" data-id="cljy06in50028vt1y71b09qdl" data-title="剑指offer_19顺时针打印矩阵" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-剑指offer-18二叉树的镜像" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2019/12/05/%E5%89%91%E6%8C%87offer-18%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%95%9C%E5%83%8F/" class="article-date">
-  <time class="dt-published" datetime="2019-12-05T02:55:46.000Z" itemprop="datePublished">2019-12-05</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%89%91%E6%8C%87offer/">剑指offer</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2019/12/05/%E5%89%91%E6%8C%87offer-18%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%95%9C%E5%83%8F/">剑指offer_18二叉树的镜像</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>操作给定的二叉树，将其变换为源二叉树的镜像。</p>
-<h3 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">二叉树的镜像定义：源二叉树 </span><br><span class="line">    	    8</span><br><span class="line">    	   /  \</span><br><span class="line">    	  6   10</span><br><span class="line">    	 / \  / \</span><br><span class="line">    	5  7 9 11</span><br><span class="line">    	镜像二叉树</span><br><span class="line">    	    8</span><br><span class="line">    	   /  \</span><br><span class="line">    	  10   6</span><br><span class="line">    	 / \  / \</span><br><span class="line">    	11 9 7  5</span><br></pre></td></tr></table></figure>
-
-
-
-<hr>
-<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>依次每一层交换左右子树就可以了</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"> <span class="keyword">class</span> <span class="title class_">TreeNode</span>:</span><br><span class="line">     <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, x</span>):</span><br><span class="line">         self.val = x</span><br><span class="line">         self.left = <span class="literal">None</span></span><br><span class="line">         self.right = <span class="literal">None</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="comment"># 返回镜像树的根节点</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">Mirror</span>(<span class="params">self, root</span>):</span><br><span class="line">        <span class="comment"># write code here</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line">            <span class="keyword">return</span> root</span><br><span class="line">        node=root.left</span><br><span class="line">        root.left=root.right</span><br><span class="line">        root.right=node</span><br><span class="line">        self.Mirror(root.left)</span><br><span class="line">        self.Mirror(root.right)</span><br><span class="line">        <span class="keyword">return</span> root</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/05/%E5%89%91%E6%8C%87offer-18%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%95%9C%E5%83%8F/" data-id="cljy06in50027vt1y8iyn5b5l" data-title="剑指offer_18二叉树的镜像" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-剑指offer-17树的子结构" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2019/12/04/%E5%89%91%E6%8C%87offer-17%E6%A0%91%E7%9A%84%E5%AD%90%E7%BB%93%E6%9E%84/" class="article-date">
-  <time class="dt-published" datetime="2019-12-04T10:00:48.000Z" itemprop="datePublished">2019-12-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%89%91%E6%8C%87offer/">剑指offer</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2019/12/04/%E5%89%91%E6%8C%87offer-17%E6%A0%91%E7%9A%84%E5%AD%90%E7%BB%93%E6%9E%84/">剑指offer_17树的子结构</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>输入两棵二叉树A，B，判断B是不是A的子结构。（ps：我们约定空树不是任意一个树的子结构）</p>
-<hr>
-<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>首先理解子结构和子树的区别</p>
-<p>子树的意思是只要包含了一个结点，就得包含这个结点下的所有节点，也就是必须包含最后的叶子结点<br>子结构的意思是包含了一个结点，可以只取左子树或者右子树，或者都不取。 </p>
-<p>我打算递归调用HasSubtree遍历二叉树A。如果发现某一节点的值和树B的根结点的值相等，则调用DoesTree1HaveTree2,进行第二步判断。 </p>
-<p>第二步是判断树A中以R为跟结点的子树是不是和树B具有相同的结构。同样，我们也可以用递归的思路来考虑：如果节点R的值和树B的根节点不同，那么以R为根节点的子树和树B肯定不具有相同的节点；如果它们的值相同，那么递归地判断它们各自的左右节点的值是不是相同。递归的终止条件是到达了树A或者树B的叶子节点。 </p>
-<p>需要注意的是 DoesTree1HasTree2函数中，如果Tree2为空，则说明第二棵树遍历完了，即是第一颗树的子树，返回TRUE  </p>
-<p>如果tree1为空而tree2不为空说明tree2结构超大，tree1中不存在</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">HasSubtree</span>(<span class="params">self, pRoot1, pRoot2</span>):</span><br><span class="line">		<span class="comment"># write code here</span></span><br><span class="line">        result = <span class="literal">False</span></span><br><span class="line">        <span class="keyword">if</span>  pRoot1 <span class="keyword">and</span>  pRoot2:				</span><br><span class="line">            <span class="keyword">if</span> pRoot1.val==pRoot2.val:		<span class="comment">#如果根节点相同，再进行判断是不是子树</span></span><br><span class="line">                result = self.DoesTree1HaveTree2(pRoot1,pRoot2)</span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> result:		<span class="comment">#如果根节点不同，那就判断左边有没有相同的结点</span></span><br><span class="line">                result = self.HasSubtree(pRoot1.left,pRoot2)</span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> result:		<span class="comment">#最后判断右边有没有相同的结点</span></span><br><span class="line">                result = self.HasSubtree(pRoot1.right,pRoot2)</span><br><span class="line">        <span class="keyword">return</span> result</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">DoesTree1HaveTree2</span>(<span class="params">self,pRoot_A,pRoot_B</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> pRoot_B:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> pRoot_A:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        <span class="keyword">if</span> pRoot_A.val != pRoot_B.val:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">         </span><br><span class="line">        <span class="keyword">return</span> self.DoesTree1HaveTree2(pRoot_A.left,pRoot_B.left) <span class="keyword">and</span> self.DoesTree1HaveTree2(pRoot_A.right,pRoot_B.right)</span><br><span class="line">        </span><br></pre></td></tr></table></figure>
-
-
-
-<p>大神的做法，是直接先序遍历，然后拼接成字符串，然后比较字符串B在不在字符串A里面，以此来判断是不是子结构，但是有一点点小bug，就是针对</p>
-<p>二叉树A</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th></th>
-<th>1</th>
-</tr>
-</thead>
-<tbody><tr>
-<td></td>
-<td></td>
-<td>2</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>3</td>
-<td></td>
-<td>4</td>
-</tr>
-<tr>
-<td>5</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<p>二叉树B</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>2</th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>3</td>
-<td></td>
-<td>4</td>
-</tr>
-</tbody></table>
-<p>这种的话，就会出现错误，</p>
-<p>A先序遍历是12354，B先序遍历是234，显然不在里面，但B又是A的子结构</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">HasSubtree</span>(<span class="params">self, pRoot1, pRoot2</span>):</span><br><span class="line">         </span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">convert</span>(<span class="params">p</span>):</span><br><span class="line">            <span class="keyword">if</span> p:</span><br><span class="line">                <span class="keyword">return</span>  <span class="built_in">str</span>(p.val)+convert(p.left) + convert(p.right)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="string">&quot;&quot;</span></span><br><span class="line">        <span class="keyword">return</span> convert(pRoot2) <span class="keyword">in</span> convert(pRoot1) <span class="keyword">if</span> pRoot2 <span class="keyword">else</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/04/%E5%89%91%E6%8C%87offer-17%E6%A0%91%E7%9A%84%E5%AD%90%E7%BB%93%E6%9E%84/" data-id="cljy06in50023vt1y3gzb3klt" data-title="剑指offer_17树的子结构" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-剑指offer-16合并两个排序的链表" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2019/12/04/%E5%89%91%E6%8C%87offer-16%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%8E%92%E5%BA%8F%E7%9A%84%E9%93%BE%E8%A1%A8/" class="article-date">
-  <time class="dt-published" datetime="2019-12-04T08:56:55.000Z" itemprop="datePublished">2019-12-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%89%91%E6%8C%87offer/">剑指offer</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2019/12/04/%E5%89%91%E6%8C%87offer-16%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%8E%92%E5%BA%8F%E7%9A%84%E9%93%BE%E8%A1%A8/">剑指offer_16合并两个排序的链表</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>输入两个单调递增的链表，输出两个链表合成后的链表，当然我们需要合成后的链表满足单调不减规则。</p>
-<hr>
-<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><ul>
-<li>比较两个链表的首结点，哪个小的的结点则合并到第三个链表尾结点，并向前移动一个结点。</li>
-<li>步骤一结果会有一个链表先遍历结束，或者没有</li>
-<li>第三个链表尾结点指向剩余未遍历结束的链表</li>
-<li>返回第三个链表首结点</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ListNode</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, x</span>):</span><br><span class="line">        self.val = x</span><br><span class="line">        self.<span class="built_in">next</span> = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="comment"># 返回合并后列表</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">Merge</span>(<span class="params">self, pHead1, pHead2</span>):</span><br><span class="line"></span><br><span class="line">        <span class="comment"># write code here</span></span><br><span class="line"></span><br><span class="line">        dummy = ListNode(<span class="number">0</span>)</span><br><span class="line">        pHead = dummy</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> pHead1 <span class="keyword">and</span> pHead2:</span><br><span class="line">            <span class="keyword">if</span> pHead1.val &gt;= pHead2.val:		<span class="comment">#链表二的结点小，则链表三指向该结点，然后链表二指针后移</span></span><br><span class="line">                dummy.<span class="built_in">next</span> = pHead2</span><br><span class="line">                pHead2 = pHead2.<span class="built_in">next</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                dummy.<span class="built_in">next</span> = pHead1</span><br><span class="line">                pHead1 = pHead1.<span class="built_in">next</span></span><br><span class="line"></span><br><span class="line">            dummy = dummy.<span class="built_in">next</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> pHead1:					<span class="comment">#判断链表是否为空，指向余下的链结点</span></span><br><span class="line">            dummy.<span class="built_in">next</span> = pHead1</span><br><span class="line">        <span class="keyword">elif</span> pHead2:</span><br><span class="line">            dummy.<span class="built_in">next</span> = pHead2</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> pHead.<span class="built_in">next</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">LN=ListNode(<span class="number">1</span>)</span><br><span class="line">LN_1=ListNode(<span class="number">2</span>)</span><br><span class="line">LN_2=ListNode(<span class="number">3</span>)</span><br><span class="line">LN_3=ListNode(<span class="number">4</span>)</span><br><span class="line">LN.<span class="built_in">next</span>=LN_1</span><br><span class="line">LN_1.<span class="built_in">next</span>=LN_2</span><br><span class="line">LN_2.<span class="built_in">next</span>=LN_3</span><br><span class="line"></span><br><span class="line">LNN=ListNode(<span class="number">2</span>)</span><br><span class="line">LNN_1=ListNode(<span class="number">3</span>)</span><br><span class="line">LNN_2=ListNode(<span class="number">4</span>)</span><br><span class="line">LNN_3=ListNode(<span class="number">5</span>)</span><br><span class="line">LNN.<span class="built_in">next</span>=LNN_1</span><br><span class="line">LNN_1.<span class="built_in">next</span>=LNN_2</span><br><span class="line">LNN_2.<span class="built_in">next</span>=LNN_3</span><br><span class="line"></span><br><span class="line">S1=Solution()</span><br><span class="line"><span class="built_in">print</span>(S1.Merge(LN,LNN))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>采用递归也可以，但时间复杂度比较大</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="comment"># 返回合并后列表</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">Merge</span>(<span class="params">self, pHead1, pHead2</span>):</span><br><span class="line">        <span class="comment"># write code here</span></span><br><span class="line">        <span class="keyword">if</span> pHead1 <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">return</span> pHead2</span><br><span class="line">        <span class="keyword">if</span> pHead2 <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">return</span> pHead1</span><br><span class="line">        <span class="keyword">if</span> pHead1.val &lt; pHead2.val:				<span class="comment">#链表一结点小，就指向递归后的次小</span></span><br><span class="line">            pHead1.<span class="built_in">next</span> = self.Merge(pHead1.<span class="built_in">next</span>,pHead2)</span><br><span class="line">            <span class="keyword">return</span> pHead1</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            pHead2.<span class="built_in">next</span> = self.Merge(pHead1,pHead2.<span class="built_in">next</span>)</span><br><span class="line">            <span class="keyword">return</span> pHead2</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/04/%E5%89%91%E6%8C%87offer-16%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%8E%92%E5%BA%8F%E7%9A%84%E9%93%BE%E8%A1%A8/" data-id="cljy06in50021vt1y78b5a7h1" data-title="剑指offer_16合并两个排序的链表" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-剑指offer-15反转链表" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2019/12/04/%E5%89%91%E6%8C%87offer-15%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/" class="article-date">
-  <time class="dt-published" datetime="2019-12-04T07:58:07.000Z" itemprop="datePublished">2019-12-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%89%91%E6%8C%87offer/">剑指offer</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2019/12/04/%E5%89%91%E6%8C%87offer-15%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/">剑指offer_15反转链表</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>输入一个链表，反转链表后，输出新链表的表头。</p>
-<hr>
-<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>遍历整个链表，然后让头结点指向空，其他结点依次指向前一个结点，这样就达到了反转链表。先定义一个last指针，指向为空，然后定义一个temp指针指向头结点的下一个，</p>
-<p>链表这样1—-&gt;2——&gt;3——-&gt;4</p>
-<p>一个循环的具体过程：</p>
-<ul>
-<li>先让temp指针指向pHead所指元素的下一个，此时last指向空</li>
-</ul>
-<p>		</p>
-<table>
-<thead>
-<tr>
-<th>pHead（指向1）</th>
-<th>temp</th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1—————&gt;</td>
-<td>2——————&gt;</td>
-<td>3———————&gt;</td>
-<td>4————————&gt;NuLL</td>
-</tr>
-</tbody></table>
-<ul>
-<li>然后让pHead所指元素的下一个指向last所指的元素（也就是前一个元素）</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="left">last(指向Null)      pHead(指向1）</th>
-<th align="left">temp</th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">Null&lt;—————1</td>
-<td align="left">2——–——&gt;</td>
-<td>3————&gt;</td>
-<td>4————&gt;NuLL</td>
-</tr>
-</tbody></table>
-<ul>
-<li>然后再移动last指针，使它和pHead指向同一个，</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="right">last pHead(都指向1)</th>
-<th>temp</th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="right">Null&lt;———————1</td>
-<td>2——————&gt;</td>
-<td>3———————&gt;</td>
-<td>4————————&gt;NuLL</td>
-</tr>
-</tbody></table>
-<ul>
-<li>最后让pHead指向temp所指的元素</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="right">last（指向1）</th>
-<th>temp pHead</th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="right">Null&lt;—–—————1</td>
-<td>2——————&gt;</td>
-<td>3———————&gt;</td>
-<td>4————————&gt;NuLL</td>
-</tr>
-</tbody></table>
-<p>依次执行循环，知道最后pHead指向空，此时last指向最后一个结点（也就是反转后的第一个结点），跳出循环</p>
-<p>特殊情况就是这个链表只有一个结点的时候，就直接输出这个结点</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ListNode</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, x</span>):</span><br><span class="line">        self.val = x</span><br><span class="line">        self.<span class="built_in">next</span> = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="comment"># 返回ListNode</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">ReverseList</span>(<span class="params">self, pHead</span>):</span><br><span class="line">        <span class="comment"># write code here</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> pHead <span class="keyword">or</span> <span class="keyword">not</span> pHead.<span class="built_in">next</span>:</span><br><span class="line">            <span class="keyword">return</span> pHead</span><br><span class="line"></span><br><span class="line">        last = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> pHead:</span><br><span class="line">            tmp = pHead.<span class="built_in">next</span></span><br><span class="line">            pHead.<span class="built_in">next</span> = last</span><br><span class="line">            last = pHead</span><br><span class="line">            pHead = tmp</span><br><span class="line"></span><br><span class="line">        <span class="comment">#return last.val</span></span><br><span class="line">        <span class="keyword">return</span> last</span><br><span class="line"></span><br><span class="line">LN=ListNode(<span class="number">1</span>)</span><br><span class="line">LN_1=ListNode(<span class="number">2</span>)</span><br><span class="line">LN_2=ListNode(<span class="number">3</span>)</span><br><span class="line">LN_3=ListNode(<span class="number">4</span>)</span><br><span class="line">LN.<span class="built_in">next</span>=LN_1</span><br><span class="line">LN_1.<span class="built_in">next</span>=LN_2</span><br><span class="line">LN_2.<span class="built_in">next</span>=LN_3</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">s1=Solution()</span><br><span class="line"><span class="built_in">print</span>(s1.ReverseList(LN))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/04/%E5%89%91%E6%8C%87offer-15%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/" data-id="cljy06in4001uvt1yh6lfd9ql" data-title="剑指offer_15反转链表" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-剑指offer-14链表中倒数第K个结点" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2019/12/04/%E5%89%91%E6%8C%87offer-14%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACK%E4%B8%AA%E7%BB%93%E7%82%B9/" class="article-date">
-  <time class="dt-published" datetime="2019-12-04T03:08:46.000Z" itemprop="datePublished">2019-12-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%89%91%E6%8C%87offer/">剑指offer</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2019/12/04/%E5%89%91%E6%8C%87offer-14%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACK%E4%B8%AA%E7%BB%93%E7%82%B9/">剑指offer_14链表中倒数第K个结点</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>输入一个链表，输出该链表中倒数第k个结点。</p>
-<hr>
-<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>第一种解法定义一个res列表，然后进行遍历整个链表，把一个个节点存储进res列表里，然后再输出倒数第k个结点</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ListNode</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, x</span>):</span><br><span class="line">        self.val = x</span><br><span class="line">        self.<span class="built_in">next</span> = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">FindKthToTail</span>(<span class="params">self, head, k</span>):</span><br><span class="line">        <span class="comment"># write code here</span></span><br><span class="line">        res=[]</span><br><span class="line">        <span class="keyword">while</span> head:</span><br><span class="line">            res.append(head)</span><br><span class="line">            head=head.<span class="built_in">next</span></span><br><span class="line">        <span class="keyword">if</span> k&gt;<span class="built_in">len</span>(res) <span class="keyword">or</span> k&lt;<span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">        <span class="comment">#return res[-k].val</span></span><br><span class="line">        <span class="keyword">return</span> res[-k]</span><br><span class="line"></span><br><span class="line">LN=ListNode(<span class="number">1</span>)</span><br><span class="line">LN_1=ListNode(<span class="number">2</span>)</span><br><span class="line">LN_2=ListNode(<span class="number">3</span>)</span><br><span class="line">LN_3=ListNode(<span class="number">4</span>)</span><br><span class="line">LN.<span class="built_in">next</span>=LN_1</span><br><span class="line">LN_1.<span class="built_in">next</span>=LN_2</span><br><span class="line">LN_2.<span class="built_in">next</span>=LN_3</span><br><span class="line"><span class="comment">#形成了LN--&gt;LN_1--&gt;LN_2--&gt;LN_3的一个链表</span></span><br><span class="line"></span><br><span class="line">s1=Solution()</span><br><span class="line"><span class="built_in">print</span>(s1.FindKthToTail(LN,<span class="number">2</span>))</span><br></pre></td></tr></table></figure>
-
-<p>第二种解法是定义两个指针，让一个指针先走k-1次，而另一个指针不动，然后再两个指针同时移动，直到前面那个指针到了最后一个，次数后面那个指针刚好就是指向倒数第K个节点，输出该指针指向的结点即可</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">FindKthToTail</span>(<span class="params">self, head, k</span>):</span><br><span class="line">        <span class="comment"># write code here</span></span><br><span class="line">        <span class="keyword">if</span> head==<span class="literal">None</span> <span class="keyword">or</span> k&lt;=<span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">        <span class="comment">#设置两个指针，p2指针先走（k-1）步，然后再一起走，当p2为最后一个时，p1就为倒数第k个</span></span><br><span class="line">        p2=head</span><br><span class="line">        p1=head</span><br><span class="line">        <span class="comment">#p2先走，走k-1步，如果k大于链表长度则返回 空，否则的话继续走</span></span><br><span class="line">        <span class="keyword">while</span> k&gt;<span class="number">1</span>:</span><br><span class="line">            <span class="keyword">if</span> p2.<span class="built_in">next</span>!=<span class="literal">None</span>:</span><br><span class="line">                p2=p2.<span class="built_in">next</span></span><br><span class="line">                k-=<span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"><span class="comment">#两个指针一起 走，一直到p2为最后一个,p1即为所求</span></span><br><span class="line">        <span class="keyword">while</span> p2.<span class="built_in">next</span>!=<span class="literal">None</span>:</span><br><span class="line">            p1=p1.<span class="built_in">next</span></span><br><span class="line">            p2=p2.<span class="built_in">next</span></span><br><span class="line">        <span class="keyword">return</span> p1</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/04/%E5%89%91%E6%8C%87offer-14%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACK%E4%B8%AA%E7%BB%93%E7%82%B9/" data-id="cljy06in4001svt1y69jtegvd" data-title="剑指offer_14链表中倒数第K个结点" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-剑指offer-13调整数组顺序使奇数位于偶数前面" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2019/12/04/%E5%89%91%E6%8C%87offer-13%E8%B0%83%E6%95%B4%E6%95%B0%E7%BB%84%E9%A1%BA%E5%BA%8F%E4%BD%BF%E5%A5%87%E6%95%B0%E4%BD%8D%E4%BA%8E%E5%81%B6%E6%95%B0%E5%89%8D%E9%9D%A2/" class="article-date">
-  <time class="dt-published" datetime="2019-12-04T02:41:50.000Z" itemprop="datePublished">2019-12-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%89%91%E6%8C%87offer/">剑指offer</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2019/12/04/%E5%89%91%E6%8C%87offer-13%E8%B0%83%E6%95%B4%E6%95%B0%E7%BB%84%E9%A1%BA%E5%BA%8F%E4%BD%BF%E5%A5%87%E6%95%B0%E4%BD%8D%E4%BA%8E%E5%81%B6%E6%95%B0%E5%89%8D%E9%9D%A2/">剑指offer_13调整数组顺序使奇数位于偶数前面</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>输入一个整数数组，实现一个函数来调整该数组中数字的顺序，使得所有的奇数位于数组的前半部分，所有的偶数位于数组的后半部分，并保证奇数和奇数，偶数和偶数之间的相对位置不变。</p>
-<hr>
-<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>先创建两个空列表a和b用来存储奇数和偶数，然后遍历传入的数组，用%取余符号来判断是奇数还是偶数，奇数就存入a列表，偶数就存入b列表，之后再把b列表拼接到a列表后面就可以了</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">reOrderArray</span>(<span class="params">array</span>):</span><br><span class="line">    a=[]</span><br><span class="line">    b=[]</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> array:</span><br><span class="line">        <span class="keyword">if</span> i%<span class="number">2</span>!=<span class="number">0</span>:</span><br><span class="line">            a.append(i)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            b.append(i)</span><br><span class="line">    <span class="keyword">for</span> num <span class="keyword">in</span> b:</span><br><span class="line">        a.append(num)</span><br><span class="line">    <span class="keyword">return</span> a</span><br><span class="line"></span><br><span class="line">a=[<span class="number">1</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">7</span>,<span class="number">6</span>]</span><br><span class="line"><span class="built_in">print</span>(reOrderArray(a))</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/04/%E5%89%91%E6%8C%87offer-13%E8%B0%83%E6%95%B4%E6%95%B0%E7%BB%84%E9%A1%BA%E5%BA%8F%E4%BD%BF%E5%A5%87%E6%95%B0%E4%BD%8D%E4%BA%8E%E5%81%B6%E6%95%B0%E5%89%8D%E9%9D%A2/" data-id="cljy06in4001ovt1y31h9efcq" data-title="剑指offer_13调整数组顺序使奇数位于偶数前面" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-剑指offer-12数值的整数次方" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2019/12/04/%E5%89%91%E6%8C%87offer-12%E6%95%B0%E5%80%BC%E7%9A%84%E6%95%B4%E6%95%B0%E6%AC%A1%E6%96%B9/" class="article-date">
-  <time class="dt-published" datetime="2019-12-04T02:30:30.000Z" itemprop="datePublished">2019-12-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%89%91%E6%8C%87offer/">剑指offer</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2019/12/04/%E5%89%91%E6%8C%87offer-12%E6%95%B0%E5%80%BC%E7%9A%84%E6%95%B4%E6%95%B0%E6%AC%A1%E6%96%B9/">剑指offer_12数值的整数次方</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>给定一个double类型的浮点数base和int类型的整数exponent。求base的exponent次方。</p>
-<p>保证base和exponent不同时为0</p>
-<hr>
-<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>首先想到的就是直接base**exponent,但是感觉这很明显就不是要考察的</p>
-<p>那就开始分析一下</p>
-<ul>
-<li>底数不能为0</li>
-<li>指数是0的时候，底数不管多少都是1</li>
-<li>指数是负数的时候，结果应该是多少分之一</li>
-</ul>
-<p>然后就是用for循环遍历一下，几次方就循环自乘几次</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">Power</span>(<span class="params">base,exponent</span>):</span><br><span class="line">    result=<span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> base==<span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    <span class="keyword">if</span> exponent==<span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> exponent&lt;<span class="number">0</span>:</span><br><span class="line">        <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(-exponent):</span><br><span class="line">            result=result*base</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>/result</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(exponent):</span><br><span class="line">            result=result*base</span><br><span class="line">        <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(Power(<span class="number">2.0</span>,<span class="number">4</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/04/%E5%89%91%E6%8C%87offer-12%E6%95%B0%E5%80%BC%E7%9A%84%E6%95%B4%E6%95%B0%E6%AC%A1%E6%96%B9/" data-id="cljy06in4001nvt1y5oq55zi6" data-title="剑指offer_12数值的整数次方" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-剑指offer-11二进制中1的个数" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2019/12/03/%E5%89%91%E6%8C%87offer-11%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD1%E7%9A%84%E4%B8%AA%E6%95%B0/" class="article-date">
-  <time class="dt-published" datetime="2019-12-03T08:45:31.000Z" itemprop="datePublished">2019-12-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%89%91%E6%8C%87offer/">剑指offer</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2019/12/03/%E5%89%91%E6%8C%87offer-11%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD1%E7%9A%84%E4%B8%AA%E6%95%B0/">剑指offer_11二进制中1的个数</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示。</p>
-<hr>
-<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>如果是负数，就用0xffffffff进行与运算，为什么是8个f呢，因为32位来表示。</p>
-<p>如果n!&#x3D;0，n的二进制中至少有一个1</p>
-<ul>
-<li>如果1在最低位，n-1 &amp; n得到的数正好将这个1，变成0</li>
-<li>如果1不在最低位，n-1 &amp; n得到的数正好将这个1，变成0</li>
-</ul>
-<p>因此我们判断n-1 &amp; n能够循环运行的次数就可以判断二进制中有多少个1了。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">NumberOf1</span>(<span class="params">n</span>):</span><br><span class="line">        <span class="comment"># write code here</span></span><br><span class="line">        count = <span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> n &lt; <span class="number">0</span>:</span><br><span class="line">            n = n &amp; <span class="number">0xffffffff</span></span><br><span class="line">        <span class="keyword">while</span> n:</span><br><span class="line">            count += <span class="number">1</span></span><br><span class="line">            n = (n - <span class="number">1</span>) &amp; n</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> count</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(NumberOf1(<span class="number">5</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>5的二进制是0000 0000 0000 0000 0000 0000 0000 0101</p>
-<p>所以结果是2</p>
-<p>-3的二进制是1111 1111 1111 1111 1111 1111 1111 1101</p>
-<p>所以结果是31</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/03/%E5%89%91%E6%8C%87offer-11%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD1%E7%9A%84%E4%B8%AA%E6%95%B0/" data-id="cljy06in3001jvt1y0rq1br73" data-title="剑指offer_11二进制中1的个数" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-剑指offer-10矩阵覆盖" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2019/12/03/%E5%89%91%E6%8C%87offer-10%E7%9F%A9%E9%98%B5%E8%A6%86%E7%9B%96/" class="article-date">
-  <time class="dt-published" datetime="2019-12-03T07:06:08.000Z" itemprop="datePublished">2019-12-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%89%91%E6%8C%87offer/">剑指offer</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2019/12/03/%E5%89%91%E6%8C%87offer-10%E7%9F%A9%E9%98%B5%E8%A6%86%E7%9B%96/">剑指offer_10矩阵覆盖</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>我们可以用 2 * 1 的小矩形横着或者竖着去覆盖更大的矩形。请问用n个2 * 1的小矩形无重叠地覆盖一个2*n的大矩形，总共有多少种方法？</p>
-<hr>
-<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>画图理解，找规律</p>
-<img src="/2019/12/03/%E5%89%91%E6%8C%87offer-10%E7%9F%A9%E9%98%B5%E8%A6%86%E7%9B%96/tu.png" class="" title="picture">
-
-<p>f(1) &#x3D; 1 </p>
-<p>f(2) &#x3D; 2</p>
-<p>f(3)&#x3D;f(2)+f(1)</p>
-<p>故f(n) &#x3D; f(n-1) + f(n-2)</p>
-<p>所以依旧是斐波那契数列，直接用循环</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">rectCover</span>(<span class="params">number</span>):</span><br><span class="line">       a=<span class="number">1</span></span><br><span class="line">       b=<span class="number">2</span></span><br><span class="line"></span><br><span class="line">       <span class="keyword">if</span> number==<span class="number">0</span>:</span><br><span class="line">           <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">       <span class="keyword">if</span> number==<span class="number">1</span>:</span><br><span class="line">           <span class="keyword">return</span> a</span><br><span class="line">       <span class="keyword">if</span> number==<span class="number">2</span>:</span><br><span class="line">           <span class="keyword">return</span> b</span><br><span class="line">       <span class="keyword">else</span>:</span><br><span class="line">           <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(number-<span class="number">1</span>):</span><br><span class="line">               a,b=b,a+b</span><br><span class="line">           <span class="keyword">return</span> a</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/03/%E5%89%91%E6%8C%87offer-10%E7%9F%A9%E9%98%B5%E8%A6%86%E7%9B%96/" data-id="cljy06in3001hvt1ygz9240xg" data-title="剑指offer_10矩阵覆盖" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
-  <nav id="page-nav">
-    
-    <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
-  </nav>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python%E8%84%9A%E6%9C%AC/">python脚本</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/">产品经理</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%AC%E8%80%83/">公考</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%89%91%E6%8C%87offer/">剑指offer</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/">区块链</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%89%AB%E8%A1%97/">扫街</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BE%8E%E9%A3%9F/">美食</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E7%BB%8F/">面经</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/">面试准备</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/" rel="tag">Mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python%E8%84%9A%E6%9C%AC/" rel="tag">python脚本</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E6%88%90%E9%95%BF/" rel="tag">产品经理成长</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A/" rel="tag">以太坊</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%AC%E8%80%83/" rel="tag">公考</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/" rel="tag">区块链</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AF%BB%E5%91%B3%E9%A1%BA%E5%BE%B7/" rel="tag">寻味顺德</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B9%BF%E5%B7%9E%E5%A1%94/" rel="tag">广州塔</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" rel="tag">排序算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">操作系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%B7%E7%8F%A0%E5%8C%BA/" rel="tag">海珠区</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BE%8E%E9%A3%9F%E6%8E%A2%E5%BA%97/" rel="tag">美食探店</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B6%8A%E7%A7%80%E5%8C%BA/" rel="tag">越秀区</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" rel="tag">软件测试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E7%BB%8F/" rel="tag">面经</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" rel="tag">面试准备</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mysql/" style="font-size: 12px;">Mysql</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/python%E8%84%9A%E6%9C%AC/" style="font-size: 14px;">python脚本</a> <a href="/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E6%88%90%E9%95%BF/" style="font-size: 10px;">产品经理成长</a> <a href="/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A/" style="font-size: 10px;">以太坊</a> <a href="/tags/%E5%85%AC%E8%80%83/" style="font-size: 10px;">公考</a> <a href="/tags/%E5%89%91%E6%8C%87offer/" style="font-size: 20px;">剑指offer</a> <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/" style="font-size: 10px;">区块链</a> <a href="/tags/%E5%AF%BB%E5%91%B3%E9%A1%BA%E5%BE%B7/" style="font-size: 10px;">寻味顺德</a> <a href="/tags/%E5%B9%BF%E5%B7%9E%E5%A1%94/" style="font-size: 10px;">广州塔</a> <a href="/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" style="font-size: 10px;">排序算法</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%B5%B7%E7%8F%A0%E5%8C%BA/" style="font-size: 10px;">海珠区</a> <a href="/tags/%E7%BE%8E%E9%A3%9F%E6%8E%A2%E5%BA%97/" style="font-size: 10px;">美食探店</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 16px;">计算机网络</a> <a href="/tags/%E8%B6%8A%E7%A7%80%E5%8C%BA/" style="font-size: 10px;">越秀区</a> <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">软件测试</a> <a href="/tags/%E9%9D%A2%E7%BB%8F/" style="font-size: 10px;">面经</a> <a href="/tags/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" style="font-size: 18px;">面试准备</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2023/07/11/%E9%A1%BA%E5%BE%B7%E7%BE%8E%E9%A3%9F%E6%8E%A8%E8%8D%90/">顺德美食推荐</a>
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
           </li>
+          
         
-          <li>
-            <a href="/2022/01/09/2022%E5%B9%B41%E6%9C%88%E5%B9%BF%E5%B7%9E%E6%89%AB%E8%A1%97%E6%97%A5%E8%AE%B0/">2022年1月广州扫街日记</a>
-          </li>
         
-          <li>
-            <a href="/2021/12/09/%E5%85%AC%E8%80%83%E7%AC%94%E8%AE%B0/">初识公考</a>
-          </li>
-        
-          <li>
-            <a href="/2020/06/07/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/">产品经理成长之路01</a>
-          </li>
-        
-          <li>
-            <a href="/2019/12/30/eos%E8%8A%82%E7%82%B9%E8%AF%BB%E5%8F%96%E8%A7%A3%E6%9E%90/">eos节点读取解析</a>
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
           </li>
         
       </ul>
     </div>
   </div>
+</nav>
 
   
-</aside>
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="An elegant Material-Design theme for Hexo"></span>
+          
+        </div>
+
         
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
+
       
-      &copy; 2023 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
     </div>
   </div>
-</footer>
+</div>
 
-    </div>
-    <nav id="mobile-nav">
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          style="margin-top: 0">
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2019/12/05/%E5%89%91%E6%8C%87offer-19%E9%A1%BA%E6%97%B6%E9%92%88%E6%89%93%E5%8D%B0%E7%9F%A9%E9%98%B5/" target="_self">
+          剑指offer_19顺时针打印矩阵
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/12/05/%E5%89%91%E6%8C%87offer-19%E9%A1%BA%E6%97%B6%E9%92%88%E6%89%93%E5%8D%B0%E7%9F%A9%E9%98%B5/" target="_self">
+        <div>
+          题目描述输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字，例如，如果输入如下4 X 4矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 则依次打印出数字1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10.    1 2 3 4    5 6 7 8   9 10 11 12   13 14 15 16    解题思路在pyt
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-12-05 11:24" pubdate>
+              2019-12-05
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
   
-    <a href="/" class="mobile-nav-link">Home</a>
   
-    <a href="/archives" class="mobile-nav-link">Archives</a>
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%89%91%E6%8C%87offer/" class="category-chain-item">剑指offer</a>
   
-</nav>
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%89%91%E6%8C%87offer/">#剑指offer</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2019/12/05/%E5%89%91%E6%8C%87offer-18%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%95%9C%E5%83%8F/" target="_self">
+          剑指offer_18二叉树的镜像
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/12/05/%E5%89%91%E6%8C%87offer-18%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%95%9C%E5%83%8F/" target="_self">
+        <div>
+          题目描述操作给定的二叉树，将其变换为源二叉树的镜像。 输入描述123456789101112二叉树的镜像定义：源二叉树     	    8    	   /  \    	  6   10    	 / \  / \    	5  7 9 11    	镜像二叉树    	    8    	   /  \    	  10   6    	 / \  / \    	11 9 7  5
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-12-05 10:55" pubdate>
+              2019-12-05
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%89%91%E6%8C%87offer/" class="category-chain-item">剑指offer</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%89%91%E6%8C%87offer/">#剑指offer</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2019/12/04/%E5%89%91%E6%8C%87offer-17%E6%A0%91%E7%9A%84%E5%AD%90%E7%BB%93%E6%9E%84/" target="_self">
+          剑指offer_17树的子结构
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/12/04/%E5%89%91%E6%8C%87offer-17%E6%A0%91%E7%9A%84%E5%AD%90%E7%BB%93%E6%9E%84/" target="_self">
+        <div>
+          题目描述输入两棵二叉树A，B，判断B是不是A的子结构。（ps：我们约定空树不是任意一个树的子结构）  解题思路首先理解子结构和子树的区别 子树的意思是只要包含了一个结点，就得包含这个结点下的所有节点，也就是必须包含最后的叶子结点子结构的意思是包含了一个结点，可以只取左子树或者右子树，或者都不取。  我打算递归调用HasSubtree遍历二叉树A。如果发现某一节点的值和树B的根结点的值相等，则调用D
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-12-04 18:00" pubdate>
+              2019-12-04
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%89%91%E6%8C%87offer/" class="category-chain-item">剑指offer</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%89%91%E6%8C%87offer/">#剑指offer</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2019/12/04/%E5%89%91%E6%8C%87offer-16%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%8E%92%E5%BA%8F%E7%9A%84%E9%93%BE%E8%A1%A8/" target="_self">
+          剑指offer_16合并两个排序的链表
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/12/04/%E5%89%91%E6%8C%87offer-16%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%8E%92%E5%BA%8F%E7%9A%84%E9%93%BE%E8%A1%A8/" target="_self">
+        <div>
+          题目描述输入两个单调递增的链表，输出两个链表合成后的链表，当然我们需要合成后的链表满足单调不减规则。  解题思路 比较两个链表的首结点，哪个小的的结点则合并到第三个链表尾结点，并向前移动一个结点。 步骤一结果会有一个链表先遍历结束，或者没有 第三个链表尾结点指向剩余未遍历结束的链表 返回第三个链表首结点  1234567891011121314151617181920212223242526272
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-12-04 16:56" pubdate>
+              2019-12-04
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%89%91%E6%8C%87offer/" class="category-chain-item">剑指offer</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%89%91%E6%8C%87offer/">#剑指offer</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2019/12/04/%E5%89%91%E6%8C%87offer-15%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/" target="_self">
+          剑指offer_15反转链表
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/12/04/%E5%89%91%E6%8C%87offer-15%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/" target="_self">
+        <div>
+          题目描述输入一个链表，反转链表后，输出新链表的表头。  解题思路遍历整个链表，然后让头结点指向空，其他结点依次指向前一个结点，这样就达到了反转链表。先定义一个last指针，指向为空，然后定义一个temp指针指向头结点的下一个， 链表这样1—-&gt;2——&gt;3——-&gt;4 一个循环的具体过程：  先让temp指针指向pHead所指元素的下一个，此时last指向空  		    pHead
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-12-04 15:58" pubdate>
+              2019-12-04
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%89%91%E6%8C%87offer/" class="category-chain-item">剑指offer</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%89%91%E6%8C%87offer/">#剑指offer</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2019/12/04/%E5%89%91%E6%8C%87offer-14%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACK%E4%B8%AA%E7%BB%93%E7%82%B9/" target="_self">
+          剑指offer_14链表中倒数第K个结点
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/12/04/%E5%89%91%E6%8C%87offer-14%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACK%E4%B8%AA%E7%BB%93%E7%82%B9/" target="_self">
+        <div>
+          题目描述输入一个链表，输出该链表中倒数第k个结点。  解题思路第一种解法定义一个res列表，然后进行遍历整个链表，把一个个节点存储进res列表里，然后再输出倒数第k个结点 1234567891011121314151617181920212223242526272829# -*- coding:utf-8 -*-class ListNode:    def __init__(self, x):
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-12-04 11:08" pubdate>
+              2019-12-04
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%89%91%E6%8C%87offer/" class="category-chain-item">剑指offer</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%89%91%E6%8C%87offer/">#剑指offer</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2019/12/04/%E5%89%91%E6%8C%87offer-13%E8%B0%83%E6%95%B4%E6%95%B0%E7%BB%84%E9%A1%BA%E5%BA%8F%E4%BD%BF%E5%A5%87%E6%95%B0%E4%BD%8D%E4%BA%8E%E5%81%B6%E6%95%B0%E5%89%8D%E9%9D%A2/" target="_self">
+          剑指offer_13调整数组顺序使奇数位于偶数前面
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/12/04/%E5%89%91%E6%8C%87offer-13%E8%B0%83%E6%95%B4%E6%95%B0%E7%BB%84%E9%A1%BA%E5%BA%8F%E4%BD%BF%E5%A5%87%E6%95%B0%E4%BD%8D%E4%BA%8E%E5%81%B6%E6%95%B0%E5%89%8D%E9%9D%A2/" target="_self">
+        <div>
+          题目描述输入一个整数数组，实现一个函数来调整该数组中数字的顺序，使得所有的奇数位于数组的前半部分，所有的偶数位于数组的后半部分，并保证奇数和奇数，偶数和偶数之间的相对位置不变。  解题思路先创建两个空列表a和b用来存储奇数和偶数，然后遍历传入的数组，用%取余符号来判断是奇数还是偶数，奇数就存入a列表，偶数就存入b列表，之后再把b列表拼接到a列表后面就可以了 1234567891011121314d
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-12-04 10:41" pubdate>
+              2019-12-04
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%89%91%E6%8C%87offer/" class="category-chain-item">剑指offer</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%89%91%E6%8C%87offer/">#剑指offer</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2019/12/04/%E5%89%91%E6%8C%87offer-12%E6%95%B0%E5%80%BC%E7%9A%84%E6%95%B4%E6%95%B0%E6%AC%A1%E6%96%B9/" target="_self">
+          剑指offer_12数值的整数次方
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/12/04/%E5%89%91%E6%8C%87offer-12%E6%95%B0%E5%80%BC%E7%9A%84%E6%95%B4%E6%95%B0%E6%AC%A1%E6%96%B9/" target="_self">
+        <div>
+          题目描述给定一个double类型的浮点数base和int类型的整数exponent。求base的exponent次方。 保证base和exponent不同时为0  解题思路首先想到的就是直接base**exponent,但是感觉这很明显就不是要考察的 那就开始分析一下  底数不能为0 指数是0的时候，底数不管多少都是1 指数是负数的时候，结果应该是多少分之一  然后就是用for循环遍历一下，几次方
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-12-04 10:30" pubdate>
+              2019-12-04
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%89%91%E6%8C%87offer/" class="category-chain-item">剑指offer</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%89%91%E6%8C%87offer/">#剑指offer</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2019/12/03/%E5%89%91%E6%8C%87offer-11%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD1%E7%9A%84%E4%B8%AA%E6%95%B0/" target="_self">
+          剑指offer_11二进制中1的个数
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/12/03/%E5%89%91%E6%8C%87offer-11%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD1%E7%9A%84%E4%B8%AA%E6%95%B0/" target="_self">
+        <div>
+          题目描述输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示。  解题思路如果是负数，就用0xffffffff进行与运算，为什么是8个f呢，因为32位来表示。 如果n!&#x3D;0，n的二进制中至少有一个1  如果1在最低位，n-1 &amp; n得到的数正好将这个1，变成0 如果1不在最低位，n-1 &amp; n得到的数正好将这个1，变成0  因此我们判断n-1 &amp; n能够
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-12-03 16:45" pubdate>
+              2019-12-03
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%89%91%E6%8C%87offer/" class="category-chain-item">剑指offer</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%89%91%E6%8C%87offer/">#剑指offer</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2019/12/03/%E5%89%91%E6%8C%87offer-10%E7%9F%A9%E9%98%B5%E8%A6%86%E7%9B%96/" target="_self">
+          剑指offer_10矩阵覆盖
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/12/03/%E5%89%91%E6%8C%87offer-10%E7%9F%A9%E9%98%B5%E8%A6%86%E7%9B%96/" target="_self">
+        <div>
+          题目描述我们可以用 2 * 1 的小矩形横着或者竖着去覆盖更大的矩形。请问用n个2 * 1的小矩形无重叠地覆盖一个2*n的大矩形，总共有多少种方法？  解题思路画图理解，找规律   f(1) &#x3D; 1  f(2) &#x3D; 2 f(3)&#x3D;f(2)+f(1) 故f(n) &#x3D; f(n-1) + f(n-2) 所以依旧是斐波那契数列，直接用循环 1234567891011
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-12-03 15:06" pubdate>
+              2019-12-03
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%89%91%E6%8C%87offer/" class="category-chain-item">剑指offer</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%89%91%E6%8C%87offer/">#剑指offer</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/2/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#board">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/#board">4</a><a class="page-number" href="/page/5/#board">5</a><a class="extend next" rel="next" href="/page/4/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     
 
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
 
-<script src="/js/jquery-3.6.4.min.js"></script>
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
 
 
 
   
-<script src="/fancybox/jquery.fancybox.min.js"></script>
+    <script  src="/js/img-lazyload.js" ></script>
+  
 
 
 
 
-<script src="/js/script.js"></script>
+  <script  src="/js/local-search.js" ></script>
 
 
 
 
 
-  </div>
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
 </body>
 </html>
