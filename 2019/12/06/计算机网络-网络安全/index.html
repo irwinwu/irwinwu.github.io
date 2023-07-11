@@ -18,19 +18,21 @@
   <meta name="author" content="irwinwu">
   <meta name="keywords" content="">
   
-    <meta name="description" content="两种攻击 主动攻击：中断、篡改和伪造信息 被动攻击：截获  对称加密DES即加密密钥与解密密钥是使用相同的密码体制，使用64位的密钥 公钥密码体制使用不同的加密密钥和解密密钥 数字签名的三个功能 1⃣️报文鉴别 2⃣️报文的完整性 3⃣️不可否认  具有保密性的数字签名过程：    报文鉴别： 1⃣️密码散列函数 2⃣️MD5和SHA-1  实体鉴别：口令（验证码）对称密钥分配：KDC密钥分配中心">
+    <meta name="description" content="两种攻击 主动攻击：中断、篡改和伪造信息 被动攻击：截获  对称加密DES即加密密钥与解密密钥是使用相同的密码体制，使用64位的密钥 公钥密码体制使用不同的加密密钥和解密密钥 数字签名的三个功能 1⃣️报文鉴别 2⃣️报文的完整性 3⃣️不可否认  具有保密性的数字签名过程： 报文鉴别： 1⃣️密码散列函数 2⃣️MD5和SHA-1  实体鉴别：口令（验证码）对称密钥分配：KDC密钥分配中心非对称">
 <meta property="og:type" content="article">
 <meta property="og:title" content="计算机网络-网络安全">
 <meta property="og:url" content="http://example.com/2019/12/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/index.html">
 <meta property="og:site_name" content="irwinwu">
-<meta property="og:description" content="两种攻击 主动攻击：中断、篡改和伪造信息 被动攻击：截获  对称加密DES即加密密钥与解密密钥是使用相同的密码体制，使用64位的密钥 公钥密码体制使用不同的加密密钥和解密密钥 数字签名的三个功能 1⃣️报文鉴别 2⃣️报文的完整性 3⃣️不可否认  具有保密性的数字签名过程：    报文鉴别： 1⃣️密码散列函数 2⃣️MD5和SHA-1  实体鉴别：口令（验证码）对称密钥分配：KDC密钥分配中心">
+<meta property="og:description" content="两种攻击 主动攻击：中断、篡改和伪造信息 被动攻击：截获  对称加密DES即加密密钥与解密密钥是使用相同的密码体制，使用64位的密钥 公钥密码体制使用不同的加密密钥和解密密钥 数字签名的三个功能 1⃣️报文鉴别 2⃣️报文的完整性 3⃣️不可否认  具有保密性的数字签名过程： 报文鉴别： 1⃣️密码散列函数 2⃣️MD5和SHA-1  实体鉴别：口令（验证码）对称密钥分配：KDC密钥分配中心非对称">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/images/%E8%AE%A1%E7%BD%91%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D.png">
 <meta property="article:published_time" content="2019-12-06T02:43:44.000Z">
-<meta property="article:modified_time" content="2020-11-13T05:31:09.000Z">
+<meta property="article:modified_time" content="2023-07-11T15:56:31.962Z">
 <meta property="article:author" content="irwinwu">
 <meta property="article:tag" content="面试准备">
 <meta property="article:tag" content="计算机网络">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/images/%E8%AE%A1%E7%BD%91%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -74,7 +76,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"text"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -297,10 +299,7 @@
 <li>2⃣️报文的完整性</li>
 <li>3⃣️不可否认</li>
 </ul>
-<h5 id="具有保密性的数字签名过程："><a href="#具有保密性的数字签名过程：" class="headerlink" title="具有保密性的数字签名过程："></a>具有保密性的数字签名过程：</h5>
-
-
-
+<h5 id="具有保密性的数字签名过程："><a href="#具有保密性的数字签名过程：" class="headerlink" title="具有保密性的数字签名过程："></a>具有保密性的数字签名过程：</h5><p><img src="/../images/%E8%AE%A1%E7%BD%91%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D.png" srcset="/img/loading.gif" lazyload></p>
 <h5 id="报文鉴别："><a href="#报文鉴别：" class="headerlink" title="报文鉴别："></a>报文鉴别：</h5><ul>
 <li>1⃣️密码散列函数</li>
 <li>2⃣️MD5和SHA-1</li>
